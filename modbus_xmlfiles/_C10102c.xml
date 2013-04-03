@@ -1,0 +1,3793 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
+<folder>
+     <item>
+          <itemname>Settings</itemname>
+          <caption_EN>Settings</caption_EN>
+          <caption_DE>Einstellungen</caption_DE>
+          <caption_FR>Program.-données</caption_FR>
+          <caption_IT>dati progrmma</caption_IT>
+          <caption_ES>Nastaveni</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>RTCTime</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%H:%M:%S</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time</caption_EN>
+               <caption_DE>Uhrzeit</caption_DE>
+               <caption_FR>Heure</caption_FR>
+               <caption_IT>ora</caption_IT>
+               <caption_ES>Cas</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>RTCDate</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>209</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%d.%m.%Y</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>date</caption_EN>
+               <caption_DE>Datum</caption_DE>
+               <caption_FR>Date</caption_FR>
+               <caption_IT>data</caption_IT>
+               <caption_ES>Datum</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LngSelect</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>417</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>English:Deutsch:Français:Italiano:Español:Nederlands:Português:Svenska:Norsk:Cestina</dataformat>
+               <min>0</min>
+               <max>9</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>language</caption_EN>
+               <caption_DE>Sprache</caption_DE>
+               <caption_FR>Langue</caption_FR>
+               <caption_IT>lingua</caption_IT>
+               <caption_ES>Jazyk</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>MeasuredValue</itemname>
+          <caption_EN>Measured Values</caption_EN>
+          <caption_DE>Messwerte</caption_DE>
+          <caption_FR>Valeurs mesurées</caption_FR>
+          <caption_IT>valori misurati</caption_IT>
+          <caption_ES>Merene hodnoty</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>OutdoorTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>433</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T outdoor</caption_EN>
+               <caption_DE>Aussentemperatur</caption_DE>
+               <caption_FR>T extérieure</caption_FR>
+               <caption_IT>T esterna</caption_IT>
+               <caption_ES>Venkovni teplota</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OutdoorTemp1h</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>465</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T outdoor 1h</caption_EN>
+               <caption_DE>T Aussen 1h</caption_DE>
+               <caption_FR>T extérieure 1h</caption_FR>
+               <caption_IT>T esterna 1h</caption_IT>
+               <caption_ES>T venk prum 1 h</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OutdoorTemp24h</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>497</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T outdoor 24h</caption_EN>
+               <caption_DE>T Aussen 24h</caption_DE>
+               <caption_FR>T extérieure 24h</caption_FR>
+               <caption_IT>Testerna 24h</caption_IT>
+               <caption_ES>T venk prum 24 h</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ReturnTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>529</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return target</caption_EN>
+               <caption_DE>T RücklaufSoll</caption_DE>
+               <caption_FR>T retour-cons-ch</caption_FR>
+               <caption_IT>T rit. imposta</caption_IT>
+               <caption_ES>T zpatecky zad</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ReturnTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>561</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return real</caption_EN>
+               <caption_DE>T Rücklauf Ist</caption_DE>
+               <caption_FR>T retour-ch</caption_FR>
+               <caption_IT>T ritorno</caption_IT>
+               <caption_ES>T zpatecky skut</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FlowTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>593</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T heating out</caption_EN>
+               <caption_DE>T Vorlauf</caption_DE>
+               <caption_FR>T départ-ch</caption_FR>
+               <caption_IT>T mandata</caption_IT>
+               <caption_ES>T vystup skut</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>625</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T water target</caption_EN>
+               <caption_DE>T WarmwasserSoll</caption_DE>
+               <caption_FR>T consigne ECS</caption_FR>
+               <caption_IT>T acqua c impost</caption_IT>
+               <caption_ES>T TUV zadana</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>657</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T water real</caption_EN>
+               <caption_DE>T Warmwasser Ist</caption_DE>
+               <caption_FR>T effective ECS</caption_FR>
+               <caption_IT>T acqua calda</caption_IT>
+               <caption_ES>T TUV skutecna</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>RoomTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>689</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T pilot room</caption_EN>
+               <caption_DE>T Raum</caption_DE>
+               <caption_FR>T pièce</caption_FR>
+               <caption_IT>T locale</caption_IT>
+               <caption_ES>T ref. mistnost</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>RoomTemp1h</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>721</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T room 1h</caption_EN>
+               <caption_DE>T Raum 1h</caption_DE>
+               <caption_FR>T pièce 1h</caption_FR>
+               <caption_IT>T locale 1h</caption_IT>
+               <caption_ES>T vnitrni prum1h</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatSourceIn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>753</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T source in</caption_EN>
+               <caption_DE>T Quelle Ein</caption_DE>
+               <caption_FR>T captage entrée</caption_FR>
+               <caption_IT>T fonte entra</caption_IT>
+               <caption_ES>T primar vstup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatSourceOut</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>785</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T source out</caption_EN>
+               <caption_DE>T Quelle Aus</caption_DE>
+               <caption_FR>T captage sortie</caption_FR>
+               <caption_IT>T fonte uscita</caption_IT>
+               <caption_ES>T primar vystup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>EvaporationTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>817</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T evaporator</caption_EN>
+               <caption_DE>T Verdampfer</caption_DE>
+               <caption_FR>T évaporateur</caption_FR>
+               <caption_IT>T evaporazione.</caption_IT>
+               <caption_ES>T vyparovaci</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CondensationTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>849</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T condenser</caption_EN>
+               <caption_DE>T Kondensator</caption_DE>
+               <caption_FR>T condenseur</caption_FR>
+               <caption_IT>T condensazione</caption_IT>
+               <caption_ES>T kondenzacni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SuctionGasTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>881</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T suction line</caption_EN>
+               <caption_DE>T Saugleitung</caption_DE>
+               <caption_FR>T gaz-aspiration</caption_FR>
+               <caption_IT>T aspirazione</caption_IT>
+               <caption_ES>T sani kompresor</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>913</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T pool</caption_EN>
+               <caption_DE>T Schwimmbecken</caption_DE>
+               <caption_FR>T piscine</caption_FR>
+               <caption_IT>T piscina</caption_IT>
+               <caption_ES>T bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>EvaporationPress</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>945</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>bar</unit>
+               <caption_EN>p evaporator</caption_EN>
+               <caption_DE>p Verdampfer</caption_DE>
+               <caption_FR>P évaporation</caption_FR>
+               <caption_IT>press-evaporaz</caption_IT>
+               <caption_ES>P vyparovaci</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CondensationPress</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>977</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>bar</unit>
+               <caption_EN>p condenser</caption_EN>
+               <caption_DE>p Kondensator</caption_DE>
+               <caption_FR>P condensation</caption_FR>
+               <caption_IT>press-condensaz</caption_IT>
+               <caption_ES>P kondenzacni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Heating</itemname>
+          <caption_EN>Heating</caption_EN>
+          <caption_DE>Heizen</caption_DE>
+          <caption_FR>Chauffage</caption_FR>
+          <caption_IT>riscaldamento</caption_IT>
+          <caption_ES>Vytapeni</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>HeatOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1009</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>manual turn off</caption_EN>
+               <caption_DE>Abschaltung</caption_DE>
+               <caption_FR>arrêt manuel</caption_FR>
+               <caption_IT>risc spegnimento</caption_IT>
+               <caption_ES>Zakazat topeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1025</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>time start</caption_EN>
+               <caption_DE>Beginn</caption_DE>
+               <caption_FR>heure début</caption_FR>
+               <caption_IT>risc ora inizio</caption_IT>
+               <caption_ES>Zacatek</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1041</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>time stop</caption_EN>
+               <caption_DE>Ende</caption_DE>
+               <caption_FR>heure fin</caption_FR>
+               <caption_IT>risc ora fine</caption_IT>
+               <caption_ES>Konec</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatCharacteristicSetPoint</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1057</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>10</min>
+               <max>30</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T out base</caption_EN>
+               <caption_DE>T aussen Einsatz</caption_DE>
+               <caption_FR>T ext. enclench.</caption_FR>
+               <caption_IT>risc Test.inizio</caption_IT>
+               <caption_ES>T venk zacat top</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatCharacteristicSetPointBaseTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1089</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>15</min>
+               <max>65</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return base</caption_EN>
+               <caption_DE>T Rückl. Einsatz</caption_DE>
+               <caption_FR>T retour enclen</caption_FR>
+               <caption_IT>risc Trit.inizio</caption_IT>
+               <caption_ES>T zpat zacat top</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatCharacteristicGradient</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1121</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>0</min>
+               <max>100</max>
+               <accesslev>3</accesslev>
+               <unit>  %</unit>
+               <caption_EN>T curve gradient</caption_EN>
+               <caption_DE>Kennl. Steigung</caption_DE>
+               <caption_FR>pente</caption_FR>
+               <caption_IT>risc linea aumen</caption_IT>
+               <caption_ES>Sklon top krivky</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatCharacteristicLimit</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1153</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>10</min>
+               <max>72</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T curve limit</caption_EN>
+               <caption_DE>Kennl. Limit</caption_DE>
+               <caption_FR>T limite courbe</caption_FR>
+               <caption_IT>risc T limite</caption_IT>
+               <caption_ES>T omez top kriv</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatReturnTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1185</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return real</caption_EN>
+               <caption_DE>T Rücklauf Ist</caption_DE>
+               <caption_FR>T retour actuelle</caption_FR>
+               <caption_IT>risc Trit eff</caption_IT>
+               <caption_ES>T zpat skutec</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatReturnTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1217</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return target</caption_EN>
+               <caption_DE>T Rücklauf Soll</caption_DE>
+               <caption_FR>T retour consign</caption_FR>
+               <caption_IT>risc Trit rif</caption_IT>
+               <caption_ES>T zpat vypoct</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatTempHyst</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1249</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>1</min>
+               <max>3</max>
+               <accesslev>3</accesslev>
+               <unit>K</unit>
+               <caption_EN>hysteresis</caption_EN>
+               <caption_DE>Hysterese</caption_DE>
+               <caption_FR>hystèresis</caption_FR>
+               <caption_IT>risc hysterese</caption_IT>
+               <caption_ES>Hystereze</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>RoomTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1281</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>15</min>
+               <max>30</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T room target</caption_EN>
+               <caption_DE>T Raum Soll</caption_DE>
+               <caption_FR>T consigne pièce</caption_FR>
+               <caption_IT>risc T luogo rif</caption_IT>
+               <caption_ES>T refer pozadov</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>RoomTempFactor</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1313</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>3</dataformat>
+               <min>0</min>
+               <max>200</max>
+               <accesslev>3</accesslev>
+               <unit>  %</unit>
+               <caption_EN>T room influence</caption_EN>
+               <caption_DE>Raumeinfluss</caption_DE>
+               <caption_FR>influence pièce</caption_FR>
+               <caption_IT>risc incid ambie</caption_IT>
+               <caption_ES>T refer korekce</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatIncreaseOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1329</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN></caption_EN>
+               <caption_DE>SollwertÄnd. Aus</caption_DE>
+               <caption_FR>changer arrêt</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Zakázat korekci</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatIncreaseTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1345</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>setpt chg start</caption_EN>
+               <caption_DE>SollwÄnd. Beginn</caption_DE>
+               <caption_FR>changer début</caption_FR>
+               <caption_IT>risc aumentoIniz</caption_IT>
+               <caption_ES>Korekce zacatek</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatIncreaseTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1361</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>setpt chg stop</caption_EN>
+               <caption_DE>SollwÄnd. Ende</caption_DE>
+               <caption_FR>changer fin</caption_FR>
+               <caption_IT>risc aumentoFine</caption_IT>
+               <caption_ES>Korekce konec</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatIncreaseSetPtOffset</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1377</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-5</min>
+               <max>5</max>
+               <accesslev>3</accesslev>
+               <unit>K</unit>
+               <caption_EN>setpoint change</caption_EN>
+               <caption_DE>Sollw. Änderung</caption_DE>
+               <caption_FR>changer valeur</caption_FR>
+               <caption_IT>risc aumento</caption_IT>
+               <caption_ES>Korekce top kriv</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>AuxilaryModeHeating</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1409</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>OFF:2IN1:CASCADE</dataformat>
+               <min>0</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>auxilary mode</caption_EN>
+               <caption_DE>Stufe2 Modus</caption_DE>
+               <caption_FR>mode stade 2</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Dvoustup provoz</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>AuxilaryMaxDifference</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1425</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>0</min>
+               <max>5</max>
+               <accesslev>3</accesslev>
+               <unit>K</unit>
+               <caption_EN>aux. Max diff.</caption_EN>
+               <caption_DE>Stufe2 max Diff.</caption_DE>
+               <caption_FR>stade 2 diff max</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Stupen 2 max dif</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Cooling</itemname>
+          <caption_EN>Cooling</caption_EN>
+          <caption_DE>Kühlen</caption_DE>
+          <caption_FR>Rafraîchissement</caption_FR>
+          <caption_IT>raffredamento</caption_IT>
+          <caption_ES>Chlazeni</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>CoolOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1457</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>manual turn off</caption_EN>
+               <caption_DE>Abschaltung</caption_DE>
+               <caption_FR>arrêt manuel</caption_FR>
+               <caption_IT>raff spegnimento</caption_IT>
+               <caption_ES>Zakazat chlazeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1473</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time start</caption_EN>
+               <caption_DE>Beginn</caption_DE>
+               <caption_FR>heure début</caption_FR>
+               <caption_IT>raff ora inizio</caption_IT>
+               <caption_ES>Zacatek chlaz</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1489</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time stop</caption_EN>
+               <caption_DE>Ende</caption_DE>
+               <caption_FR>heure fin</caption_FR>
+               <caption_IT>raff ora fine</caption_IT>
+               <caption_ES>Konec chlaz</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolCharacteristicSetPoint</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1505</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>18</min>
+               <max>30</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T out base</caption_EN>
+               <caption_DE>T aussen Einsatz</caption_DE>
+               <caption_FR>T ext. enclench.</caption_FR>
+               <caption_IT>raff Test. attivaz</caption_IT>
+               <caption_ES>T venk zacat chl</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolCharacteristicSetPointBaseTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1537</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>18</min>
+               <max>26</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return base</caption_EN>
+               <caption_DE>T Rückl. Einsatz</caption_DE>
+               <caption_FR>T retour enclen</caption_FR>
+               <caption_IT>raff Trit. attivaz</caption_IT>
+               <caption_ES>T zpat zacat chl</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolCharacteristicGradient</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1569</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-50</min>
+               <max>50</max>
+               <accesslev>3</accesslev>
+               <unit>  %</unit>
+               <caption_EN>T curve gradient</caption_EN>
+               <caption_DE>Kennl. Steigung</caption_DE>
+               <caption_FR>pente</caption_FR>
+               <caption_IT>raff linea aumen</caption_IT>
+               <caption_ES>Sklon chl krivky</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolCharacteristicLimit</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1601</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>18</min>
+               <max>26</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T curve limit</caption_EN>
+               <caption_DE>Kennl. Limit</caption_DE>
+               <caption_FR>T limite courbe</caption_FR>
+               <caption_IT>raff T limite</caption_IT>
+               <caption_ES>T min chl krivky</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolReturnTemp</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1633</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return real</caption_EN>
+               <caption_DE>T Rücklauf Ist</caption_DE>
+               <caption_FR>T retour actuelle</caption_FR>
+               <caption_IT>raff Trit eff</caption_IT>
+               <caption_ES>T zpat skutecna</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolReturnTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1665</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return target</caption_EN>
+               <caption_DE>T Rücklauf Soll</caption_DE>
+               <caption_FR>T retour consign</caption_FR>
+               <caption_IT>raff Trit rif</caption_IT>
+               <caption_ES>T zpat vypocet</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>CoolReturnTempHyst</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1697</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>1</min>
+               <max>3</max>
+               <accesslev>3</accesslev>
+               <unit>K</unit>
+               <caption_EN>hysteresis</caption_EN>
+               <caption_DE>Hysterese</caption_DE>
+               <caption_FR>hystèresis</caption_FR>
+               <caption_IT>raff hysterese</caption_IT>
+               <caption_ES>Hysterze</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Hotwater</itemname>
+          <caption_EN>Hot Water</caption_EN>
+          <caption_DE>Warmwasser</caption_DE>
+          <caption_FR>ECS</caption_FR>
+          <caption_IT>acqua calda</caption_IT>
+          <caption_ES>TUV</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>DomesticWaterOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1729</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>manual turn off</caption_EN>
+               <caption_DE>Abschaltung</caption_DE>
+               <caption_FR>arrêt manuel</caption_FR>
+               <caption_IT>acqC spegnimento</caption_IT>
+               <caption_ES>Zakazat TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1745</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time start</caption_EN>
+               <caption_DE>Beginn</caption_DE>
+               <caption_FR>heure début</caption_FR>
+               <caption_IT>acqC ora nizio</caption_IT>
+               <caption_ES>Zacatek TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1761</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time stop</caption_EN>
+               <caption_DE>Ende</caption_DE>
+               <caption_FR>heure fin</caption_FR>
+               <caption_IT>acqC ora fine</caption_IT>
+               <caption_ES>Konec TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTempActual</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1777</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return real</caption_EN>
+               <caption_DE>T Warmw. Ist</caption_DE>
+               <caption_FR>T actuelle</caption_FR>
+               <caption_IT>acqC T eff</caption_IT>
+               <caption_ES>T TUV skutecna</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1809</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>28</min>
+               <max>60</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return target</caption_EN>
+               <caption_DE>T Warmw. Soll</caption_DE>
+               <caption_FR>T consigne</caption_FR>
+               <caption_IT>acqC T rif</caption_IT>
+               <caption_ES>T TUV zadana</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DomesticWaterTempHyst</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1841</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>5</min>
+               <max>10</max>
+               <accesslev>3</accesslev>
+               <unit>  K</unit>
+               <caption_EN>hysteresis</caption_EN>
+               <caption_DE>Hysterese</caption_DE>
+               <caption_FR>hystèresis</caption_FR>
+               <caption_IT>acqC hysterese</caption_IT>
+               <caption_ES>Hysterze</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LegionellaSchedule</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1873</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-8</dataformat>
+               <min>0</min>
+               <max>255</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>NEW act MDMDFSSP</caption_EN>
+               <caption_DE>NEW akt MDMDFSSP</caption_DE>
+               <caption_FR>légionelle arrêt</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Legio povolit</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LegionellaTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1889</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>E-NEW Begin</caption_EN>
+               <caption_DE>E-NEW Beginn</caption_DE>
+               <caption_FR>légionelle début</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Zacatek leg</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LegionellaTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1905</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>E-NEW End</caption_EN>
+               <caption_DE>E-NEW Ende</caption_DE>
+               <caption_FR>légionelle fin</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Konec leg</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LegionellaTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1921</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>60</min>
+               <max>65</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>E-NEW Nominal</caption_EN>
+               <caption_DE>E-NEW Sollwert</caption_DE>
+               <caption_FR>légionel T-nom.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>T leg pozadov</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DWNumberOfCompressors</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1953</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>1</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>auxilary compr.</caption_EN>
+               <caption_DE>Stufe2 Kompr.</caption_DE>
+               <caption_FR>stade 2 compr.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Pocet kompres</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Pool</itemname>
+          <caption_EN>Pool</caption_EN>
+          <caption_DE>Schwimmbecken</caption_DE>
+          <caption_FR>Piscine</caption_FR>
+          <caption_IT>piscina</caption_IT>
+          <caption_ES>Bazen</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>PoolOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>1969</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>manual turn off</caption_EN>
+               <caption_DE>Abschaltung</caption_DE>
+               <caption_FR>arrêt manuel</caption_FR>
+               <caption_IT>piscina spegn.</caption_IT>
+               <caption_ES>Zakazat bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTimeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>1985</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time start</caption_EN>
+               <caption_DE>Beginn</caption_DE>
+               <caption_FR>heure début</caption_FR>
+               <caption_IT>pis. Ora inizio</caption_IT>
+               <caption_ES>Zacatek bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTimeOff</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2001</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_TIME</datatype>
+               <dataformat>%H:%M</dataformat>
+               <min>00:00</min>
+               <max>23:59</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time stop</caption_EN>
+               <caption_DE>Ende</caption_DE>
+               <caption_FR>heure fin</caption_FR>
+               <caption_IT>pis. Ora fine</caption_IT>
+               <caption_ES>Konec bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTempActual</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2017</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return real</caption_EN>
+               <caption_DE>T Pool Ist</caption_DE>
+               <caption_FR>T actuelle</caption_FR>
+               <caption_IT>pis. T eff</caption_IT>
+               <caption_ES>T bazen skut</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2049</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>20</min>
+               <max>38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return target</caption_EN>
+               <caption_DE>T Pool Soll</caption_DE>
+               <caption_FR>T consigne</caption_FR>
+               <caption_IT>pis. T rif</caption_IT>
+               <caption_ES>T bazen zad</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolTempHyst</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2081</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>1</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit>  K</unit>
+               <caption_EN>hysteresis</caption_EN>
+               <caption_DE>Hysterese</caption_DE>
+               <caption_FR>hystèresis</caption_FR>
+               <caption_IT>pis. hysterese</caption_IT>
+               <caption_ES>Hysterze</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolMaxRunTime</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2113</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>2</dataformat>
+               <min>20</min>
+               <max>60</max>
+               <accesslev>3</accesslev>
+               <unit>min</unit>
+               <caption_EN>max run period</caption_EN>
+               <caption_DE>Max. Laufzeit</caption_DE>
+               <caption_FR>fonction.minimal</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Maximalni doba</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PoolNumberOfCompressors</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2129</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>1</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>auxilary compr.</caption_EN>
+               <caption_DE>Stufe2 Kompr.</caption_DE>
+               <caption_FR>stade 2 compr.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Pocet kompres</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>AuxiliaryHeat</itemname>
+          <caption_EN>Auxiliary Heat</caption_EN>
+          <caption_DE>Stufe 2</caption_DE>
+          <caption_FR>Stade 2</caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES>Druhy stupen</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>AuxiliaryHeatMode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2145</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>OFF:LEGIONELLA:ON</dataformat>
+               <min>0</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>step 2 mode</caption_EN>
+               <caption_DE>Stufe 2 Modus</caption_DE>
+               <caption_FR>mode stade 2</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>mode</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>AuxiliaryHeatTempLimitSourceIn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2161</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-25</min>
+               <max>20</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>LimitHeatSrcIn</caption_EN>
+               <caption_DE>TQuelleEinGrenze</caption_DE>
+               <caption_FR>TEntréeCapt.Min.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>T prim 2.stup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>OperatingHours</itemname>
+          <caption_EN></caption_EN>
+          <caption_DE>Stundenzähler</caption_DE>
+          <caption_FR>Heures de fct.</caption_FR>
+          <caption_IT>impost.data-ora</caption_IT>
+          <caption_ES>Provozni hodiny</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>OHCompressor1</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2193</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>compressor 1</caption_EN>
+               <caption_DE>Kompressor 1</caption_DE>
+               <caption_FR>compresseur 1</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Kompresor 1</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHCompressor2</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2225</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>compressor 2</caption_EN>
+               <caption_DE>Kompressor 2</caption_DE>
+               <caption_FR>compresseur 2</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Kompresor 2</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHHeatingCompressor</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2257</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>heating  comp.</caption_EN>
+               <caption_DE>Heizung Kompr.</caption_DE>
+               <caption_FR>chauffage compr.</caption_FR>
+               <caption_IT>ore_serv_compres</caption_IT>
+               <caption_ES>Provoz topeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHDomesticWaterCompressor</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2289</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>hot water comp.</caption_EN>
+               <caption_DE>Warmw. Kompr.</caption_DE>
+               <caption_FR>ECS compresseur</caption_FR>
+               <caption_IT>ore_serv_riscald</caption_IT>
+               <caption_ES>Provoz TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHHeatingAuxilary</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2321</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>heating  aux.</caption_EN>
+               <caption_DE>Heizung E-Heiz.</caption_DE>
+               <caption_FR>chauffage élec.</caption_FR>
+               <caption_IT>ore_serv_compres</caption_IT>
+               <caption_ES>Provoz EK Top</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHDomesticWaterAuxilary</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2353</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>hot water aux.</caption_EN>
+               <caption_DE>Warmw. E-Heiz.</caption_DE>
+               <caption_FR>ECS électrique.</caption_FR>
+               <caption_IT>ore_serv_riscald</caption_IT>
+               <caption_ES>Provoz EK TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHPoolCompressor</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2385</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>pool</caption_EN>
+               <caption_DE>Schwimmbecken</caption_DE>
+               <caption_FR>piscine</caption_FR>
+               <caption_IT>oreserv_riscfont</caption_IT>
+               <caption_ES>Provoz Bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OHCooling</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2417</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>cooling</caption_EN>
+               <caption_DE>Kühlung</caption_DE>
+               <caption_FR>rafraîchissement</caption_FR>
+               <caption_IT>reset_reg_Pompe</caption_IT>
+               <caption_ES>Provoz Chlazeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Failure</itemname>
+          <caption_EN>Failure Data</caption_EN>
+          <caption_DE>Ausfalldaten</caption_DE>
+          <caption_FR>Panne-données</caption_FR>
+          <caption_IT>dati interruzio</caption_IT>
+          <caption_ES>Poruchova data</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>FailureTimeStampTIME</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2449</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%H:%M:%S</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>time</caption_EN>
+               <caption_DE>Zeit</caption_DE>
+               <caption_FR>heure</caption_FR>
+               <caption_IT>blocco ora</caption_IT>
+               <caption_ES>Cas poruchy</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTimeStampDATE</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2657</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%d.%m.%Y</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>date</caption_EN>
+               <caption_DE>Datum</caption_DE>
+               <caption_FR>date</caption_FR>
+               <caption_IT>blocco data</caption_IT>
+               <caption_ES>Datum poruchy</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureOperatingMode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>2865</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-8</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>running mode</caption_EN>
+               <caption_DE>Betriebsmodus</caption_DE>
+               <caption_FR>mode de régime</caption_FR>
+               <caption_IT>bloc Modoeserciz</caption_IT>
+               <caption_ES>Provozni stav</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureDOBuffer</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>2881</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-10</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>DO-buffer</caption_EN>
+               <caption_DE>DO-Buffer</caption_DE>
+               <caption_FR>DO-Buffer</caption_FR>
+               <caption_IT>bloc DO-buffer</caption_IT>
+               <caption_ES>Stav dig vystupy</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureDIBuffer</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>2897</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-8</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>DI-buffer</caption_EN>
+               <caption_DE>DI-Buffer</caption_DE>
+               <caption_FR>DI-Buffer</caption_FR>
+               <caption_IT>bloc DI-buffer</caption_IT>
+               <caption_ES>Stav dig vstupy</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureAIError</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>2913</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>senor</caption_EN>
+               <caption_DE>Fühlerfehler</caption_DE>
+               <caption_FR>défault de sonde</caption_FR>
+               <caption_IT>bloc sondaFservi</caption_IT>
+               <caption_ES>Cidla</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureEvaporationPress</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2929</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>bar</unit>
+               <caption_EN>P evaporator</caption_EN>
+               <caption_DE>P Verdampfer</caption_DE>
+               <caption_FR>P évaporation</caption_FR>
+               <caption_IT>bloc P evaporaz.</caption_IT>
+               <caption_ES>p Vyparovaci</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureCondensationPress</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2961</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>bar</unit>
+               <caption_EN>P condenser</caption_EN>
+               <caption_DE>P Kondensator</caption_DE>
+               <caption_FR>P condensation</caption_FR>
+               <caption_IT>bloc P condensaz</caption_IT>
+               <caption_ES>p Kondenzacni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempReturn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>2993</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T return</caption_EN>
+               <caption_DE>T Rücklauf</caption_DE>
+               <caption_FR>T retour-ch</caption_FR>
+               <caption_IT>bloc T ritorno</caption_IT>
+               <caption_ES>Teplota zpatecky</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempFlow</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3025</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T heating out</caption_EN>
+               <caption_DE>T Vorlauf</caption_DE>
+               <caption_FR>T départ-ch</caption_FR>
+               <caption_IT>bloc T mandata</caption_IT>
+               <caption_ES>Teplota vystupu</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempHeatSourceIn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3057</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T source in</caption_EN>
+               <caption_DE>T Quelle Ein</caption_DE>
+               <caption_FR>T captage entrée</caption_FR>
+               <caption_IT>bloc T fte entra</caption_IT>
+               <caption_ES>T prim vstup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempHeatSourceOut</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3089</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T source out</caption_EN>
+               <caption_DE>T Quelle Aus</caption_DE>
+               <caption_FR>T captage sortie</caption_FR>
+               <caption_IT>bloc T fte uscit</caption_IT>
+               <caption_ES>T prim vystup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempSuctionGas</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3121</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T suction line</caption_EN>
+               <caption_DE>T Saugleitung</caption_DE>
+               <caption_FR>T gaz-aspiration</caption_FR>
+               <caption_IT>bloc T aspiraz</caption_IT>
+               <caption_ES>Teplota sani</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempOutdoor</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3153</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN></caption_EN>
+               <caption_DE>T Aussen</caption_DE>
+               <caption_FR>T ECS panne</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Teplota venkovni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempDomesticWater</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3185</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T hot water</caption_EN>
+               <caption_DE>T Warmwasser</caption_DE>
+               <caption_FR>T ECS</caption_FR>
+               <caption_IT>bloc T acq calda</caption_IT>
+               <caption_ES>Teplota TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FailureTempPool</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3217</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>T pool</caption_EN>
+               <caption_DE>T Schwimmbecken</caption_DE>
+               <caption_FR>T piscine</caption_FR>
+               <caption_IT>bloc T piscina</caption_IT>
+               <caption_ES>Teplota bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Service</itemname>
+          <caption_EN>Service Menu</caption_EN>
+          <caption_DE>Servicedaten</caption_DE>
+          <caption_FR>Service-données</caption_FR>
+          <caption_IT>dati servizio</caption_IT>
+          <caption_ES>Servisni data</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>View</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3249</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>Normal:Expert</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>view</caption_EN>
+               <caption_DE>Ansicht</caption_DE>
+               <caption_FR>vue</caption_FR>
+               <caption_IT>parola chiave</caption_IT>
+               <caption_ES>Pristup</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>Pincode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3265</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_I4</datatype>
+               <dataformat>5</dataformat>
+               <min>0</min>
+               <max>99999</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>PIN-code</caption_EN>
+               <caption_DE>PIN-Nummer</caption_DE>
+               <caption_FR>code PIN</caption_FR>
+               <caption_IT>parola chiave</caption_IT>
+               <caption_ES>Heslo</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SetDefaultSettings</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3297</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>factory reset</caption_EN>
+               <caption_DE>Werkseinstellung</caption_DE>
+               <caption_FR>réglage usine</caption_FR>
+               <caption_IT>impostazionebase</caption_IT>
+               <caption_ES>Vyrobni nastav</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SoftwareReset</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3313</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>Software Reset</caption_EN>
+               <caption_DE>Neustart</caption_DE>
+               <caption_FR>redémarrage PAC</caption_FR>
+               <caption_IT>richiesta  reset</caption_IT>
+               <caption_ES>Reset provozu</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DOManualOperatingModeOn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3329</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-10</dataformat>
+               <min>0</min>
+               <max>1024</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>DO-manual on</caption_EN>
+               <caption_DE>DO Hand Ein</caption_DE>
+               <caption_FR>DO-canal marche</caption_FR>
+               <caption_IT>do-Can manual-on</caption_IT>
+               <caption_ES>DO Rucni ovl</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatingUpScreed</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3345</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit> </unit>
+               <caption_EN>first heating 7d</caption_EN>
+               <caption_DE>Estrichaufheizg</caption_DE>
+               <caption_FR>chauffage chappe</caption_FR>
+               <caption_IT>riscald caldana</caption_IT>
+               <caption_ES>Ohrev betonu</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ScreedTempNominal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3361</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>°C</unit>
+               <caption_EN>first heating temp</caption_EN>
+               <caption_DE>Estrich SollTemp</caption_DE>
+               <caption_FR>chappe T consign</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Teplota nabeh</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SourcePumpPreRunPeriod</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3393</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>3</dataformat>
+               <min>10</min>
+               <max>120</max>
+               <accesslev>3</accesslev>
+               <unit>s</unit>
+               <caption_EN></caption_EN>
+               <caption_DE>Quelle PVorlauf</caption_DE>
+               <caption_FR>captage pré-circ</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Prim cerp predstih</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatingPumpPreRunPeriod</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3409</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>3</dataformat>
+               <min>120</min>
+               <max>300</max>
+               <accesslev>3</accesslev>
+               <unit>s</unit>
+               <caption_EN></caption_EN>
+               <caption_DE>Hzg PumpVorlauf</caption_DE>
+               <caption_FR>ch: pré-circul.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Top cerp predstih</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatingPumpAfterRunPeriod</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3425</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>3</dataformat>
+               <min>0</min>
+               <max>120</max>
+               <accesslev>3</accesslev>
+               <unit>min</unit>
+               <caption_EN>after run period</caption_EN>
+               <caption_DE>Hzg PumpNachlauf</caption_DE>
+               <caption_FR>ch: post-circul.</caption_FR>
+               <caption_IT>risc:pompa_ritar</caption_IT>
+               <caption_ES>Top cerp dobeh</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OffsetPn</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3441</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>3</dataformat>
+               <min>-1</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>offset press low</caption_EN>
+               <caption_DE>Offset Ndrdruck</caption_DE>
+               <caption_FR>offset BP</caption_FR>
+               <caption_IT>offset press bas</caption_IT>
+               <caption_ES>Offset nizky p</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OffsetPh</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3473</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>3</dataformat>
+               <min>-1</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit>  </unit>
+               <caption_EN>offset pressHigh</caption_EN>
+               <caption_DE>Offset Hochdruck</caption_DE>
+               <caption_FR>offset HP</caption_FR>
+               <caption_IT>offset press alt</caption_IT>
+               <caption_ES>Offset vysoky p</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OperatingHoursSelector</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3505</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>None:Compressor1:Compressor2:HeatingCompr:DWaterCompr:HeatingAux:DWaterAux:PoolCompr:Cooling</dataformat>
+               <min>0</min>
+               <max>8</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>select oh</caption_EN>
+               <caption_DE>Wähle Stdzähler</caption_DE>
+               <caption_FR>select heures op</caption_FR>
+               <caption_IT>select oh</caption_IT>
+               <caption_ES>Vyber prov hod</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OperatingHoursValue</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3521</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>h</unit>
+               <caption_EN>oh value new</caption_EN>
+               <caption_DE>Stundenwert neu</caption_DE>
+               <caption_FR>heures op. new</caption_FR>
+               <caption_IT>oh value new</caption_IT>
+               <caption_ES>Nastav prov hod</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>NDStatus</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3553</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>255</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ND Status</caption_EN>
+               <caption_DE>ND Status</caption_DE>
+               <caption_FR>Status BP</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ND Status</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>ErrorEvents</itemname>
+          <caption_EN>Warning/Alarming</caption_EN>
+          <caption_DE>Warn/Unterbr/Aus</caption_DE>
+          <caption_FR>Avertiss./panne</caption_FR>
+          <caption_IT>allarmi/interru.</caption_IT>
+          <caption_ES>Varovani/Alarmy</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>Failure</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3569</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>failure</caption_EN>
+               <caption_DE>Ausfälle</caption_DE>
+               <caption_FR>défaillance</caption_FR>
+               <caption_IT>blocci</caption_IT>
+               <caption_ES>Vypadek</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>Interruption</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3585</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>interruption</caption_EN>
+               <caption_DE>Unterbrechungen</caption_DE>
+               <caption_FR>interruptions</caption_FR>
+               <caption_IT>interruzioni</caption_IT>
+               <caption_ES>Preruseni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningsInput</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3601</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>warning source</caption_EN>
+               <caption_DE>Warnung Eingang</caption_DE>
+               <caption_FR>avertiss.:entrée</caption_FR>
+               <caption_IT>avvertim:entrata</caption_IT>
+               <caption_ES>Varovani primar</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningsOutput</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3617</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>warning outlet</caption_EN>
+               <caption_DE>Warnung Ausgang</caption_DE>
+               <caption_FR>avertiss.: sortie</caption_FR>
+               <caption_IT>avvertim:uscita</caption_IT>
+               <caption_ES>Varovani sekund</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningsDiv</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3633</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>warning sensors</caption_EN>
+               <caption_DE>Warnung Sensorik</caption_DE>
+               <caption_FR>avertiss.: sonde</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Varovani cidla</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningsOthers</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3649</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>warning diff.</caption_EN>
+               <caption_DE>Warnung Sonstige</caption_DE>
+               <caption_FR>avertiss.: autre</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Varovani diferen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningInMask</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3665</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>4095</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>suppr.warn.sourc</caption_EN>
+               <caption_DE>Unterdr.Warn.Ein</caption_DE>
+               <caption_FR>CoupAlarmeEntrée</caption_FR>
+               <caption_IT>esclu.avver.entr</caption_IT>
+               <caption_ES>Potlac var prim</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningOutMask</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3681</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>4095</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>suppr.warn.outl.</caption_EN>
+               <caption_DE>Unterdr.Warn.Aus</caption_DE>
+               <caption_FR>CoupAlarmeSortie</caption_FR>
+               <caption_IT>esclu.avver.Usci</caption_IT>
+               <caption_ES>Potlac var sek</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningDivMask</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3697</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>4095</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>suppr.warn.sens.</caption_EN>
+               <caption_DE>Unterdr.Warn.Sen</caption_DE>
+               <caption_FR>CoupAlarmeSonde</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Potlac var cidla</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>WarningOthersMask</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3713</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>4095</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>suppr. warn diff.</caption_EN>
+               <caption_DE>Unterdr.Warn.Son</caption_DE>
+               <caption_FR>CoupAlarmeAutre</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Potlac varov dif</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Communication</itemname>
+          <caption_EN>Communication</caption_EN>
+          <caption_DE>Kommunikation</caption_DE>
+          <caption_FR>Communication</caption_FR>
+          <caption_IT>coummunicaion</caption_IT>
+          <caption_ES>Komunikace</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>CommMode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3729</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>NO-COMM.:LINE-MODBUS:DIAL-MODBUS</dataformat>
+               <min>0</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>comm. mode</caption_EN>
+               <caption_DE>Komm. Modus</caption_DE>
+               <caption_FR>mode communic.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Druh komunikace</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>Ringtones</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3745</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>2</dataformat>
+               <min>1</min>
+               <max>10</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ringtones</caption_EN>
+               <caption_DE>Klingeltöne</caption_DE>
+               <caption_FR>sonneries</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Pocet vyzvaneni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Default</itemname>
+          <caption_EN>Default Values</caption_EN>
+          <caption_DE>Voreinstellung</caption_DE>
+          <caption_FR>Préréglage</caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES>Zakladni nastav</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>ServiceHeating</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3761</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>heating mode</caption_EN>
+               <caption_DE>Heizbetrieb</caption_DE>
+               <caption_FR>mode chauffage</caption_FR>
+               <caption_IT>servizio riscald</caption_IT>
+               <caption_ES>Topeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ServiceDomesticWater</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3777</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>hot water mode</caption_EN>
+               <caption_DE>Brauchw.betrieb</caption_DE>
+               <caption_FR>mode ECS</caption_FR>
+               <caption_IT>serv aqua calda</caption_IT>
+               <caption_ES>TUV</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ServiceCooling</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3793</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>cooling mode</caption_EN>
+               <caption_DE>Kühlbetrieb</caption_DE>
+               <caption_FR>mode rafraîchis.</caption_FR>
+               <caption_IT>servizio raffred</caption_IT>
+               <caption_ES>Chlazeni</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ServicePool</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3809</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>pool mode</caption_EN>
+               <caption_DE>Schwimmb.betrieb</caption_DE>
+               <caption_FR>mode piscine</caption_FR>
+               <caption_IT>servizio pisc.</caption_IT>
+               <caption_ES>Bazen</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ServiceAuxiliaryHeating</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>3825</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-1</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>step 2</caption_EN>
+               <caption_DE>Stufe 2</caption_DE>
+               <caption_FR>Stade 2</caption_FR>
+               <caption_IT>grado 2</caption_IT>
+               <caption_ES>Stupen 2</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>HeatSourceMinT</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3841</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>+2 °C:-1 °C:-9 °C</dataformat>
+               <min>0</min>
+               <max>2</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>heat source Tmin</caption_EN>
+               <caption_DE>Quelle min T</caption_DE>
+               <caption_FR>T source min.</caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>T min prim do TC</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>Refrigerant</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3857</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>R407c:R134a</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>refrigerant</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Chladivo</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>NumberOfCompressors</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3873</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>1:1_75_100:1_66_100:1_50_100:2</dataformat>
+               <min>0</min>
+               <max>4</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>num. Compr.</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Pocet kompresoru</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>TimeScaler</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3889</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>1</min>
+               <max>10</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>time factor</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>CompressorsAlt</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PSourcePump</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3921</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>3</dataformat>
+               <min>-1</min>
+               <max>1000</max>
+               <accesslev>3</accesslev>
+               <unit>kW</unit>
+               <caption_EN>Psourcepump</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>CompressorsAlt</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ModemType</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3953</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>NONE:WPCU.M56k</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>modem type</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Time factor</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ExtControlCode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>3969</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_I4</datatype>
+               <dataformat>6</dataformat>
+               <min>0</min>
+               <max>999999</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>external control</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Typ modemu</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>PowerCalculation</itemname>
+          <caption_EN>Powerinformation</caption_EN>
+          <caption_DE></caption_DE>
+          <caption_FR></caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES></caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>Pelectric</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4001</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>kW</unit>
+               <caption_EN>P electric</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>Pthermal</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4033</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>kW</unit>
+               <caption_EN>P thermal</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>COP</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4065</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>COP</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SelectedYear</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4097</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>4</dataformat>
+               <min>2008</min>
+               <max>2100</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>selected year</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SelectedValue</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4113</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>Welectric:Wthermal:Wheating:Wdom.water:Wpool:beta_total:beta_heating:beta_d.water:beta_pool</dataformat>
+               <min>0</min>
+               <max>8</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>selected type</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>PowerValue</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4129</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>1</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit>kwH/-</unit>
+               <caption_EN>selected value</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Info</itemname>
+          <caption_EN>Information</caption_EN>
+          <caption_DE></caption_DE>
+          <caption_FR></caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES>Info</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>FirmwareVersion</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4161</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat>0</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>firmware version</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Model</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>FirmwareDate</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4289</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat></dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>firmware date</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Seriove cislo</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ManufType</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4417</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat></dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>model</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Verze firmware</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ManufSerialNum</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4545</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat></dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>serial number</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Datum firmware</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SetManufType</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4673</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat></dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>set model</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Zadani modelu</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SetManufSerialNum</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>4801</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat></dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>set serial nr</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Zadani ser cisla</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>System</itemname>
+          <caption_EN>System</caption_EN>
+          <caption_DE></caption_DE>
+          <caption_FR></caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES>System</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>OperatingState</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>0</regplc>
+               <regaddr>4929</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-8</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>operating state</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>operating state</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DOBuffer</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>4945</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-10</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>DO-buffer</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>DO-buffer</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DIBuffer</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>4961</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-8</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>DI-buffer</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>DI-buffer</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_Enabled</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>4977</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>8191</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC enabled</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC enabled</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_Error</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>4993</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC error</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC error</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_ErrorHiLo</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>5009</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>1</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC errorHiLo</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC errorHiLo</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_ErrorEnabled</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>1</regplc>
+               <regaddr>5025</regaddr>
+               <regcnt>16</regcnt>
+               <datatype>VT_ARRAY|VT_UI1</datatype>
+               <dataformat>-12</dataformat>
+               <min>0</min>
+               <max>8191</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC ErrorEnabled</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC ErrorEnabled</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>SelectedADC</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5041</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>ADC_1:ADC_2:ADC_3:ADC_4:ADC_5:ADC_6:ADC_7:ADC_8:ADC_9:ADC_10:ADC_11:ADC_12:ADC_13</dataformat>
+               <min>0</min>
+               <max>12</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>selected type</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES></caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_Result</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>3</regplc>
+               <regaddr>5057</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>65535</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC Counter</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC Counter 1</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ADC_CorrFct</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5073</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_R4</datatype>
+               <dataformat>5</dataformat>
+               <min>-3.40282E+38</min>
+               <max>3.40282E+38</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>ADC CorrFct</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>ADC CorrFct</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+     <item>
+          <itemname>Debug</itemname>
+          <caption_EN>Debug</caption_EN>
+          <caption_DE></caption_DE>
+          <caption_FR></caption_FR>
+          <caption_IT></caption_IT>
+          <caption_ES>Debug</caption_ES>
+          <caption_NL></caption_NL>
+          <caption_SV></caption_SV>
+          <caption_NO></caption_NO>
+          <caption_CS></caption_CS>
+          <tag>
+               <name>LastStartTime</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5105</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%H:%M:%S</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>Last Start Time</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Posl start cas</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LastStartDate</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5313</regaddr>
+               <regcnt>13</regcnt>
+               <datatype>VT_DATE</datatype>
+               <dataformat>%d.%m.%Y</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>Last Start Date</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>Posl start datum</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LCD_Display_Line_1</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5521</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat>0</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>LCD line 1</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>LCD line 1</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>LCD_Display_Line_2</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5649</regaddr>
+               <regcnt>8</regcnt>
+               <datatype>VT_BSTR</datatype>
+               <dataformat>0</dataformat>
+               <min></min>
+               <max></max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>LCD line 2</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>LCD line 2</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>DebugCh1</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5777</regaddr>
+               <regcnt>2</regcnt>
+               <datatype>VT_I4</datatype>
+               <dataformat>0</dataformat>
+               <min>-2147483647</min>
+               <max>2147483647</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>debug1</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>debug</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ServiceStatus</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5809</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>65535</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>servicestatus</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>servicestatus</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>OperatingMode</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5825</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI1</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>255</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>operatingmode</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>operatingmode</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+          <tag>
+               <name>ModemStatus</name>
+               <slaveaddr>1</slaveaddr>
+               <regplc>4</regplc>
+               <regaddr>5841</regaddr>
+               <regcnt>1</regcnt>
+               <datatype>VT_UI2</datatype>
+               <dataformat>0</dataformat>
+               <min>0</min>
+               <max>65535</max>
+               <accesslev>3</accesslev>
+               <unit></unit>
+               <caption_EN>modemstatus</caption_EN>
+               <caption_DE></caption_DE>
+               <caption_FR></caption_FR>
+               <caption_IT></caption_IT>
+               <caption_ES>modemstatus</caption_ES>
+               <caption_NL></caption_NL>
+               <caption_SV></caption_SV>
+               <caption_NO></caption_NO>
+               <caption_CS></caption_CS>
+          </tag>
+     </item>
+</folder>
