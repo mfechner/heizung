@@ -1,8 +1,8 @@
 CFLAGS = -c -Wall
 LDFLAGS =
 
-CFLAGS += `pkg-config --cflags libmodbus`
-LDFLAGS += `pkg-config --libs libmodbus`
+CFLAGS += $(shell pkg-config --cflags libmodbus)
+LDFLAGS += $(shell pkg-config --libs libmodbus)
 
 all: readModbus
 
@@ -14,5 +14,5 @@ clean:
 	rm readModbus
 	
 %.o: %.c
-	$(CC) $(CFLAGS) -c $<
+	$(CC) $(CFLAGS) $<
 

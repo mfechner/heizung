@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <errno.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include <modbus.h>
 
 struct globalArgs_t {
@@ -20,10 +21,12 @@ struct globalArgs_t {
     int address;
     int size;
     int verbose;
+    int type;
 } globalArgs;
-const int MAX_SIZE=64;
+const int MAX_SIZE=16;
+const int TYPE_FLOAT=1;
 
-static const char *optString = "d:f:a:s:hv";
+static const char *optString = "d:f:a:s:ht:v";
 
 void displayUsage() {
 
@@ -39,6 +42,7 @@ int main(int argc, char **argv) {
 
     globalArgs.deviceName = "/dev/ttyr00";
     globalArgs.verbose = 0;
+    globalArgs.type = 0;
 
     while ((opt = getopt(argc, argv, optString)) != -1) {
         switch (opt) {
@@ -56,6 +60,9 @@ int main(int argc, char **argv) {
                 break;
             case 'v':
                 globalArgs.verbose = 1;
+                break;
+            case 't':
+                globalArgs.type = (int) strtol(optarg, NULL, 0);
                 break;
             case 'h':
             case '?':
@@ -89,6 +96,9 @@ int main(int argc, char **argv) {
     modbus_set_slave(ctx, 1);
 
     switch (globalArgs.function) {
+        case 0:
+            rc = modbus_report_slave_id(ctx, smallArray);
+            break;
         case 1:
             rc = modbus_read_bits(ctx, globalArgs.address, globalArgs.size, smallArray);
             break;
@@ -112,16 +122,28 @@ int main(int argc, char **argv) {
         return -1;
     }
 
-    if (globalArgs.function == 1 || globalArgs.function == 2) {
+    if (globalArgs.function == 0 || globalArgs.function == 1 || globalArgs.function == 2) {
         for (i = 0; i < rc; i++) {
             printf("reg[%d]=%d (0x%X)\n", i, smallArray[i], smallArray[i]);
         }
+        if(globalArgs.type==1){
+            printf("value: %f", (float)(smallArray[1] << 16 | smallArray[0]));
+        }
+
     } else {
         for (i = 0; i < rc; i++) {
             printf("reg[%d]=%d (0x%X)\n", i, bigArray[i], bigArray[i]);
         }
+        if (globalArgs.type == TYPE_FLOAT) {
+            int total;
+            float real;
+            total=((bigArray[1] << 16) + bigArray[0]);
+            real=*((float*)&total);
+            printf("value: %f\n", real);
+        }
 
     }
+
     modbus_close(ctx);
     modbus_free(ctx);
     return 0;
