@@ -29,6 +29,13 @@ const int TYPE_FLOAT=1;
 static const char *optString = "d:f:a:s:ht:v";
 
 void displayUsage() {
+    printf("readModus by Matthias Fechner\n");
+    printf("Usage: readModbus [-d device] [-f function] [-a address] [-s size] [-t type] [-v]\n\n");
+    printf("  d : Device to open, default /dev/ttyr0\n");
+    printf("  f : Function: 0x01: read coil status, 0x02: read input status, 0x03: read holding registers, 0x04: read input registers\n");
+    printf("  a : Address to read\n");
+    printf("  s : Size in bytes to read\n");
+    printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool\n");
 
 }
 
