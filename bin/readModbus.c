@@ -15,16 +15,17 @@
 #include <stdlib.h>
 #include <modbus.h>
 
+enum types { FLOAT=1, DATETIME, INT , BOOL};
 struct globalArgs_t {
     char *deviceName;
     int function;
     int address;
     int size;
     int verbose;
-    int type;
+    enum types type;
 } globalArgs;
 const int MAX_SIZE=16;
-const int TYPE_FLOAT=1;
+const int OUTPUT_MAX_SIZE=40;
 
 static const char *optString = "d:f:a:s:ht:v";
 
@@ -36,7 +37,40 @@ void displayUsage() {
     printf("  a : Address to read\n");
     printf("  s : Size in bytes to read\n");
     printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool\n");
+}
 
+int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE]) {
+    switch(type) {
+    case FLOAT:
+        printf("Found FLOAT\n");
+        int total;
+        float real;
+        total=((value[1] << 16) + value[0]);
+        real=*((float*)&total);
+
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%f", real);
+        return 0;
+    case DATETIME:
+        printf("Found DATETIME\n");
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
+        return 0;
+    case INT:
+        printf("Found INT\n");
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        return 0;
+    }
+
+    return -1;
+}
+
+int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZE]) {
+    switch(type) {
+    case BOOL:
+        printf("Found BOOL\n");
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        return 0;
+    }
+    return -1;
 }
 
 int main(int argc, char **argv) {
@@ -46,6 +80,7 @@ int main(int argc, char **argv) {
     int rc;
     int i;
     int opt;
+    char output[40];
 
     globalArgs.deviceName = "/dev/ttyr00";
     globalArgs.verbose = 0;
@@ -133,22 +168,15 @@ int main(int argc, char **argv) {
         for (i = 0; i < rc; i++) {
             printf("reg[%d]=%d (0x%X)\n", i, smallArray[i], smallArray[i]);
         }
-        if(globalArgs.type==1){
-            printf("value: %f", (float)(smallArray[1] << 16 | smallArray[0]));
-        }
+        convertSmallArrayToString(output, globalArgs.type, smallArray);
+        printf("value: %s\n", output);
 
     } else {
         for (i = 0; i < rc; i++) {
             printf("reg[%d]=%d (0x%X)\n", i, bigArray[i], bigArray[i]);
         }
-        if (globalArgs.type == TYPE_FLOAT) {
-            int total;
-            float real;
-            total=((bigArray[1] << 16) + bigArray[0]);
-            real=*((float*)&total);
-            printf("value: %f\n", real);
-        }
-
+        convertBigArrayToString(output, globalArgs.type, bigArray);
+        printf("value: %s\n", output);
     }
 
     modbus_close(ctx);
