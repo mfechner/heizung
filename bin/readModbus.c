@@ -15,7 +15,7 @@
 #include <stdlib.h>
 #include <modbus.h>
 
-enum types { FLOAT=1, DATETIME, INT , BOOL};
+enum types { FLOAT=1, DATETIME, INT , BOOL, TIME, BYTE, BITS};
 struct globalArgs_t {
     char *deviceName;
     int function;
@@ -36,7 +36,7 @@ void displayUsage() {
     printf("  f : Function: 0x01: read coil status, 0x02: read input status, 0x03: read holding registers, 0x04: read input registers\n");
     printf("  a : Address to read\n");
     printf("  s : Size in bytes to read\n");
-    printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool\n");
+    printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool, 5=time, 6=byte, 7=bits\n");
 }
 
 int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE]) {
@@ -58,6 +58,10 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
         printf("Found INT\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
         return 0;
+    case TIME:
+        printf("Found TIME\n");
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%02d:%02d", value[0]>>8, value[0]&0xF);
+        return 0;
     }
 
     return -1;
@@ -68,6 +72,16 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZ
     case BOOL:
         printf("Found BOOL\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        return 0;
+    case BYTE:
+        printf("Found Byte\n");
+        char tempString[16];
+        int i;
+        for(i=0; i<globalArgs.size; i++) {
+            snprintf(&tempString[i], 1, "%d", value[i]);
+            printf("Subvalue: %d\n", value[i]);
+        }
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%s", tempString);
         return 0;
     }
     return -1;
@@ -169,14 +183,14 @@ int main(int argc, char **argv) {
             printf("reg[%d]=%d (0x%X)\n", i, smallArray[i], smallArray[i]);
         }
         convertSmallArrayToString(output, globalArgs.type, smallArray);
-        printf("value: %s\n", output);
+        printf("Small value: %s\n", output);
 
     } else {
         for (i = 0; i < rc; i++) {
             printf("reg[%d]=%d (0x%X)\n", i, bigArray[i], bigArray[i]);
         }
         convertBigArrayToString(output, globalArgs.type, bigArray);
-        printf("value: %s\n", output);
+        printf("Big value: %s\n", output);
     }
 
     modbus_close(ctx);
