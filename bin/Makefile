@@ -1,4 +1,4 @@
-CFLAGS = -c -Wall
+CFLAGS = -c -Wall -g
 LDFLAGS =
 
 CFLAGS += $(shell pkg-config --cflags libmodbus)
