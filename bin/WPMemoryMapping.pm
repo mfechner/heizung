@@ -1,5 +1,5 @@
 # Memory mapping of the WPCU.C device
-%wp_memory = {
+%wp_memory = (
 # Overview
     'RTCTime'               			=> { function => 4, addr => 0x0001, size => 0xD, acl => '', type => TYPE_DATETIME, caption => 'Time', unit => ''},
     'RTCDate'               			=> { function => 4, addr => 0x00D1, size => 0xD, acl => '', type => TYPE_DATETIME, caption => 'Date', unit => ''},
@@ -192,6 +192,18 @@
     'LCD_Display_Line_1'                => { function => 4, addr => 0x1591, size => 0x8, acl => '', type => TYPE_STRING, caption => 'LCD line 1', unit => ''},
     'LCD_Display_Line_2'                => { function => 4, addr => 0x1611, size => 0x8, acl => '', type => TYPE_STRING, caption => 'LCD line 2', unit => ''},
     'TimeScaler'                        => { function => 4, addr => 0x1691, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'Time factor', unit => ''}
-};
+);
+
+%dataTypes = (
+    TYPE_FLOAT    => 1,
+    TYPE_DATETIME => 2,
+    TYPE_INT      => 3,
+    TYPE_BOOL     => 4,
+    TYPE_TIME     => 5,
+    TYPE_BYTE     => 6,
+    TYPE_BITS     => 7,
+    TYPE_STRING   => 8,
+);
+
     
 return 1;
