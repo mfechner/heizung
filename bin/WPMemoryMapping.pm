@@ -15,7 +15,7 @@
     'ReturnTempNominal'     			=> { function => 4, addr => 0x02B1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T return target', unit => '°C'},
     'ReturnTemp'            			=> { function => 3, addr => 0x02D1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T return real', unit => '°C'},
     'FlowTemp'              			=> { function => 3, addr => 0x02F1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T heating out', unit => '°C'},
-    'Condensation Temp'     			=> { function => 3, addr => 0x0311, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T condenser', unit => '°C'},
+    'CondensationTemp'     			    => { function => 3, addr => 0x0311, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T condenser', unit => '°C'},
     'CondensationPress'     			=> { function => 3, addr => 0x0331, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'p condenser', unit => 'bar'},
     'RoomTemp'              			=> { function => 3, addr => 0x0351, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T pilot room', unit => '°C'},
     'RoomTemp1h'            			=> { function => 4, addr => 0x0371, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T pilot room 1h', unit => '°C'},
