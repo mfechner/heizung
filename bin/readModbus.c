@@ -40,12 +40,13 @@ void displayUsage() {
     printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool, 5=time, 6=byte, 7=bits\n");
     printf("\n");
     printf("./readModbus -f 3 -a 0x01B1 -s 0x2 -t 1\n");
+    printf("\n");
 }
 
 int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE]) {
     switch(type) {
     case FLOAT:
-        printf("Found FLOAT\n");
+        if(globalArgs.verbose) printf("Found FLOAT\n");
         int total;
         float real;
         total=((value[1] << 16) + value[0]);
@@ -54,23 +55,23 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%f", real);
         return 0;
     case DATETIME:
-        printf("Found DATETIME\n");
+        if(globalArgs.verbose) printf("Found DATETIME\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
         return 0;
     case INT:
-        printf("Found INT\n");
+        if(globalArgs.verbose) printf("Found INT\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
         return 0;
     case TIME:
-        printf("Found TIME\n");
+        if(globalArgs.verbose) printf("Found TIME\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%02d:%02d", value[0]>>8, value[0]&0xF);
         return 0;
     case BYTE:
-        printf("Found Byte\n");
+        if(globalArgs.verbose) printf("Found Byte\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
         return 0;
     case STRING:
-        printf("Found String\n");
+        if(globalArgs.verbose) printf("Found String\n");
         int i;
         char tempString[2];
         for (i=0; i<globalArgs.size; i++) {
@@ -88,17 +89,16 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
 int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZE]) {
     switch(type) {
     case BOOL:
-        printf("Found BOOL\n");
+        if(globalArgs.verbose) printf("Found BOOL\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
         return 0;
     case BITS:
-        printf("Found Bits\n");
+        if(globalArgs.verbose) printf("Found Bits\n");
         char tempString[2];
         int i;
 
         for (i=0; i<globalArgs.size; i++) {
             snprintf(tempString, 2, "%d", value[i]);
-            printf("tempString %02d: %d, %s\n", i, value[i], tempString);
             strcat(returnValue, tempString);
         }
 
@@ -200,17 +200,17 @@ int main(int argc, char **argv) {
 
     if (globalArgs.function == 0 || globalArgs.function == 1 || globalArgs.function == 2) {
         for (i = 0; i < rc; i++) {
-            printf("reg[%d]=%d (0x%X)\n", i, smallArray[i], smallArray[i]);
+            if(globalArgs.verbose) printf("reg[%d]=%d (0x%X)\n", i, smallArray[i], smallArray[i]);
         }
         convertSmallArrayToString(output, globalArgs.type, smallArray);
-        printf("Small value: %s\n", output);
+        printf("%s\n", output);
 
     } else {
         for (i = 0; i < rc; i++) {
-            printf("reg[%d]=%d (0x%X)\n", i, bigArray[i], bigArray[i]);
+            if(globalArgs.verbose) printf("reg[%d]=%d (0x%X)\n", i, bigArray[i], bigArray[i]);
         }
         convertBigArrayToString(output, globalArgs.type, bigArray);
-        printf("Big value: %s\n", output);
+        printf("%s\n", output);
     }
 
     modbus_close(ctx);
