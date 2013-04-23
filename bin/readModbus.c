@@ -37,7 +37,8 @@ void displayUsage() {
     printf("  f : Function: 0x01: read coil status, 0x02: read input status, 0x03: read holding registers, 0x04: read input registers\n");
     printf("  a : Address to read\n");
     printf("  s : Size in bytes to read\n");
-    printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool, 5=time, 6=byte, 7=bits\n");
+    printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool, 5=time, 6=byte, 7=bits, 8=string\n");
+    printf("  v : Verbose mode\n");
     printf("\n");
     printf("./readModbus -f 3 -a 0x01B1 -s 0x2 -t 1\n");
     printf("\n");
@@ -68,7 +69,7 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
         return 0;
     case BYTE:
         if(globalArgs.verbose) printf("Found Byte\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]&0xFF);
         return 0;
     case STRING:
         if(globalArgs.verbose) printf("Found String\n");
