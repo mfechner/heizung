@@ -14,8 +14,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <modbus.h>
+#include <string.h>
 
-enum types { FLOAT=1, DATETIME, INT , BOOL, TIME, BYTE, BITS};
+enum types { FLOAT=1, DATETIME, INT , BOOL, TIME, BYTE, BITS, STRING};
 struct globalArgs_t {
     char *deviceName;
     int function;
@@ -37,6 +38,8 @@ void displayUsage() {
     printf("  a : Address to read\n");
     printf("  s : Size in bytes to read\n");
     printf("  t : Type of data 1=float, 2=datetime, 3=int, 4=bool, 5=time, 6=byte, 7=bits\n");
+    printf("\n");
+    printf("./readModbus -f 3 -a 0x01B1 -s 0x2 -t 1\n");
 }
 
 int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE]) {
@@ -62,6 +65,21 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
         printf("Found TIME\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%02d:%02d", value[0]>>8, value[0]&0xF);
         return 0;
+    case BYTE:
+        printf("Found Byte\n");
+        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        return 0;
+    case STRING:
+        printf("Found String\n");
+        int i;
+        char tempString[2];
+        for (i=0; i<globalArgs.size; i++) {
+            snprintf(tempString, 2, "%c", value[i]&0xFF);
+            strcat(returnValue, tempString);
+            snprintf(tempString, 2, "%c", value[i]>>8);
+            strcat(returnValue, tempString);
+        }
+        return 0;
     }
 
     return -1;
@@ -73,15 +91,17 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZ
         printf("Found BOOL\n");
         snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
         return 0;
-    case BYTE:
-        printf("Found Byte\n");
-        char tempString[16];
+    case BITS:
+        printf("Found Bits\n");
+        char tempString[2];
         int i;
-        for(i=0; i<globalArgs.size; i++) {
-            snprintf(&tempString[i], 1, "%d", value[i]);
-            printf("Subvalue: %d\n", value[i]);
+
+        for (i=0; i<globalArgs.size; i++) {
+            snprintf(tempString, 2, "%d", value[i]);
+            printf("tempString %02d: %d, %s\n", i, value[i], tempString);
+            strcat(returnValue, tempString);
         }
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%s", tempString);
+
         return 0;
     }
     return -1;
