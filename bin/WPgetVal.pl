@@ -7,21 +7,15 @@
 use strict;
 use Data::Dumper;
 use WPMemoryMapping;
+use WPgeneralFunctions;
 
 use vars qw(%wp_memory %dataTypes);
 
 if ( $#ARGV != 0 ) { die "Usage: $0 <attribute>\n"; }
 my $attr = $ARGV[0];
 
-my $prog = "./readModbus -f" . $wp_memory{$attr}{function} 
-    . " -a" . $wp_memory{$attr}{addr}
-    . " -s" . $wp_memory{$attr}{size}
-    . " -t" . $dataTypes{ $wp_memory{$attr}{type} };
-print ("Execute $prog\n");
-open( PROG, "$prog|" );
-my $output = <PROG>;
-chomp($output);
-close(PROG);
+my $output = &readParameter(\%wp_memory, \%dataTypes, $attr);
+
 print(  $wp_memory{$attr}{caption} . " = " . $output
 	  . $wp_memory{$attr}{unit}
 	  . "\n" );
