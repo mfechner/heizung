@@ -25,8 +25,6 @@ struct globalArgs_t {
     int verbose;
     enum types type;
 } globalArgs;
-const int MAX_SIZE=16;
-const int OUTPUT_MAX_SIZE=40;
 
 static const char *optString = "d:f:a:s:ht:v";
 
@@ -44,7 +42,7 @@ void displayUsage() {
     printf("\n");
 }
 
-int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE]) {
+int convertBigArrayToString(char *returnValue, int type, uint16_t *value) {
     switch(type) {
     case FLOAT:
         if(globalArgs.verbose) printf("Found FLOAT\n");
@@ -53,23 +51,23 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
         total=((value[1] << 16) + value[0]);
         real=*((float*)&total);
 
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%f", real);
+        snprintf(returnValue, globalArgs.size, "%f", real);
         return 0;
     case DATETIME:
         if(globalArgs.verbose) printf("Found DATETIME\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
+        snprintf(returnValue, globalArgs.size, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
         return 0;
     case INT:
         if(globalArgs.verbose) printf("Found INT\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        snprintf(returnValue, globalArgs.size, "%d", value[0]);
         return 0;
     case TIME:
         if(globalArgs.verbose) printf("Found TIME\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%02d:%02d", value[0]>>8, value[0]&0xF);
+        snprintf(returnValue, globalArgs.size, "%02d:%02d", value[0]>>8, value[0]&0xF);
         return 0;
     case BYTE:
         if(globalArgs.verbose) printf("Found Byte\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]&0xFF);
+        snprintf(returnValue, globalArgs.size, "%d", value[0]&0xFF);
         return 0;
     case STRING:
         if(globalArgs.verbose) printf("Found String\n");
@@ -87,11 +85,11 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t value[MAX_SIZE
     return -1;
 }
 
-int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZE]) {
+int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
     switch(type) {
     case BOOL:
         if(globalArgs.verbose) printf("Found BOOL\n");
-        snprintf(returnValue, OUTPUT_MAX_SIZE, "%d", value[0]);
+        snprintf(returnValue, globalArgs.size, "%d", value[0]);
         return 0;
     case BITS:
         if(globalArgs.verbose) printf("Found Bits\n");
@@ -110,8 +108,8 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t value[MAX_SIZ
 
 int main(int argc, char **argv) {
     modbus_t *ctx;
-    uint8_t smallArray[MAX_SIZE];
-    uint16_t bigArray[MAX_SIZE];
+    uint8_t *smallArray;
+    uint16_t *bigArray;
     int rc;
     int i;
     int opt;
@@ -151,15 +149,27 @@ int main(int argc, char **argv) {
                 return 1;
         }
     }
-    if(globalArgs.size > MAX_SIZE) {
-        fprintf(stderr, "Can only read %d bytes", MAX_SIZE);
-        return -1;
+    if (globalArgs.verbose) {
+        printf("Allocate %ld bytes to hold data\n", (globalArgs.size * sizeof(*smallArray)  + 1) +(globalArgs.size * sizeof(*bigArray) +1));
+    }
+    smallArray = (uint8_t *) malloc(sizeof(*smallArray) * globalArgs.size + 1);
+    if(smallArray == NULL) {
+        fprintf(stderr, "Cannot reserve memory to store bytes received\n");
+        return EXIT_FAILURE;
+    }
+    bigArray = (uint16_t *) malloc(sizeof(*bigArray) * globalArgs.size + 1);
+    if(bigArray == NULL) {
+        fprintf(stderr, "Cannot reserve memory to store bytes recieved\n");
+        free(smallArray);
+        return EXIT_FAILURE;
     }
 
     ctx = modbus_new_rtu(globalArgs.deviceName, 9600, 'N', 8, 1);
     if (ctx == NULL) {
         fprintf(stderr, "Unable to create the libmodbus context\n");
-        return -1;
+        free(smallArray);
+        free(bigArray);
+        return EXIT_FAILURE;
     }
     if (globalArgs.verbose)
         modbus_set_debug(ctx, 1);
@@ -167,7 +177,9 @@ int main(int argc, char **argv) {
     if (modbus_connect(ctx) == -1) {
         fprintf(stderr, "Connection failed: %s\n", modbus_strerror(errno));
         modbus_free(ctx);
-        return -1;
+        free(smallArray);
+        free(bigArray);
+        return EXIT_FAILURE;
     }
 
     modbus_set_slave(ctx, 1);
@@ -196,7 +208,9 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Read register failed %s\n", modbus_strerror(errno));
         modbus_close(ctx);
         modbus_free(ctx);
-        return -1;
+        free(smallArray);
+        free(bigArray);
+        return EXIT_FAILURE;
     }
 
     if (globalArgs.function == 0 || globalArgs.function == 1 || globalArgs.function == 2) {
@@ -216,5 +230,7 @@ int main(int argc, char **argv) {
 
     modbus_close(ctx);
     modbus_free(ctx);
-    return 0;
+    free(smallArray);
+    free(bigArray);
+    return EXIT_SUCCESS;
 }
