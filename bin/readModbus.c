@@ -155,13 +155,13 @@ int main(int argc, char **argv) {
     smallArray = (uint8_t *) malloc(sizeof(*smallArray) * globalArgs.size + 1);
     if(smallArray == NULL) {
         fprintf(stderr, "Cannot reserve memory to store bytes received\n");
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     bigArray = (uint16_t *) malloc(sizeof(*bigArray) * globalArgs.size + 1);
     if(bigArray == NULL) {
         fprintf(stderr, "Cannot reserve memory to store bytes recieved\n");
         free(smallArray);
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
 
     ctx = modbus_new_rtu(globalArgs.deviceName, 9600, 'N', 8, 1);
@@ -169,7 +169,7 @@ int main(int argc, char **argv) {
         fprintf(stderr, "Unable to create the libmodbus context\n");
         free(smallArray);
         free(bigArray);
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
     if (globalArgs.verbose)
         modbus_set_debug(ctx, 1);
@@ -179,7 +179,7 @@ int main(int argc, char **argv) {
         modbus_free(ctx);
         free(smallArray);
         free(bigArray);
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
 
     modbus_set_slave(ctx, 1);
@@ -202,6 +202,7 @@ int main(int argc, char **argv) {
             break;
         default:
             fprintf(stderr, "No function defined, do not read anything\n");
+            exit(EXIT_FAILURE);
     }
 
     if (rc == -1) {
@@ -210,7 +211,7 @@ int main(int argc, char **argv) {
         modbus_free(ctx);
         free(smallArray);
         free(bigArray);
-        return EXIT_FAILURE;
+        exit(EXIT_FAILURE);
     }
 
     if (globalArgs.function == 0 || globalArgs.function == 1 || globalArgs.function == 2) {
@@ -232,5 +233,5 @@ int main(int argc, char **argv) {
     modbus_free(ctx);
     free(smallArray);
     free(bigArray);
-    return EXIT_SUCCESS;
+    exit(EXIT_SUCCESS);
 }

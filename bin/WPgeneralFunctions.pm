@@ -25,7 +25,8 @@ sub readParameter() {
         . " -a" . $wp_memory->{$parameterKey}{addr}
         . " -s" . $wp_memory->{$parameterKey}{size}
         . " -t" . $dataTypes->{ $wp_memory->{$parameterKey}{type} };
-    open( PROG, "$prog|" );
+    open( PROG, "$prog|" ) || die("Cannot execute $prog\n");
+    die("readModbus failed with exit code $?\n") if($? != 0);    
     $value=<PROG>;
     chomp($value);
     close(PROG);
