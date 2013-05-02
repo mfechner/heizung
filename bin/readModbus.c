@@ -51,23 +51,23 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t *value) {
         total=((value[1] << 16) + value[0]);
         real=*((float*)&total);
 
-        snprintf(returnValue, globalArgs.size, "%f", real);
+        snprintf(returnValue, 20, "%f", real);
         return 0;
     case DATETIME:
         if(globalArgs.verbose) printf("Found DATETIME\n");
-        snprintf(returnValue, globalArgs.size, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
+        snprintf(returnValue, 20, "%04d-%02d-%02d %02d:%02d:%02d", value[5]+1900, value[4]+1, value[3], value[2], value[1], value[0]);
         return 0;
     case INT:
         if(globalArgs.verbose) printf("Found INT\n");
-        snprintf(returnValue, globalArgs.size, "%d", value[0]);
+        snprintf(returnValue, 20, "%d", value[0]);
         return 0;
     case TIME:
         if(globalArgs.verbose) printf("Found TIME\n");
-        snprintf(returnValue, globalArgs.size, "%02d:%02d", value[0]>>8, value[0]&0xF);
+        snprintf(returnValue, 5, "%02d:%02d", value[0]>>8, value[0]&0xF);
         return 0;
     case BYTE:
         if(globalArgs.verbose) printf("Found Byte\n");
-        snprintf(returnValue, globalArgs.size, "%d", value[0]&0xFF);
+        snprintf(returnValue, 2, "%d", value[0]&0xFF);
         return 0;
     case STRING:
         if(globalArgs.verbose) printf("Found String\n");
@@ -89,7 +89,7 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
     switch(type) {
     case BOOL:
         if(globalArgs.verbose) printf("Found BOOL\n");
-        snprintf(returnValue, globalArgs.size, "%d", value[0]);
+        snprintf(returnValue, 20, "%d", value[0]);
         return 0;
     case BITS:
         if(globalArgs.verbose) printf("Found Bits\n");
@@ -149,15 +149,16 @@ int main(int argc, char **argv) {
                 return 1;
         }
     }
+
     if (globalArgs.verbose) {
-        printf("Allocate %ld bytes to hold data\n", (globalArgs.size * sizeof(*smallArray)  + 1) +(globalArgs.size * sizeof(*bigArray) +1));
+        printf("Allocate %ld bytes to hold data\n", (20 * sizeof(*smallArray)  + 1) +(20 * sizeof(*bigArray) +1));
     }
-    smallArray = (uint8_t *) malloc(sizeof(*smallArray) * globalArgs.size + 1);
+    smallArray = (uint8_t *) malloc(sizeof(*smallArray) * 20 + 1);
     if(smallArray == NULL) {
         fprintf(stderr, "Cannot reserve memory to store bytes received\n");
         exit(EXIT_FAILURE);
     }
-    bigArray = (uint16_t *) malloc(sizeof(*bigArray) * globalArgs.size + 1);
+    bigArray = (uint16_t *) malloc(sizeof(*bigArray) * 20 + 1);
     if(bigArray == NULL) {
         fprintf(stderr, "Cannot reserve memory to store bytes recieved\n");
         free(smallArray);
