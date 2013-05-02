@@ -1,5 +1,26 @@
 @CHARSET "UTF-8";
 
+span {
+    font-size: smaller;
+    padding: 3px;
+}
+
+span#value {
+    float: left;
+    width: 60px;
+    height: 10px;
+    display: block;
+    border: 1px solid black;
+    text-align: right;
+}
+
+span#description {
+    width: 50px;
+    height: 10px;
+    float: left;
+    display: block;
+}
+
 div#diagramm {
     float: left;
     position: relative;
@@ -19,28 +40,272 @@ div#diagram img#background.picture {
     top: 100px;
 }
 
+#description {
+    color: black;
+}
 .blackText {
-    border: 1;
+    color: black;
+}
+.redText {
+    color: red;
+}
+.blueText {
+    color: blue;
+}
+.targetText {
+    color: white;
+    background-color: rgb(246,81,0);
 }
 
-div#diagram div#OutdoorTemp {
+#OutdoorTemp {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+#OutdoorTemp1h {
+    position: absolute;
+    left: 30px;
+    top: 40px;
+}
+#OutdoorTemp24h {
+    position: absolute;
+    left: 30px;
+    top: 60px;
+}
+
+#RoomTempNominal {
+    position: absolute;
+    left: 300px;
+    top: 15px;
+}
+#RoomTemp {
+    position: absolute;
+    left: 300px;
+    top: 35px;
+}
+#RoomTemp1h {
+    position: absolute;
+    left: 300px;
+    top: 65px;
+}
+
+#RTCDate {
+    position: absolute;
+    left: 450px;
+    top: 15px;
+}
+#RTCTime {
+    position: absolute;
+    left: 450px;
+    top: 35px;
+}
+#FirmwareVersion {
+    position: absolute;
+    left: 450px;
+    top: 55px;
+}
+#FirmwareDate {
+    position: absolute;
+    left: 450px;
+    top: 75px;
+}
+
+#Pelectric {
+    position: absolute;
+    left: 30px;
+    top: 130px;
+}
+#Pthermal {
+    position: absolute;
+    left: 30px;
+    top: 150px;
+}
+#COP {
+    position: absolute;
+    left: 30px;
+    top: 170px;
+}
+#Pelectric.blackText span#description {
+    width: 100px;
+}
+#Pthermal.blackText span#description {
+    width: 100px;
+}
+#COP.blackText span#description {
+    width: 100px;
+}
+
+#HeatSourceIn {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 280px;
+}
+#HeatSourceOut {
+    position: absolute;
+    left: 70px;
+    top: 397px;
 }
 
-span#value {
-    float: right;
-    width: 60px;
-    display: block;
-    border: 1px solid black;
-    padding-right: 5px;
-    text-align: right;
+#SunctionGasTemp {
+    position: absolute;
+    left: 205px;
+    top: 280px;
+}
+#OHCompressor1 {
+    position: absolute;
+    left: 280px;
+    top: 270px;
 }
 
-span#description {
-    padding-right: 5px;
-    width: 40px;
-    float: left;
-    display: block;
+
+#EvaporationTemp {
+    position: absolute;
+    left: 105px;
+    top: 250px;
+}
+#EvaporationPress {
+    position: absolute;
+    left: 105px;
+    top: 270px;
+}
+
+#CondensationTemp {
+    position: absolute;
+    left: 355px;
+    top: 250px;
+}
+#CondensationPress {
+    position: absolute;
+    left: 355px;
+    top: 270px;
+}
+
+#FlowTemp {
+    position: absolute;
+    left: 475px;
+    top: 115px;
+}
+#HeatReturnTemp2 {
+    position: absolute;
+    left: 475px;
+    top: 198px;
+}
+
+#iconPumpHeatSource {
+    position: absolute;
+    left: 25px;
+    top: 330px;
+}
+
+#iconCompressor1 {
+    position: absolute;
+    left: 300px;
+    top: 290px;
+}
+
+#iconPumpHeating {
+    position: absolute;
+    left: 415px;
+    top: 366px;
+}
+#iconMagnetValve {
+    position: absolute;
+    left: 175px;
+    top: 358px;
+}
+
+#iconCooling {
+    position: absolute;
+    left: 600px;
+    top: 100px;
+}
+#CoolReturnTempNominal {
+    position: absolute;
+    left: 640px;
+    top: 97px;
+}
+#CoolReturnTemp {
+    position: absolute;
+    left: 640px;
+    top: 117px;
+}
+
+#iconHeating {
+    position: absolute;
+    left: 600px;
+    top: 150px;
+}
+#HeatReturnTempNominal {
+    position: absolute;
+    left: 640px;
+    top: 147px;
+}
+#HeatReturnTemp {
+    position: absolute;
+    left: 640px;
+    top: 167px;
+}
+
+#iconDomesticWater {
+    position: absolute;
+    left: 600px;
+    top: 200px;
+}
+#DomesticWaterTempNominal {
+    position: absolute;
+    left: 640px;
+    top: 197px;
+}
+#DomesticWaterTempActual {
+    position: absolute;
+    left: 640px;
+    top: 217px;
+}
+
+#iconPool {
+    position: absolute;
+    left: 600px;
+    top: 250px;
+}
+#PoolTempNominal {
+    position: absolute;
+    left: 640px;
+    top: 247px;
+}
+#PoolTempActual {
+    position: absolute;
+    left: 640px;
+    top: 267px;
+}
+
+#iconSolar {
+    position: absolute;
+    left: 600px;
+    top: 300px;
+}
+#SolarTempNominalMin {
+    position: absolute;
+    left: 640px;
+    top: 297px;
+}
+#SolarTempActual {
+    position: absolute;
+    left: 640px;
+    top: 317px;
+}
+
+#icon3way {
+    position: absolute;
+    left: 600px;
+    top: 350px;
+}
+#HeatingCircuitNominal {
+    position: absolute;
+    left: 640px;
+    top: 347px;
+}
+#HeatingCircuitTemp {
+    position: absolute;
+    left: 640px;
+    top: 367px;
 }
