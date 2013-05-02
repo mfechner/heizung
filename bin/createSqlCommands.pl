@@ -17,7 +17,7 @@ my %sqlDataTypes = (
     TYPE_TIME     => "TIME NOT NULL",
     TYPE_BYTE     => "TINYINT NOT NULL",
     TYPE_BITS     => "VARCHAR(16) NOT NULL",
-    TYPE_STRING   => "VARCHAR(8) NOT NULL",
+    TYPE_STRING   => "VARCHAR(16) NOT NULL",
     
 );
 
