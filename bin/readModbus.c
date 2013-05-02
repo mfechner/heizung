@@ -96,8 +96,8 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
         char tempString[2];
         int i;
 
-        for (i=0; i<globalArgs.size; i++) {
-            snprintf(tempString, 2, "%d", value[i]);
+        for (i=globalArgs.size; i>0; i--) {
+            snprintf(tempString, 2, "%d", value[i-1]);
             strcat(returnValue, tempString);
         }
 
