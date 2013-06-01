@@ -93,13 +93,13 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
         return 0;
     case BITS:
         if(globalArgs.verbose) printf("Found Bits\n");
-        char tempString[2];
         int i;
+        uint16_t bitValue=0;
 
-        for (i=globalArgs.size; i>0; i--) {
-            snprintf(tempString, 2, "%d", value[i-1]);
-            strcat(returnValue, tempString);
+        for (i=0;i<globalArgs.size; i++) {
+            bitValue |= ((uint16_t)value[i] << i);
         }
+        snprintf(returnValue, 8, "%d", bitValue);
 
         return 0;
     }
@@ -121,32 +121,32 @@ int main(int argc, char **argv) {
 
     while ((opt = getopt(argc, argv, optString)) != -1) {
         switch (opt) {
-            case 'd':
-                globalArgs.deviceName = optarg;
-                break;
-            case 'f':
-                globalArgs.function = (int) strtol(optarg, NULL, 0);
-                break;
-            case 'a':
-                globalArgs.address = (int) strtol(optarg, NULL, 0);
-                break;
-            case 's':
-                globalArgs.size = (int) strtol(optarg, NULL, 0);
-                break;
-            case 'v':
-                globalArgs.verbose = 1;
-                break;
-            case 't':
-                globalArgs.type = (int) strtol(optarg, NULL, 0);
-                break;
-            case 'h':
-            case '?':
-                if(optopt == 's' || optopt == 'a' || optopt == 'f') {
-                    fprintf(stderr, "Missing argument\n");
-                    return -1;
-                }
-                displayUsage();
-                return 1;
+        case 'd':
+            globalArgs.deviceName = optarg;
+            break;
+        case 'f':
+            globalArgs.function = (int) strtol(optarg, NULL, 0);
+            break;
+        case 'a':
+            globalArgs.address = (int) strtol(optarg, NULL, 0);
+            break;
+        case 's':
+            globalArgs.size = (int) strtol(optarg, NULL, 0);
+            break;
+        case 'v':
+            globalArgs.verbose = 1;
+            break;
+        case 't':
+            globalArgs.type = (int) strtol(optarg, NULL, 0);
+            break;
+        case 'h':
+        case '?':
+            if(optopt == 's' || optopt == 'a' || optopt == 'f') {
+                fprintf(stderr, "Missing argument\n");
+                return -1;
+            }
+            displayUsage();
+            return 1;
         }
     }
 
@@ -186,24 +186,24 @@ int main(int argc, char **argv) {
     modbus_set_slave(ctx, 1);
 
     switch (globalArgs.function) {
-        case 0:
-            rc = modbus_report_slave_id(ctx, smallArray);
-            break;
-        case 1:
-            rc = modbus_read_bits(ctx, globalArgs.address, globalArgs.size, smallArray);
-            break;
-        case 2:
-            rc = modbus_read_input_bits(ctx, globalArgs.address, globalArgs.size, smallArray);
-            break;
-        case 3:
-            rc = modbus_read_registers(ctx, globalArgs.address, globalArgs.size, bigArray);
-            break;
-        case 4:
-            rc = modbus_read_input_registers(ctx, globalArgs.address, globalArgs.size, bigArray);
-            break;
-        default:
-            fprintf(stderr, "No function defined, do not read anything\n");
-            exit(EXIT_FAILURE);
+    case 0:
+        rc = modbus_report_slave_id(ctx, smallArray);
+        break;
+    case 1:
+        rc = modbus_read_bits(ctx, globalArgs.address, globalArgs.size, smallArray);
+        break;
+    case 2:
+        rc = modbus_read_input_bits(ctx, globalArgs.address, globalArgs.size, smallArray);
+        break;
+    case 3:
+        rc = modbus_read_registers(ctx, globalArgs.address, globalArgs.size, bigArray);
+        break;
+    case 4:
+        rc = modbus_read_input_registers(ctx, globalArgs.address, globalArgs.size, bigArray);
+        break;
+    default:
+        fprintf(stderr, "No function defined, do not read anything\n");
+        exit(EXIT_FAILURE);
     }
 
     if (rc == -1) {
