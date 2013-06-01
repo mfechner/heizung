@@ -3,10 +3,13 @@
     <title>W&auml;rmepumpen-Monitor &Uuml;bersicht</title>
     <meta name="robots" content="noindex">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="/css/jquery-ui.css" type="text/css">
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
 </head>
 <body>
     <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js"></script>
     <script type="text/javascript" src="/js/general.js">
     </script>
     <div id="diagram">
@@ -71,7 +74,8 @@
         <div id="icon3way"><img alt="" src="/img/3way_32x32_inactive.ico"></div>
         <div class="targetText" id="HeatingCircuitNominal"><span id="value"></span></div>
         <div class="blackText" id="HeatingCircuitTemp"><span id="value"></span></div>
-        
+    <!-- Date and Time Selector -->
+        <div id="dateTimeField"><span id="description">Date/Time</span><span><input type="text" id="dateTimePicker"></span></div>
     </div>
 </body>
 </html>
