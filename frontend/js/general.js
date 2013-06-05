@@ -1,17 +1,25 @@
 $(document).ready(function() {
 	refreshValues();
 	window.setInterval(refreshValues, 60000);
-
+	$( "#dateTimePicker" ).datetimepicker({
+		dateFormat: 'yy-mm-dd',
+		timeFormat: 'HH:mm',
+		onSelect: function (dateTime, inst) {
+			refreshValues();
+		}
+	});
 });
 
 function refreshValues() {
+	var dateTime= $( "#dateTimePicker").val();
+	console.log("date:" + dateTime);
 	$.ajax({
 		// the URL for the request
 		url : "post.php",
 		// the data to send (will be converted to a query string)
 		data : {
 			action : 'overview',
-			START: '2013-04-30 22:05:17'
+			START: dateTime
 		},
 		// whether this is a POST or GET request
 		type : "GET",
@@ -25,7 +33,7 @@ function refreshValues() {
 		// code to run if the request fails; the raw request and
 		// status codes are passed to the function
 		error : function(xhr, status) {
-			alert("Sorry, there was a problem!");
+			alert("Could not retrieve data for selected date/time!");
 		},
 		// code to run regardless of success or failure
 		complete : function(xhr, status) {
