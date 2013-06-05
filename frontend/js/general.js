@@ -42,75 +42,92 @@ function updateValues(json) {
 	}
 	$("#HeatReturnTemp2 #value").html(json.HeatReturnTemp);
 
-	console.log("OperatingState: "+json.OperatingState);
-	if(json.OperatingState.charAt(7) == 1) { // Warmwasser
+	console.log("OperatingState: 0x"+json.OperatingState.toString(16));
+	if(json.OperatingState & 0x1) { // Warmwasser
 		$("#iconDomesticWater img").attr("src", "/img/hw_32x32_active.ico");
 	} else {
 		$("#iconDomesticWater img").attr("src", "/img/hw_32x32_inactive.ico");
 	}
-	if(json.OperatingState.charAt(6) == 1) { // Heizen
+	if(json.OperatingState & 0x2) { // Heizen
 		$("#iconHeating img").attr("src", "/img/heat_32x32_active.ico");
 	} else {
 		$("#iconHeating img").attr("src", "/img/heat_32x32_inactive.ico");
 	}
-	if(json.OperatingState.charAt(5) == 1) { // Beckenwasser
+	if(json.OperatingState & 0x4) { // Beckenwasser
 		$("#iconPool img").attr("src", "/img/pool_32x32_active.ico");
 	} else {
 		$("#iconPool img").attr("src", "/img/pool_32x32_inactive.ico");
 	}
-	if(json.OperatingState.charAt(4) == 1) { // Naturkühlung
+	if(json.OperatingState & 0x8) { // Naturkühlung
 		$("#iconCooling img").attr("src", "/img/cool_32x32_active.ico");
 	} else {
 		$("#iconCooling img").attr("src", "/img/cool_32x32_inactive.ico");
 	}
-	if(json.OperatingState.charAt(3) == 1) { // Kompressor aktiv
-	} else {
-	}
-	if(json.OperatingState.charAt(2) == 1) { // Stufe 2
-	} else {
-	}
-	if(json.OperatingState.charAt(1) == 1) { // Solar
-	} else {
-	}
-	
-
-	console.log("DOBuffer: "+json.DOBuffer);
-	if(json.DOBuffer.charAt(0) == 1) { // Kompressor 1
+	if(json.OperatingState & 0x10) { // Kompressor aktiv
 		$("#iconCompressor1 img").attr("src", "/img/refrig_0_g_.ico");
 	} else {
 		$("#iconCompressor1 img").attr("src", "/img/refrig_0rgb.ico");
 	}
-	if(json.DOBuffer.charAt(1) == 1) { // Kompressor 2
+	if(json.OperatingState & 0x20) { // Stufe 2
+	} else {
 	}
-	if(json.DOBuffer.charAt(2) == 1) { // Heizungspumpe
+	if(json.OperatingState & 0x40) { // Solar
+	} else {
+	}
+	
+
+	console.log("DOBuffer: 0x"+json.DOBuffer.toString(16));
+	if(json.DOBuffer & 0x1) { // Kompressor 1
+	}
+	if(json.DOBuffer & 0x2) { // Kompressor 2
+	}
+	if(json.DOBuffer & 0x4) { // Heizungspumpe
 		$("#iconPumpHeating img").attr("src", "/img/pump_180_g_.ico");
 	} else {
 		$("#iconPumpHeating img").attr("src", "/img/pump_180rgb.ico");
 	}
-	if(json.DOBuffer.charAt(3) == 1) { // Magnetventil
+	if(json.DOBuffer & 0x8) { // Magnetventil
 		$("#iconMagnetValve img").attr("src", "/img/valve_magn_0_g_.ico");
 	} else {
 		$("#iconMagnetValve img").attr("src", "/img/valve_magn_0rgb.ico");
 	}
-	if(json.DOBuffer.charAt(4) == 1) { // Alarm
+	if(json.DOBuffer & 0x10) { // Alarm
 	} else {
 	}
-	if(json.DOBuffer.charAt(5) == 1) { // Motorventil Naturkühlung
+	if(json.DOBuffer & 0x20) { // Motorventil Naturkühlung
 	} else {
 	}
-	if(json.DOBuffer.charAt(6) == 1) { // Motorventil Warmwasser
+	if(json.DOBuffer & 0x40) { // Motorventil Warmwasser
 	} else {
 	}
-	if(json.DOBuffer.charAt(7) == 1) { // Pumpe Quelle
+	if(json.DOBuffer & 0x80) { // Pumpe Quelle
 		$("#iconPumpHeatSource img").attr("src", "/img/pump_90_g_.ico");
 	} else {
 		$("#iconPumpHeatSource img").attr("src", "/img/pump_90rgb.ico");
 	}
-	if(json.DOBuffer.charAt(8) == 1) { // Ventil Pool
+	if(json.DOBuffer & 0x100) { // Ventil Pool
 	} else {
 	}
-	if(json.DOBuffer.charAt(9) == 1) { // Solarbetrieb
+	if(json.DOBuffer & 0x200) { // Solarbetrieb
 	} else {
 	}
-	
+
+	console.log("DIBuffer: 0x"+json.DIBuffer.toString(16));
+	if(json.DIBuffer & 0x1) { // Externe Abschaltung
+	}
+	if(json.DIBuffer & 0x2) { // SM Kompressor 2 / Stufe 2
+	}
+	if(json.DIBuffer & 0x4) { // Freigabe Beckenwasser
+	}
+	if(json.DIBuffer & 0x8) { // SM PhaseDrehfeld
+	}
+	if(json.DIBuffer & 0x10) { // SM Pumpe Quelle
+	}
+	if(json.DIBuffer & 0x20) { // SM Hd Pressostat
+	}
+	if(json.DIBuffer & 0x40) { // SM Nd Pressostat
+	}
+	if(json.DIBuffer & 0x80) { // SM Kompressor 1
+	}
+
 }
