@@ -304,3 +304,86 @@ input#dateTimePicker.hasDatepicker {
 .ui-timepicker-rtl{ direction: rtl; }
 .ui-timepicker-rtl dl { text-align: right; }
 .ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+
+div#heating div span#description {
+    width: 200px;
+    height: 10px;
+}
+
+div#heating div {
+    position: absolute;
+}
+
+div#heating div#HeatOff {
+    left: 20px;
+    top: 10px;
+}
+div#heating div#HeatTimeOn {
+    left: 20px;
+    top: 30px;
+}
+div#heating div#HeatTimeOff {
+    left: 20px;
+    top: 50px;
+}
+div#heating div#HeatCharacteristicSetPoint {
+    left: 20px;
+    top: 70px;
+}
+div#heating div#HeatCharacteristicSetPointBaseTemp {
+    left: 20px;
+    top: 90px;
+}
+div#heating div#HeatCharacteristicGradient {
+    left: 20px;
+    top: 110px;
+}
+div#heating div#HeatCharacteristicLimit {
+    left: 20px;
+    top: 130px;
+}
+div#heating div#HeatReturnTemp {
+    left: 20px;
+    top: 150px;
+}
+div#heating div#HeatReturnTempNominal {
+    left: 20px;
+    top: 170px;
+}
+div#heating div#HeatTempHyst {
+    left: 20px;
+    top: 190px;
+}
+div#heating div#RoomTempNominal {
+    left: 20px;
+    top: 210px;
+}
+div#heating div#RoomTempFactor {
+    left: 20px;
+    top: 230px;
+}
+div#heating div#HeatIncreaseOff {
+    left: 20px;
+    top: 250px;
+}
+div#heating div#HeatIncreaseTimeOn {
+    left: 20px;
+    top: 270px;
+}
+div#heating div#HeatIncreaseTimeOff {
+    left: 20px;
+    top: 290px;
+}
+div#heating div#HeatIncreaseSetPtOffset {
+    left: 20px;
+    top: 310px;
+	}
+div#heating div#AuxilaryModeHeating {
+    left: 20px;
+    top: 330px;
+}
+div#heating div#AuxilaryMaxDifference {
+    left: 20px;
+    top: 350px;
+}
+

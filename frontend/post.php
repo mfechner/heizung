@@ -4,7 +4,7 @@ require_once("_includes/globals.inc.php");
 $json = file_get_contents("config.json");
 $config = json_decode($json, TRUE);
 
-$query = "SELECT timestamp,
+$overviewQuery = "SELECT timestamp,
     			   FirmwareVersion,
                    FirmwareDate,
                    OperatingState,
@@ -43,8 +43,36 @@ $query = "SELECT timestamp,
                    Pthermal,
                    COP
     FROM ".$db_getTable;
+$heatingQuery = "SELECT timestamp,
+				HeatOff,
+				HeatTimeOn,
+				HeatTimeOff,
+				HeatCharacteristicSetPoint,
+				HeatCharacteristicSetPointBaseTemp,
+				HeatCharacteristicGradient,
+				HeatCharacteristicLimit,
+				HeatReturnTemp,
+				HeatReturnTempNominal,
+				HeatTempHyst,
+				RoomTempNominal,
+				RoomTempFactor,
+				HeatIncreaseOff,
+				HeatIncreaseTimeOn,
+				HeatIncreaseTimeOff,
+				HeatIncreaseSetPtOffset,
+				AuxilaryModeHeating,
+				AuxilaryMaxDifference
+		FROM ".$db_getTable;
 
-$values = getDbRecord($query);
+switch ($_REQUEST['action']) {
+	case 'overview.php':
+		$values = getDbRecord($overviewQuery);
+		break;
+	case 'heating.php':
+		$values = getDbRecord($heatingQuery);
+		break;
+	default:
+}
 $values = formatValues($values);
 echo json_encode($values);
 
@@ -78,11 +106,17 @@ function formatValues($values) {
 		}
 	}
 
-	$date = new DateTime($values->RTCDate);
-	$values->RTCDate = $date->format('d.m.Y');
-	$time = new DateTime($values->RTCTime);
-	$values->RTCTime = $time->format('H:i:s');
-	$firmwareDate = new DateTime($values->FirmwareDate);
-	$values->FirmwareDate = $firmwareDate->format('d.m.Y');
+	if(key_exists("RTCDate", $values)) {
+		$date = new DateTime($values->RTCDate);
+		$values->RTCDate = $date->format('d.m.Y');
+	}
+	if(key_exists("RTCTime", $values)) {
+		$time = new DateTime($values->RTCTime);
+		$values->RTCTime = $time->format('H:i:s');
+	}
+	if(key_exists("FirmwareDate", $values)) {
+		$firmwareDate = new DateTime($values->FirmwareDate);
+		$values->FirmwareDate = $firmwareDate->format('d.m.Y');
+	}
 	return($values);
 }

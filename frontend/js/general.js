@@ -38,12 +38,14 @@ function updateCaptions(json) {
 function refreshValues() {
 	var dateTime= $( "#dateTimePicker").val();
 	console.log("date:" + dateTime);
+	var url = this.location.pathname;
+	var filename = url.substring(url.lastIndexOf('/')+1);
 	$.ajax({
 		// the URL for the request
 		url : "post.php",
 		// the data to send (will be converted to a query string)
 		data : {
-			action : 'overview',
+			action : filename,
 			START: dateTime
 		},
 		// whether this is a POST or GET request
