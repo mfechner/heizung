@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	refreshCaptions();
 	refreshValues();
 	window.setInterval(refreshValues, 60000);
 	$( "#dateTimePicker" ).datetimepicker({
@@ -9,6 +10,30 @@ $(document).ready(function() {
 		}
 	});
 });
+
+function refreshCaptions() {
+	console.log("Retrieve description json string");
+	$.ajax({
+		url: "config.json",
+		type: "GET",
+		dataType: "json",
+		success: function(json) {
+			updateCaptions(json);
+		}
+	});
+}
+
+function updateCaptions(json) {
+	console.log("Update captions");
+	for(var key in json) {
+		if(json[key]["caption"]) {
+			$("#"+key+" #description").html(json[key]["caption"]);
+		}
+		if(json[key]["webcaption"]) {
+			$("#"+key+" #description_short").html(json[key]["webcaption"]);
+		}
+	}
+}
 
 function refreshValues() {
 	var dateTime= $( "#dateTimePicker").val();
@@ -48,9 +73,10 @@ function updateValues(json) {
 	for(var key in json) {
 		$("#"+key+" #value").html(json[key]);
 	}
-	$("#HeatReturnTemp2 #value").html(json.HeatReturnTemp);
-
-	console.log("OperatingState: 0x"+json.OperatingState.toString(16));
+	if(json.HeatReturnTemp) {
+		$("#HeatReturnTemp2 #value").html(json.HeatReturnTemp);
+	}
+	
 	if(json.OperatingState & 0x1) { // Warmwasser
 		$("#iconDomesticWater img").attr("src", "/img/hw_32x32_active.ico");
 	} else {
@@ -84,7 +110,6 @@ function updateValues(json) {
 	}
 	
 
-	console.log("DOBuffer: 0x"+json.DOBuffer.toString(16));
 	if(json.DOBuffer & 0x1) { // Kompressor 1
 	}
 	if(json.DOBuffer & 0x2) { // Kompressor 2
@@ -120,7 +145,6 @@ function updateValues(json) {
 	} else {
 	}
 
-	console.log("DIBuffer: 0x"+json.DIBuffer.toString(16));
 	if(json.DIBuffer & 0x1) { // Externe Abschaltung
 	}
 	if(json.DIBuffer & 0x2) { // SM Kompressor 2 / Stufe 2
