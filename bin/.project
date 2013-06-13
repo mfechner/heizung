@@ -3,6 +3,7 @@
 	<name>heizung</name>
 	<comment></comment>
 	<projects>
+		<project>heizung-web</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

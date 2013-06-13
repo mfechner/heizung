@@ -1,5 +1,5 @@
 .buildpath
-frontend/.project
-frontend/.settings/
+.project
+.settings/
 .DS_Store
 ._*
