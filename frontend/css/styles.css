@@ -16,16 +16,16 @@ span#description {
     display: block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-color: rgb(214, 214, 214);
-    padding-bottom: 6px;
+    border-color: rgb(228, 221, 221);
+    padding-bottom: 7px;
 }
 span#description_short {
     float: left;
     display: block;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    border-color: rgb(214, 214, 214);
-    padding-bottom: 6px;
+    border-color: rgb(228, 221, 221);
+    padding-bottom: 7px;
 }
 div#diagram div {
     position: absolute;
@@ -387,3 +387,40 @@ div#heating div#AuxilaryMaxDifference {
     top: 350px;
 }
 
+div#cooling div span#description {
+    width: 200px;
+    height: 10px;
+}
+
+div#cooling div {
+    position: absolute;
+}
+
+div#cooling div#CoolOff {
+    left: 20px;
+    top: 10px;
+}
+div#cooling div#CoolTimeOn {
+    left: 20px;
+    top: 30px;
+}
+div#cooling div#CoolTimeOff {
+    left: 20px;
+    top: 50px;
+}
+div#cooling div#CoolCharacteristicSetPoint {
+    left: 20px;
+    top: 70px;
+}
+div#cooling div#CoolReturnTemp {
+    left: 20px;
+    top: 90px;
+}
+div#cooling div#CoolReturnTempNominal {
+    left: 20px;
+    top: 110px;
+}
+div#cooling div#CoolReturnTempHyst {
+    left: 20px;
+    top: 130px;
+}

@@ -63,6 +63,15 @@ $heatingQuery = "SELECT timestamp,
 				AuxilaryModeHeating,
 				AuxilaryMaxDifference
 		FROM ".$db_getTable;
+$coolingQuery = "SELECT timestamp,
+                CoolOff,
+                CoolTimeOn,
+                CoolTimeOff,
+                CoolCharacteristicSetPoint,
+                CoolReturnTemp,
+                CoolReturnTempNominal,
+                CoolReturnTempHyst
+		FROM ".$db_getTable;
 
 switch ($_REQUEST['action']) {
 	case 'overview.php':
@@ -71,6 +80,9 @@ switch ($_REQUEST['action']) {
 	case 'heating.php':
 		$values = getDbRecord($heatingQuery);
 		break;
+	case 'cooling.php':
+	    $values = getDbRecord($coolingQuery);
+	    break;
 	default:
 }
 $values = formatValues($values);
