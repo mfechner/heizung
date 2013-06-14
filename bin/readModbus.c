@@ -63,7 +63,7 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t *value) {
         return 0;
     case TIME:
         if(globalArgs.verbose) printf("Found TIME\n");
-        snprintf(returnValue, 5, "%02d:%02d", value[0]>>8, value[0]&0xF);
+        snprintf(returnValue, 6, "%02d:%02d", value[0]>>8, value[0]&0xFF);
         return 0;
     case BYTE:
         if(globalArgs.verbose) printf("Found Byte\n");
