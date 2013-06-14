@@ -72,7 +72,20 @@ $coolingQuery = "SELECT timestamp,
                 CoolReturnTempNominal,
                 CoolReturnTempHyst
 		FROM ".$db_getTable;
-
+$hotwaterQuery = "SELECT timestamp,
+				DomesticWaterOff,
+				DomesticWaterTimeOn,
+				DomesticWaterTimeOff,
+				DomesticWaterTempActual,
+				DomesticWaterTempNominal,
+				DomesticWaterTempHyst,
+				LegionellaSchedule,
+				LegionellaTimeOn,
+				LegionellaTimeOff,
+				LegionellaTempNominal,
+				DWNumberOfCompressors,
+				DomesticWaterTimeDelayOnSolar
+		FROM ".$db_getTable;
 switch ($_REQUEST['action']) {
 	case 'overview.php':
 		$values = getDbRecord($overviewQuery);
@@ -83,6 +96,9 @@ switch ($_REQUEST['action']) {
 	case 'cooling.php':
 	    $values = getDbRecord($coolingQuery);
 	    break;
+	case 'hotwater.php':
+		$values = getDbRecord($hotwaterQuery);
+		break;
 	default:
 }
 $values = formatValues($values);

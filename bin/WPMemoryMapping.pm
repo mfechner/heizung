@@ -55,7 +55,7 @@
     'DomesticWaterTimeOff'              => { function => 4, addr => 0x0681, size => 0x1, acl => '', type => TYPE_TIME, caption => 'Time stop', unit => ''},
     'DomesticWaterTempActual'           => { function => 4, addr => 0x0691, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T water real', format => "%.2f", unit => '&deg;C'},
     'DomesticWaterTempNominal'          => { function => 4, addr => 0x06B1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'T water target', format => "%.2f", unit => '&deg;C'},
-    'DomesticWaterTempHyst'             => { function => 4, addr => 0x06D1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'Hysteresis', unit => 'K'},
+    'DomesticWaterTempHyst'             => { function => 4, addr => 0x06D1, size => 0x2, acl => '', type => TYPE_FLOAT, caption => 'Hysteresis', format => "%.2f", unit => '&deg;K'},
     'LegionellaSchedule'                => { function => 3, addr => 0x06F1, size => 0x1, acl => '', type => TYPE_BYTE, caption => 'Legio. MTWTFSSP', unit => ''},
     'LegionellaTimeOn'                  => { function => 4, addr => 0x0701, size => 0x1, acl => '', type => TYPE_TIME, caption => 'Legio. Begin', unit => ''},
     'LegionellaTimeOff'                 => { function => 4, addr => 0x0711, size => 0x1, acl => '', type => TYPE_TIME, caption => 'LEGIO. End', unit => ''},

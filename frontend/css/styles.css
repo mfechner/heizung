@@ -424,3 +424,61 @@ div#cooling div#CoolReturnTempHyst {
     left: 20px;
     top: 130px;
 }
+
+div#hotwater div span#description {
+    width: 200px;
+    height: 10px;
+}
+
+div#hotwater div {
+    position: absolute;
+}
+
+div#hotwater div#DomesticWaterOff {
+    left: 20px;
+    top: 10px;
+}
+div#hotwater div#DomesticWaterTimeOn {
+    left: 20px;
+    top: 30px;
+}
+div#hotwater div#DomesticWaterTimeOff {
+    left: 20px;
+    top: 50px;
+}
+div#hotwater div#DomesticWaterTempActual {
+    left: 20px;
+    top: 70px;
+}
+div#hotwater div#DomesticWaterTempNominal {
+    left: 20px;
+    top: 90px;
+}
+div#hotwater div#DomesticWaterTempHyst {
+    left: 20px;
+    top: 110px;
+}
+div#hotwater div#LegionellaSchedule {
+    left: 20px;
+    top: 130px;
+}
+div#hotwater div#LegionellaTimeOn {
+    left: 20px;
+    top: 150px;
+}
+div#hotwater div#LegionellaTimeOff {
+    left: 20px;
+    top: 170px;
+}
+div#hotwater div#LegionellaTempNominal {
+    left: 20px;
+    top: 190px;
+}
+div#hotwater div#DWNumberOfCompressors {
+    left: 20px;
+    top: 210px;
+}
+div#hotwater div#DomesticWaterTimeDelayOnSolar {
+    left: 20px;
+    top: 230px;
+}
