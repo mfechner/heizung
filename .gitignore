@@ -3,3 +3,6 @@
 .settings/
 .DS_Store
 ._*
+
+bin/*.a
+bin/writeModbus

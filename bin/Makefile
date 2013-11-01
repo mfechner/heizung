@@ -15,6 +15,9 @@ readModbus: readModbus.o mylib
 writeModbus: writeModbus.o mylib
 	$(CC) -o $@ $< $(LDFLAGS) 
 
+valgrind: readModbus writeModbus
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --num-callers=20 --track-fds=yes ./readModbus -- -f 3 -a 0x01B1 -s
+	
 clean:
 	rm *.o
 	rm *.a
