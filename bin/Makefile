@@ -1,16 +1,23 @@
-CFLAGS = -c -Wall -g
-LDFLAGS =
+CFLAGS = -c -Wall -g -I.
+LDFLAGS = -L. -lmylib
 
 CFLAGS += $(shell pkg-config --cflags libmodbus)
 LDFLAGS += $(shell pkg-config --libs libmodbus)
 
-all: readModbus
+all: readModbus writeModbus
 
-readModbus: readModbus.o
-	$(CC) $(LDFLAGS) -o $@ $< 
+mylib: mylib.o
+	$(AR) rcs lib$@.a -o $<
+
+readModbus: readModbus.o mylib
+	$(CC) -o $@ $< $(LDFLAGS) 
 	
+writeModbus: writeModbus.o mylib
+	$(CC) -o $@ $< $(LDFLAGS) 
+
 clean:
 	rm *.o
+	rm *.a
 	rm readModbus
 	
 %.o: %.c
