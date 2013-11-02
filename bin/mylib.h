@@ -21,6 +21,7 @@ struct globalArgs_t {
     int size;
     int verbose;
     enum types type;
+    char *writeData;
 };
 
 MYLIB_EXT void readParameter(int argc, char **argv);
@@ -29,5 +30,7 @@ MYLIB_EXT void allocateMemory(uint8_t **smallArray, uint16_t **bigArray);
 MYLIB_EXT void openModbusConnection(modbus_t **ctx, uint8_t **smallArray, uint16_t **bigArray);
 MYLIB_EXT int convertBigArrayToString(char *returnValue, int type, uint16_t *value);
 MYLIB_EXT int convertSmallArrayToString(char *returnValue, int type, uint8_t *value);
+MYLIB_EXT int convertStringToBigArray(char *string, int type, uint16_t *returnValue);
+MYLIB_EXT int convertStringToSmallArray(char *string, int type, uint8_t *returnValue);
 
 #endif

@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include "mylib.h"
 
-static const char *optString = "d:f:a:s:ht:v";
+static const char *optString = "d:f:a:s:ht:vw:";
 extern struct globalArgs_t globalArgs;
 
 void readParameter(int argc, char **argv) {
@@ -32,6 +32,9 @@ void readParameter(int argc, char **argv) {
         case 't':
             globalArgs.type = (int) strtol(optarg, NULL, 0);
             break;
+        case 'w':
+            globalArgs.writeData = optarg;
+            break;
         case 'h':
         case '?':
             if(optopt == 's' || optopt == 'a' || optopt == 'f') {
@@ -46,7 +49,7 @@ void readParameter(int argc, char **argv) {
 
 void displayUsage(char **argv) {
     printf("%s by Matthias Fechner\n", argv[0]);
-    printf("Usage: readModbus [-d device] [-f function] [-a address] [-s size] [-t type] [-v]\n\n");
+    printf("Usage: readModbus [-d device] [-f function] [-a address] [-s size] [-t type] [-v] [-w data to write]\n\n");
     printf("  d : Device to open, default /dev/ttyr0\n");
     printf("  f : Function: 0x01: read coil status, 0x02: read input status, 0x03: read holding registers, 0x04: read input registers\n");
     printf("  a : Address to read\n");
@@ -139,6 +142,27 @@ int convertBigArrayToString(char *returnValue, int type, uint16_t *value) {
     return -1;
 }
 
+int convertStringToBigArray(char *string, int type, uint16_t *returnValue) {
+    switch(type) {
+        case FLOAT:
+            if(globalArgs.verbose) printf("Found FLOAT\n");
+            float value=atof(string);
+            printf("Float: %4.8f\n", value);
+
+            unsigned int ui;
+            memcpy(&ui, &value, sizeof(ui));
+            printf("Hex is: 0x%X\n", ui);
+            returnValue[0]=ui & 0x0000FFFF;
+            printf("Hex: 0x%X", returnValue[0]);
+            returnValue[1]=ui >> 16;
+            printf(" %X\n", returnValue[1]);
+            returnValue[2]="\0";
+
+            return 0;
+    }
+    return -1;
+}
+
 int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
     switch(type) {
     case BOOL:
@@ -158,6 +182,10 @@ int convertSmallArrayToString(char *returnValue, int type, uint8_t *value) {
         return 0;
     }
     return -1;
+}
+
+int convertStringToSmallArray(char *string, int type, uint8_t *returnValue) {
+    return 0;
 }
 
 #endif
