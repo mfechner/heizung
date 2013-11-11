@@ -4,7 +4,7 @@ span {
     font-size: smaller;
 }
 
-span#value {
+.value {
     float: left;
     width: 60px;
     display: block;

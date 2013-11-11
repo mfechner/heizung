@@ -9,6 +9,7 @@ $(document).ready(function() {
 			refreshValues();
 		}
 	});
+	$('.edit').editable('/save.php');
 });
 
 function refreshCaptions() {
@@ -73,7 +74,7 @@ function refreshValues() {
 
 function updateValues(json) {
 	for(var key in json) {
-		$("#"+key+" #value").html(json[key]);
+		$("#"+key+" #"+key).html(json[key]);
 	}
 	if(json.HeatReturnTemp) {
 		$("#HeatReturnTemp2 #value").html(json.HeatReturnTemp);

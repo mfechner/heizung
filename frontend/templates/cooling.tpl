@@ -10,17 +10,18 @@
     <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
     <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/js/jquery-ui-timepicker-addon.js"></script>
+    <script type="text/javascript" src="/js/jquery.jeditable.mini.js"></script>
     <script type="text/javascript" src="/js/general.js">
     </script>
     <div id="cooling">
     <!-- Cooling -->
-        <div id="CoolOff"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolTimeOn"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolTimeOff"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolCharacteristicSetPoint"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolReturnTemp"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolReturnTempNominal"><span id="description"></span><span class="blackText" id="value"></span></div>
-        <div id="CoolReturnTempHyst"><span id="description"></span><span class="blackText" id="value"></div>
+        <div id="CoolOff"><span id="description"></span><span class="blackText value edit" id="CoolOff"></span></div>
+        <div id="CoolTimeOn"><span id="description"></span><span class="blackText value edit" id="CoolTimeOn"></span></div>
+        <div id="CoolTimeOff"><span id="description"></span><span class="blackText value edit" id="CoolTimeOff"></span></div>
+        <div id="CoolCharacteristicSetPoint"><span id="description"></span><span class="blackText value edit" id="CoolCharacteristicSetPoint"></span></div>
+        <div id="CoolReturnTemp"><span id="description"></span><span class="blackText value" id="CoolReturnTemp"></span></div>
+        <div id="CoolReturnTempNominal"><span id="description"></span><span class="blackText value edit" id="CoolReturnTempNominal"></span></div>
+        <div id="CoolReturnTempHyst"><span id="description"></span><span class="blackText value edit" id="CoolReturnTempHyst"></div>
 
     <!-- Date and Time Selector -->
         <div id="dateTimeField"><span id="description_short">Date/Time</span><span><input type="text" id="dateTimePicker"></span></div>
