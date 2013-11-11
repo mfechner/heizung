@@ -58,6 +58,7 @@ void displayUsage(char **argv) {
     printf("  v : Verbose mode\n");
     printf("\n");
     printf("./readModbus -f 3 -a 0x01B1 -s 0x2 -t 1\n");
+    printf("./writeModbus  -f 0x10 -a 0x0501 -s 0x2 -t 1 -v -w 23\n");
     printf("\n");
 }
 
@@ -158,6 +159,23 @@ int convertStringToBigArray(char *string, int type, uint16_t *returnValue) {
             printf(" %X\n", returnValue[1]);
             returnValue[2]="\0";
 
+            return 0;
+        case TIME:
+            if(globalArgs.verbose) printf("Found TIME\n");
+            char *part;
+            uint8_t highByte, lowByte, i=1;
+
+            part = strtok(string, ":");
+            while(part != NULL) {
+                if(i==1) {
+                    i--;
+                    highByte=atoi(part);
+                } else{
+                    lowByte=atoi(part);
+                }
+                part = strtok(NULL, ":");
+            }
+            *returnValue = (highByte << 8) | (lowByte &0xFF);
             return 0;
     }
     return -1;

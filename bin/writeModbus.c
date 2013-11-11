@@ -2,6 +2,8 @@
  *
  * To compile execute cc `pkg-config --cflags --libs libmodbus` writeModbus.c -o writeModbus
  *
+ * ./writeModbus  -f 0x10 -a 0x0501 -s 0x2 -t 1 -v -w 23
+ *
  * @param d Device to open, default /dev/ttyr00
  * @param f globalArgs.function (0x01: read coil status, 0x02: read input status, 0x03: read holding registers, 0x04: read input registers
  * @param a globalArgs.address to read
@@ -36,16 +38,17 @@ int main(int argc, char **argv) {
     modbus_set_slave(ctx, 1);
 
     switch (globalArgs.function) {
-    case 5: // write single coil
+    case 1: // write single coil
         //rc = modbus_write_bit(ctx, globalArgs.address, globalArgs.size, TRUE/FALSE);
         break;
-    case 6: // write a single register
+    case 2: // write a single register
         //rc = modbus_write_register(ctx, globalArgs.address, globalArgs.size, bigArray);
         break;
-    case 0x10: // write many registers
+    case 4: // write many registers
         rc = modbus_write_registers(ctx, globalArgs.address, globalArgs.size, bigArray);
+        break;
     default:
-        fprintf(stderr, "No function defined, do not read anything\n");
+        fprintf(stderr, "No function defined, do not write anything\n");
         exit(EXIT_FAILURE);
     }
 
