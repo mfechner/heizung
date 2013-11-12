@@ -1,7 +1,18 @@
 @CHARSET "UTF-8";
 
 span {
-    font-size: smaller;
+    font-size: 12px;
+}
+
+div#dateTimeField {
+    float: right;
+}
+div#tabs {
+    float: left;
+}
+div#overview {
+    float: left;
+    margin: 0 0 0 20;
 }
 
 .value {
@@ -27,9 +38,6 @@ span#description_short {
     border-color: rgb(228, 221, 221);
     padding-bottom: 7px;
 }
-div#diagram div {
-    position: absolute;
-}
 div#diagram div span#description {
     width: 57px;
     height: 10px;
@@ -39,23 +47,16 @@ div#diagram div span#description_short {
     height: 10px;
 }
 
-div#diagramm {
-    float: left;
-    position: relative;
-    padding: 0 0 0 0;
-    margin: 0 0 0 35;
-}
-
 div#diagram img#home.picture {
-    position: absolute;
+    position: relative;
     left: 150px;
     top: 0px;
 }
 
 div#diagram img#background.picture {
-    position: absolute;
+    position: relative;
     left: 0px;
-    top: 100px;
+    top: -330px;
 }
 
 #description {
@@ -78,60 +79,77 @@ div#diagram img#background.picture {
     background-color: rgb(246,81,0);
 }
 
-#OutdoorTemp {
-    left: 30px;
-    top: 20px;
+div#diagram  {
+    heigth: 1200px;
 }
-#OutdoorTemp1h {
-    left: 30px;
-    top: 40px;
+div#diagram div {
+    position: relative;
 }
-#OutdoorTemp24h {
+div#OutdoorTemp {
     left: 30px;
-    top: 60px;
+    top: -85px;
+}
+div#OutdoorTemp1h {
+    left: 30px;
+    top: -85px;
+}
+div#OutdoorTemp24h {
+    left: 30px;
+    top: -85px;
+}
+div#RoomTempNominal {
+    left: 310px;
+    top: -150px;
+}
+div#RoomTemp {
+    left: 310px;
+    top: -150px;
+}
+div#RoomTemp1h {
+    left: 310px;
+    top: -150px;
 }
 
-#RoomTempNominal {
-    left: 300px;
-    top: 15px;
+span#RTCDate.value {
+    width: 90px;
 }
-#RoomTemp {
-    left: 300px;
-    top: 35px;
+div#RTCDate {
+    left: 480px;
+    top: -215px;
 }
-#RoomTemp1h {
-    left: 300px;
-    top: 65px;
+span#RTCTime.value {
+    width: 90px;
+}
+div#RTCTime {
+    left: 480px;
+    top: -215px;
+}
+span#FirmwareVersion.value {
+    width: 90px;
+}
+div#FirmwareVersion {
+    left: 480px;
+    top: -215px;
+}
+span#FirmwareDate.value {
+    width: 90px;
+}
+div#FirmwareDate {
+    left: 480px;
+    top: -215px;
 }
 
-#RTCDate {
-    left: 450px;
-    top: 15px;
-}
-#RTCTime {
-    left: 450px;
-    top: 35px;
-}
-#FirmwareVersion {
-    left: 450px;
-    top: 55px;
-}
-#FirmwareDate {
-    left: 450px;
-    top: 75px;
-}
-
-#Pelectric {
+div#Pelectric {
     left: 30px;
-    top: 130px;
+    top: -200px;
 }
-#Pthermal {
+div#Pthermal {
     left: 30px;
-    top: 150px;
+    top: -220px;
 }
-#COP {
+div#COP {
     left: 30px;
-    top: 170px;
+    top: -240px;
 }
 #Pelectric.blackText span#description {
     width: 100px;
@@ -143,151 +161,152 @@ div#diagram img#background.picture {
     width: 100px;
 }
 
-#HeatSourceIn {
+div#HeatSourceIn {
     left: 10px;
-    top: 280px;
+    top: -500px;
 }
-#HeatSourceOut {
+div#HeatSourceOut {
     left: 70px;
-    top: 397px;
+    top: -400px;
 }
 
-#SunctionGasTemp {
+div#SunctionGasTemp {
     left: 205px;
-    top: 280px;
+    top: -640px;
 }
-#OHCompressor1 {
+div#OHCompressor1 {
     left: 280px;
-    top: 270px;
+    top: -674px;
 }
 
-#EvaporationTemp {
+div#EvaporationTemp {
     left: 105px;
-    top: 250px;
+    top: -826px;
 }
-#EvaporationPress {
+div#EvaporationPress {
     left: 105px;
-    top: 270px;
+    top: -826px;
 }
 
-#CondensationTemp {
+div#CondensationTemp {
     left: 355px;
-    top: 250px;
+    top: -630px;
 }
-#CondensationPress {
+div#CondensationPress {
     left: 355px;
-    top: 270px;
+    top: -630px;
 }
 
-#FlowTemp {
+div#FlowTemp {
     left: 475px;
-    top: 115px;
+    top: -1000px;
 }
-#HeatReturnTemp2 {
+div#HeatReturnTemp2 {
     left: 475px;
-    top: 198px;
+    top: -945px;
 }
 
-#iconPumpHeatSource {
+div#iconPumpHeatSource {
     left: 25px;
-    top: 330px;
+    top: -490px;
 }
 
-#iconCompressor1 {
+div#iconCompressor1 {
     left: 300px;
-    top: 290px;
+    top: -676px;
 }
 
-#iconPumpHeating {
+div#iconPumpHeating {
     left: 415px;
-    top: 366px;
+    top: -796px;
 }
-#iconMagnetValve {
+div#iconMagnetValve {
     left: 175px;
-    top: 358px;
+    top: -661px;
 }
 
-#iconCooling {
-    left: 600px;
-    top: 100px;
+div#overview div {
+    position: relative;
 }
-#CoolReturnTempNominal {
-    left: 640px;
-    top: 97px;
+/* overview div with icons */
+div#iconCooling {
+    left: 0px;
+    top: 0px;
 }
-#CoolReturnTemp {
-    left: 640px;
-    top: 117px;
+div#CoolReturnTempNominal {
+    left: 40px;
+    top: -53px;
 }
-
-#iconHeating {
-    left: 600px;
-    top: 150px;
-}
-#HeatReturnTempNominal {
-    left: 640px;
-    top: 147px;
-}
-#HeatReturnTemp {
-    left: 640px;
-    top: 167px;
+div#CoolReturnTemp {
+    left: 40px;
+    top: -53px;
 }
 
-#iconDomesticWater {
-    left: 600px;
-    top: 200px;
+div#iconHeating {
+    left: 0px;
+    top: -40px;
 }
-#DomesticWaterTempNominal {
-    left: 640px;
-    top: 197px;
+div#HeatReturnTempNominal {
+    left: 40px;
+    top: -92px;
 }
-#DomesticWaterTempActual {
-    left: 640px;
-    top: 217px;
-}
-
-#iconPool {
-    left: 600px;
-    top: 250px;
-}
-#PoolTempNominal {
-    left: 640px;
-    top: 247px;
-}
-#PoolTempActual {
-    left: 640px;
-    top: 267px;
+div#HeatReturnTemp {
+    left: 40px;
+    top: -92px;
 }
 
-#iconSolar {
-    left: 600px;
-    top: 300px;
+div#iconDomesticWater {
+    left: 0px;
+    top: -80px;
 }
-#SolarTempNominalMin {
-    left: 640px;
-    top: 297px;
+div#DomesticWaterTempNominal {
+    left: 40px;
+    top: -133px;
 }
-#SolarTempActual {
-    left: 640px;
-    top: 317px;
+div#DomesticWaterTempActual {
+    left: 40px;
+    top: -133px;
 }
 
-#icon3way {
-    left: 600px;
-    top: 350px;
+div#iconPool {
+    left: 0px;
+    top: -120px;
 }
-#HeatingCircuitNominal {
-    left: 640px;
-    top: 347px;
+div#PoolTempNominal {
+    left: 40px;
+    top: -173px;
 }
-#HeatingCircuitTemp {
-    left: 640px;
-    top: 367px;
+div#PoolTempActual {
+    left: 40px;
+    top: -173px;
 }
-#dateTimeField {
-    left: 600px;
-    top: 20px;
+
+div#iconSolar {
+    left: 0px;
+    top: -160px;
 }
+div#SolarTempNominalMin {
+    left: 40px;
+    top: -213px;
+}
+div#SolarTempActual {
+    left: 40px;
+    top: -213px;
+}
+
+div#icon3way {
+    left: 0px;
+    top: -200px;
+}
+div#HeatingCircuitNominal {
+    left: 40px;
+    top: -253px;
+}
+div#HeatingCircuitTemp {
+    left: 40px;
+    top: -253px;
+}
+
 input#dateTimePicker.hasDatepicker {
     width: 110px;
 }
@@ -305,180 +324,44 @@ input#dateTimePicker.hasDatepicker {
 .ui-timepicker-rtl dl { text-align: right; }
 .ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
 
+/* Heating */
 div#heating div span#description {
     width: 200px;
     height: 10px;
 }
 
-div#heating div {
-    position: absolute;
+div#heating {
+    position: static;
+    float: left;
 }
 
-div#heating div#HeatOff {
-    left: 20px;
-    top: 10px;
-}
-div#heating div#HeatTimeOn {
-    left: 20px;
-    top: 30px;
-}
-div#heating div#HeatTimeOff {
-    left: 20px;
-    top: 50px;
-}
-div#heating div#HeatCharacteristicSetPoint {
-    left: 20px;
-    top: 70px;
-}
-div#heating div#HeatCharacteristicSetPointBaseTemp {
-    left: 20px;
-    top: 90px;
-}
-div#heating div#HeatCharacteristicGradient {
-    left: 20px;
-    top: 110px;
-}
-div#heating div#HeatCharacteristicLimit {
-    left: 20px;
-    top: 130px;
-}
-div#heating div#HeatReturnTemp {
-    left: 20px;
-    top: 150px;
-}
-div#heating div#HeatReturnTempNominal {
-    left: 20px;
-    top: 170px;
-}
-div#heating div#HeatTempHyst {
-    left: 20px;
-    top: 190px;
-}
-div#heating div#RoomTempNominal {
-    left: 20px;
-    top: 210px;
-}
-div#heating div#RoomTempFactor {
-    left: 20px;
-    top: 230px;
-}
-div#heating div#HeatIncreaseOff {
-    left: 20px;
-    top: 250px;
-}
-div#heating div#HeatIncreaseTimeOn {
-    left: 20px;
-    top: 270px;
-}
-div#heating div#HeatIncreaseTimeOff {
-    left: 20px;
-    top: 290px;
-}
-div#heating div#HeatIncreaseSetPtOffset {
-    left: 20px;
-    top: 310px;
-	}
-div#heating div#AuxilaryModeHeating {
-    left: 20px;
-    top: 330px;
-}
-div#heating div#AuxilaryMaxDifference {
-    left: 20px;
-    top: 350px;
-}
-
+/* Cooling */
 div#cooling div span#description {
     width: 200px;
     height: 10px;
 }
 
-div#cooling div {
-    position: absolute;
+div#cooling {
+    position: static;
+    float: left;
 }
 
-div#cooling div#CoolOff {
-    left: 20px;
-    top: 10px;
-}
-div#cooling div#CoolTimeOn {
-    left: 20px;
-    top: 30px;
-}
-div#cooling div#CoolTimeOff {
-    left: 20px;
-    top: 50px;
-}
-div#cooling div#CoolCharacteristicSetPoint {
-    left: 20px;
-    top: 70px;
-}
-div#cooling div#CoolReturnTemp {
-    left: 20px;
-    top: 90px;
-}
-div#cooling div#CoolReturnTempNominal {
-    left: 20px;
-    top: 110px;
-}
-div#cooling div#CoolReturnTempHyst {
-    left: 20px;
-    top: 130px;
-}
-
+/* Hot water */
 div#hotwater div span#description {
     width: 200px;
     height: 10px;
 }
 
-div#hotwater div {
-    position: absolute;
+div#hotwater {
+    position: static;
+    float: left;
 }
 
-div#hotwater div#DomesticWaterOff {
-    left: 20px;
-    top: 10px;
-}
-div#hotwater div#DomesticWaterTimeOn {
-    left: 20px;
-    top: 30px;
-}
-div#hotwater div#DomesticWaterTimeOff {
-    left: 20px;
-    top: 50px;
-}
-div#hotwater div#DomesticWaterTempActual {
-    left: 20px;
-    top: 70px;
-}
-div#hotwater div#DomesticWaterTempNominal {
-    left: 20px;
-    top: 90px;
-}
-div#hotwater div#DomesticWaterTempHyst {
-    left: 20px;
-    top: 110px;
-}
-div#hotwater div#LegionellaSchedule {
-    left: 20px;
-    top: 130px;
-}
-div#hotwater div#LegionellaTimeOn {
-    left: 20px;
-    top: 150px;
-}
-div#hotwater div#LegionellaTimeOff {
-    left: 20px;
-    top: 170px;
-}
-div#hotwater div#LegionellaTempNominal {
-    left: 20px;
-    top: 190px;
-}
-div#hotwater div#DWNumberOfCompressors {
-    left: 20px;
-    top: 210px;
-}
-div#hotwater div#DomesticWaterTimeDelayOnSolar {
-    left: 20px;
-    top: 230px;
-}
+/** css for vertical tabs */
+.ui-tabs-vertical { width: 55em; }
+.ui-tabs-vertical .ui-tabs-nav { padding: .2em .1em .2em .2em; float: left; width: 12em; }
+.ui-tabs-vertical .ui-tabs-nav li { clear: left; width: 100%; border-bottom-width: 1px !important; border-right-width: 0 !important; margin: 0 -1px .2em 0; }
+.ui-tabs-vertical .ui-tabs-nav li a { display:block; }
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
+.ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
+

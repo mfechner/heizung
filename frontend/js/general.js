@@ -18,6 +18,9 @@ $(document).ready(function() {
 		      };
 		 }
 	});
+	$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");
+	$("#tabs li").removeClass("ui-corner-top").addClass("ui-corner-left");
+	
 });
 
 function refreshCaptions() {
@@ -85,7 +88,7 @@ function updateValues(json) {
 		$("#"+key+" #"+key).html(json[key]);
 	}
 	if(json.HeatReturnTemp) {
-		$("#HeatReturnTemp2 #value").html(json.HeatReturnTemp);
+		$("#HeatReturnTemp2 #HeatReturnTemp2").html(json.HeatReturnTemp);
 	}
 	
 	if(json.OperatingState & 0x1) { // Warmwasser

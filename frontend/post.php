@@ -4,102 +4,108 @@ require_once("_includes/globals.inc.php");
 $json = file_get_contents("config.json");
 $config = json_decode($json, TRUE);
 
-$overviewQuery = "SELECT timestamp,
-    			   FirmwareVersion,
-                   FirmwareDate,
-                   OperatingState,
-                   OutdoorTemp,
-                   OutdoorTemp1h,
-                   OutdoorTemp24h,
-                   CoolReturnTempNominal,
-                   CoolReturnTemp,
-                   HeatReturnTempNominal,
-                   HeatReturnTemp,
-                   FlowTemp,
-                   DomesticWaterTempNominal,
-                   DomesticWaterTempActual,
-                   RoomTemp,
-                   RoomTemp1h,
-                   RoomTempNominal,
-                   HeatSourceIn,
-                   HeatSourceOut,
-                   EvaporationTemp,
-                   EvaporationPress,
-    			   CondensationTemp,
-                   CondensationPress,
-    		       SunctionGasTemp,
-                   RTCTime,
-                   RTCDate,
-                   OHCompressor1,
-                   PoolTempNominal,
-                   PoolTempActual,
-                   SolarTempActual,
-                   SolarTempNominalMin,
-                   HeatingCircuitNominal,
-                   HeatingCircuitTemp,
-                   DOBuffer,
-                   DIBuffer,
-                   Pelectric,
-                   Pthermal,
-                   COP
-    FROM ".$db_getTable;
-$heatingQuery = "SELECT timestamp,
-				HeatOff,
-				HeatTimeOn,
-				HeatTimeOff,
-				HeatCharacteristicSetPoint,
-				HeatCharacteristicSetPointBaseTemp,
-				HeatCharacteristicGradient,
-				HeatCharacteristicLimit,
-				HeatReturnTemp,
-				HeatReturnTempNominal,
-				HeatTempHyst,
-				RoomTempNominal,
-				RoomTempFactor,
-				HeatIncreaseOff,
-				HeatIncreaseTimeOn,
-				HeatIncreaseTimeOff,
-				HeatIncreaseSetPtOffset,
-				AuxilaryModeHeating,
-				AuxilaryMaxDifference
-		FROM ".$db_getTable;
-$coolingQuery = "SELECT timestamp,
-                CoolOff,
-                CoolTimeOn,
-                CoolTimeOff,
-                CoolCharacteristicSetPoint,
-                CoolReturnTemp,
-                CoolReturnTempNominal,
-                CoolReturnTempHyst
-		FROM ".$db_getTable;
-$hotwaterQuery = "SELECT timestamp,
-				DomesticWaterOff,
-				DomesticWaterTimeOn,
-				DomesticWaterTimeOff,
-				DomesticWaterTempActual,
-				DomesticWaterTempNominal,
-				DomesticWaterTempHyst,
-				LegionellaSchedule,
-				LegionellaTimeOn,
-				LegionellaTimeOff,
-				LegionellaTempNominal,
-				DWNumberOfCompressors,
-				DomesticWaterTimeDelayOnSolar
-		FROM ".$db_getTable;
+$queryStart = "SELECT timestamp";
+$overviewQuery = " ,FirmwareVersion
+                   ,FirmwareDate
+                   ,OperatingState
+                   ,OutdoorTemp
+                   ,OutdoorTemp1h
+                   ,OutdoorTemp24h
+                   ,CoolReturnTempNominal
+                   ,CoolReturnTemp
+                   ,HeatReturnTempNominal
+                   ,HeatReturnTemp
+                   ,FlowTemp
+                   ,DomesticWaterTempNominal
+                   ,DomesticWaterTempActual
+                   ,RoomTemp
+                   ,RoomTemp1h
+                   ,RoomTempNominal
+                   ,HeatSourceIn
+                   ,HeatSourceOut
+                   ,EvaporationTemp
+                   ,EvaporationPress
+    			   ,CondensationTemp
+                   ,CondensationPress
+    		       ,SunctionGasTemp
+                   ,RTCTime
+                   ,RTCDate
+                   ,OHCompressor1
+                   ,PoolTempNominal
+                   ,PoolTempActual
+                   ,SolarTempActual
+                   ,SolarTempNominalMin
+                   ,HeatingCircuitNominal
+                   ,HeatingCircuitTemp
+                   ,DOBuffer
+                   ,DIBuffer
+                   ,Pelectric
+                   ,Pthermal
+                   ,COP
+    ";
+    
+$heatingQuery = " ,HeatOff
+				,HeatTimeOn
+				,HeatTimeOff
+				,HeatCharacteristicSetPoint
+				,HeatCharacteristicSetPointBaseTemp
+				,HeatCharacteristicGradient
+				,HeatCharacteristicLimit
+				,HeatReturnTemp
+				,HeatReturnTempNominal
+				,HeatTempHyst
+				,RoomTempNominal
+				,RoomTempFactor
+				,HeatIncreaseOff
+				,HeatIncreaseTimeOn
+				,HeatIncreaseTimeOff
+				,HeatIncreaseSetPtOffset
+				,AuxilaryModeHeating
+				,AuxilaryMaxDifference
+    ";
+
+$coolingQuery = " ,CoolOff
+                ,CoolTimeOn
+                ,CoolTimeOff
+                ,CoolCharacteristicSetPoint
+                ,CoolReturnTemp
+                ,CoolReturnTempNominal
+                ,CoolReturnTempHyst
+    ";
+
+$hotwaterQuery = ",DomesticWaterOff
+				,DomesticWaterTimeOn
+				,DomesticWaterTimeOff
+				,DomesticWaterTempActual
+				,DomesticWaterTempNominal
+				,DomesticWaterTempHyst
+				,LegionellaSchedule
+				,LegionellaTimeOn
+				,LegionellaTimeOff
+				,LegionellaTempNominal
+				,DWNumberOfCompressors
+				,DomesticWaterTimeDelayOnSolar
+    ";
+$queryEnd = "    FROM ".$db_getTable;
+
 switch ($_REQUEST['action']) {
 	case 'overview.php':
-		$values = getDbRecord($overviewQuery);
+		$values = getDbRecord($queryStart.$overviewQuery.$queryEnd);
 		break;
 	case 'heating.php':
-		$values = getDbRecord($heatingQuery);
+		$values = getDbRecord($queryStart.$heatingQuery.$queryEnd);
 		break;
 	case 'cooling.php':
-	    $values = getDbRecord($coolingQuery);
+	    $values = getDbRecord($queryStart.$coolingQuery.$queryEnd);
 	    break;
 	case 'hotwater.php':
-		$values = getDbRecord($hotwaterQuery);
+		$values = getDbRecord($queryStart.$hotwaterQuery.$queryEnd);
 		break;
+	case 'index.php':
+	    $values = getDbRecord($queryStart.$overviewQuery.$heatingQuery.$coolingQuery.$hotwaterQuery.$queryEnd);
+	    break;
 	default:
+	    
 }
 $values = formatValues($values);
 echo json_encode($values);

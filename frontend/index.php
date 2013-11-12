@@ -4,4 +4,4 @@ session_start();
 
 $smarty = new Smarty;
 
-$smarty->display('overview.tpl');
+$smarty->display('index.tpl');
