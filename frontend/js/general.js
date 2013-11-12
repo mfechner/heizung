@@ -9,7 +9,15 @@ $(document).ready(function() {
 			refreshValues();
 		}
 	});
-	$('.edit').editable('/save.php');
+	$('.edit').editable('/save.php', {
+		indicator: 'Saving...',
+		tooltip: 'Click to edit...',
+		"submitdata": function (value, settings) {
+		      return {
+		           "oldValue": this.revert
+		      };
+		 }
+	});
 });
 
 function refreshCaptions() {

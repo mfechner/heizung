@@ -18,7 +18,6 @@ int main(int argc, char **argv) {
     uint8_t *smallArray;
     uint16_t *bigArray;
     int rc;
-    int i;
 
     globalArgs.deviceName = "/dev/ttyr00";
     globalArgs.verbose = 0;

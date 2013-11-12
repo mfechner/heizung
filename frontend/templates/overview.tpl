@@ -57,7 +57,7 @@
         <div class="value blackText" id="CoolReturnTemp"><span id="CoolReturnTemp"></span></div>
 
         <div id="iconHeating"><img alt="" src="/img/heat_32x32_inactive.ico"></div>
-        <div class="value targetText" id="HeatReturnTempNominal"><span class="edit" id="HeatReturnTempNominal"></span></div>
+        <div class="value targetText" id="HeatReturnTempNominal"><span class="" id="HeatReturnTempNominal"></span></div>
         <div class="value blackText" id="HeatReturnTemp"><span id="HeatReturnTemp"></span></div>
 
         <div id="iconDomesticWater"><img alt="" src="/img/hw_32x32_inactive.ico"></div>

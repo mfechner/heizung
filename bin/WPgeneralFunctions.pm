@@ -25,7 +25,7 @@ sub readParameter() {
         . " -a" . $wp_memory->{$parameterKey}{addr}
         . " -s" . $wp_memory->{$parameterKey}{size}
         . " -t" . $dataTypes->{ $wp_memory->{$parameterKey}{type} };
-    #print($prog."\n");
+    print($prog."\n");
     open( PROG, "$prog|" ) || die("Cannot execute $prog\n");
     die("readModbus failed with exit code $?\n") if($? != 0);    
     $value=<PROG>;
@@ -35,4 +35,28 @@ sub readParameter() {
     return $value;
 }
 
+sub writeParameter() {
+	my ($wp_memory, $dataTypes, $parameterKey, $value) = @_;
+
+    my $prog = "./writeModbus -f" . $wp_memory->{$parameterKey}->{function}
+        . " -a" . $wp_memory->{$parameterKey}{addr}
+        . " -s" . $wp_memory->{$parameterKey}{size}
+        . " -t" . $dataTypes->{$wp_memory->{$parameterKey}{type}}
+        . " -w" . &formatValue($value);
+    print($prog."\n");
+    open( PROG, "$prog|" ) || die("Cannot execute $prog\n");
+    die("writeModbus failed with exit code $?\n") if($? != 0);
+    my $value=<PROG>;
+    chomp($value);
+    print("Got: $value\n");
+    close(PROG);
+    
+    return $value;
+}
+
+sub formatValue() {
+	my ($value) = @_;
+	$value =~ s/[°CK]//g;
+	return $value;
+}
 return 1;
