@@ -132,6 +132,9 @@ function formatValues($values) {
 			$values->$key= sprintf($config[$key]["format"], $val);
 			$values->$key= sprintf("%s%s", $values->$key, $config[$key]["unit"]);
 		}
+		if(array_key_exists($key, $config) && array_key_exists("type", $config[$key]) && $config[$key]["type"]=="TYPE_TIME") {
+		    $values->$key=substr($values->$key,0 ,5);
+		}
 	}
 
 	if(key_exists("RTCDate", $values)) {
