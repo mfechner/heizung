@@ -24,10 +24,30 @@ return array(
             ),
         ),
     ),
-    
+
     'view_manager' => array(
+        'display_not_found_reason' => true,
+        'display_exceptions' => true,
         'template_path_stack' => array(
             'heating' => __DIR__ . '/../view',
+        ),
+        'strategies' => array(
+            'ViewJsonStrategy',
+        ),
+    ),
+
+    'doctrine' => array(
+        'driver' => array(
+            'my_annotation_driver' => array(
+                'class' => 'Doctrine\ORM\Mapping\Driver\AnnotationDriver',
+                'cache' => 'array',
+                'paths' => array(__DIR__ . '/../src/Heating/Entity')
+            ),
+            'orm_default' => array(
+                'drivers' => array(
+                    'Heating\Entity' => 'my_annotation_driver'
+                ),
+            ),
         ),
     ),
 );

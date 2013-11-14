@@ -54,7 +54,7 @@ function refreshValues() {
 	var filename = url.substring(url.lastIndexOf('/')+1);
 	$.ajax({
 		// the URL for the request
-		url : "post.php",
+		url : "/heating/get",
 		// the data to send (will be converted to a query string)
 		data : {
 			action : filename,

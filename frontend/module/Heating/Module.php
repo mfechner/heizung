@@ -2,6 +2,7 @@
 namespace Heating;
 
 class Module {
+        
     public function getAutoloaderConfig() {
         return array(
             'Zend\Loader\ClassMapAutoloader' => array(
