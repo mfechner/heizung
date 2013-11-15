@@ -6,3 +6,4 @@
 
 bin/*.a
 bin/writeModbus
+log
