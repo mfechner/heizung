@@ -1,6 +1,6 @@
 $(document).ready(function() {
+	var config;
 	refreshCaptions();
-	refreshValues();
 	window.setInterval(refreshValues, 60000);
 	$( "#dateTimePicker" ).datetimepicker({
 		dateFormat: 'yy-mm-dd',
@@ -26,11 +26,12 @@ $(document).ready(function() {
 function refreshCaptions() {
 	console.log("Retrieve description json string");
 	$.ajax({
-		url: "config.json",
+		url: "/heating/getConfig",
 		type: "GET",
 		dataType: "json",
 		success: function(json) {
 			updateCaptions(json);
+			refreshValues();
 		}
 	});
 }

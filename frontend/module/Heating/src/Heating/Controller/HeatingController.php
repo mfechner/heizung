@@ -115,4 +115,13 @@ class HeatingController extends AbstractActionController {
         $result = new JsonModel($query->getArrayResult()[0]);
         return $result;
     }
+    
+    public function getConfigAction() {
+        $response = new \Zend\Http\Response\Stream();
+        $response->getHeaders()->addHeaders(array(
+            'Content-type' => 'application/json; charset=utf-8',
+        ));
+        $response->setStream(fopen(__DIR__ . "/../../../data/config.json", 'r'));
+        return $response;
+    }
 }

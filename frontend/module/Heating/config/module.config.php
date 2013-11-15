@@ -11,10 +11,10 @@ return array(
             'heating' => array(
                 'type' => 'segment',
                 'options' => array(
-                    'route' => '/heating[/:action][/:id]',
+                    'route' => '/heating[/:action][/:start]',
                     'contraints' => array(
                         'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                        'id' => '[0-9]+',
+                        'start' => '[0-9-+]+',
                     ),
                     'defaults' => array(
                         'controller' => 'Heating\Controller\Heating',
