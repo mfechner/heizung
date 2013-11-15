@@ -4,7 +4,7 @@ span {
     font-size: 12px;
 }
 
-div#dateTimeField {
+div#datetimefield {
     float: right;
 }
 div#tabs {
@@ -28,7 +28,7 @@ span#description {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-color: rgb(228, 221, 221);
-    padding-bottom: 7px;
+    padding-bottom: 15px;
 }
 span#description_short {
     float: left;
@@ -36,7 +36,7 @@ span#description_short {
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-color: rgb(228, 221, 221);
-    padding-bottom: 7px;
+    padding-bottom: 15px;
 }
 div#diagram div span#description {
     width: 57px;
@@ -65,162 +65,163 @@ div#diagram img#background.picture {
 #description_short {
     color: black;
 }
-.blackText {
+.blacktext {
     color: black;
 }
-.redText {
+.redtext {
     color: red;
 }
-.blueText {
+.bluetext {
     color: blue;
 }
-.targetText {
+.targettext {
     color: white;
     background-color: rgb(246,81,0);
 }
 
 div#diagram  {
-    heigth: 1200px;
+    left: -50px;
+    position: relative;
 }
 div#diagram div {
     position: relative;
 }
-div#OutdoorTemp {
+div#outdoortemp {
     left: 30px;
     top: -85px;
 }
-div#OutdoorTemp1h {
+div#outdoortemp1h {
     left: 30px;
     top: -85px;
 }
-div#OutdoorTemp24h {
+div#outdoortemp24h {
     left: 30px;
     top: -85px;
 }
-div#RoomTempNominal {
+div#roomtempnominal {
     left: 310px;
     top: -150px;
 }
-div#RoomTemp {
+div#roomtemp {
     left: 310px;
     top: -150px;
 }
-div#RoomTemp1h {
+div#roomtemp1h {
     left: 310px;
     top: -150px;
 }
 
-span#RTCDate.value {
+span#rtcdate.value {
     width: 90px;
 }
-div#RTCDate {
+div#rtcdate {
     left: 480px;
     top: -215px;
 }
-span#RTCTime.value {
+span#rtctime.value {
     width: 90px;
 }
-div#RTCTime {
+div#rtctime {
     left: 480px;
     top: -215px;
 }
-span#FirmwareVersion.value {
+span#firmwareversion.value {
     width: 90px;
 }
-div#FirmwareVersion {
+div#firmwareversion {
     left: 480px;
     top: -215px;
 }
-span#FirmwareDate.value {
+span#firmwaredate.value {
     width: 90px;
 }
-div#FirmwareDate {
+div#firmwaredate {
     left: 480px;
     top: -215px;
 }
 
-div#Pelectric {
+div#pelectric {
     left: 30px;
     top: -200px;
 }
-div#Pthermal {
+div#pthermal {
     left: 30px;
     top: -220px;
 }
-div#COP {
+div#cop {
     left: 30px;
     top: -240px;
 }
-#Pelectric.blackText span#description {
+#pelectric.blacktext span#description {
     width: 100px;
 }
-#Pthermal.blackText span#description {
+#pthermal.blacktext span#description {
     width: 100px;
 }
-#COP.blackText span#description {
+#cop.blacktext span#description {
     width: 100px;
 }
 
-div#HeatSourceIn {
+div#heatsourcein {
     left: 10px;
     top: -500px;
 }
-div#HeatSourceOut {
+div#heatsourceout {
     left: 70px;
     top: -400px;
 }
 
-div#SunctionGasTemp {
+div#sunctiongastemp {
     left: 205px;
     top: -640px;
 }
-div#OHCompressor1 {
+div#ohcompressor1 {
     left: 280px;
     top: -674px;
 }
 
-div#EvaporationTemp {
+div#evaporationtemp {
     left: 105px;
     top: -826px;
 }
-div#EvaporationPress {
+div#evaporationpress {
     left: 105px;
     top: -826px;
 }
 
-div#CondensationTemp {
+div#condensationtemp {
     left: 355px;
     top: -630px;
 }
-div#CondensationPress {
+div#condensationpress {
     left: 355px;
     top: -630px;
 }
 
-div#FlowTemp {
+div#flowtemp {
     left: 475px;
     top: -1000px;
 }
-div#HeatReturnTemp2 {
+div#heatreturntemp2 {
     left: 475px;
     top: -945px;
 }
 
-div#iconPumpHeatSource {
+div#iconpumpheatsource {
     left: 25px;
     top: -490px;
 }
 
-div#iconCompressor1 {
+div#iconcompressor1 {
     left: 300px;
     top: -676px;
 }
 
-div#iconPumpHeating {
+div#iconpumpheating {
     left: 415px;
     top: -796px;
 }
-div#iconMagnetValve {
+div#iconmagnetvalve {
     left: 175px;
     top: -661px;
 }
@@ -229,67 +230,67 @@ div#overview div {
     position: relative;
 }
 /* overview div with icons */
-div#iconCooling {
+div#iconcooling {
     left: 0px;
     top: 0px;
 }
-div#CoolReturnTempNominal {
+div#coolreturntempnominal {
     left: 40px;
     top: -53px;
 }
-div#CoolReturnTemp {
+div#coolreturntemp {
     left: 40px;
     top: -53px;
 }
 
-div#iconHeating {
+div#iconheating {
     left: 0px;
     top: -40px;
 }
-div#HeatReturnTempNominal {
+div#heatreturntempnominal {
     left: 40px;
     top: -92px;
 }
-div#HeatReturnTemp {
+div#heatreturntemp {
     left: 40px;
     top: -92px;
 }
 
-div#iconDomesticWater {
+div#icondomesticwater {
     left: 0px;
     top: -80px;
 }
-div#DomesticWaterTempNominal {
+div#domesticwatertempnominal {
     left: 40px;
     top: -133px;
 }
-div#DomesticWaterTempActual {
+div#domesticwatertempactual {
     left: 40px;
     top: -133px;
 }
 
-div#iconPool {
+div#iconpool {
     left: 0px;
     top: -120px;
 }
-div#PoolTempNominal {
+div#pooltempnominal {
     left: 40px;
     top: -173px;
 }
-div#PoolTempActual {
+div#pooltempactual {
     left: 40px;
     top: -173px;
 }
 
-div#iconSolar {
+div#iconsolar {
     left: 0px;
     top: -160px;
 }
-div#SolarTempNominalMin {
+div#solartempnominalmin {
     left: 40px;
     top: -213px;
 }
-div#SolarTempActual {
+div#solartempactual {
     left: 40px;
     top: -213px;
 }
@@ -298,16 +299,16 @@ div#icon3way {
     left: 0px;
     top: -200px;
 }
-div#HeatingCircuitNominal {
+div#heatingcircuitnominal {
     left: 40px;
     top: -253px;
 }
-div#HeatingCircuitTemp {
+div#heatingcircuittemp {
     left: 40px;
     top: -253px;
 }
 
-input#dateTimePicker.hasDatepicker {
+input#datetimepicker.hasdatepicker {
     width: 110px;
 }
 
