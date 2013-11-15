@@ -106,16 +106,18 @@ class HeatingController extends AbstractActionController {
 				,w.legionellatempnominal
 				,w.dwnumberofcompressors
 				,w.domesticwatertimedelayonsolar";
-        $startRestriction= $this->params()->fromRoute('start');
         $qb =$em->createQueryBuilder();
         $qb->select($queryStart.$overviewQuery.$heatingQuery.$coolingQuery.$hotwaterQuery)
             ->from("Heating\\Entity\\WpData", "w")
             ->orderBy("w.id", "DESC")
             ->setMaxResults(1);
+
+        $startRestriction= $this->params()->fromRoute('start');
         if($startRestriction) {
             $qb->where($qb->expr()->lt('w.timestamp', '?1'));
             $qb->setParameter(1, $startRestriction);
         }
+
         $query=$qb->getQuery();
         $result = new JsonModel($query->getArrayResult()[0]);
         return $result;
@@ -128,5 +130,24 @@ class HeatingController extends AbstractActionController {
         ));
         $response->setStream(fopen(__DIR__ . "/../../../data/config.json", 'r'));
         return $response;
+    }
+    
+    public function saveAction() {
+        $id = $this->params()->fromPost('id');
+        $value = $this->params()->fromPost('value');
+        $oldValue = $this->params()->fromPost('oldValue');
+
+        $em=$this->getEntityManager();
+        $wpWriteData = new \Heating\Entity\WpWriteData();
+        $wpWriteData->setKey($id);
+        $wpWriteData->setNewValue($value);
+        $wpWriteData->setOldValue($oldValue);
+        $wpWriteData->setTimestamp(new \DateTime('now'));
+        $em->persist($wpWriteData);
+        $em->flush();
+        
+        $result = new JsonModel(array($wpWriteData->getNewValue()));
+        return $result;
+        
     }
 }

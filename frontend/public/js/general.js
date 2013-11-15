@@ -11,11 +11,25 @@ $(document).ready(function() {
 	});
 	$('.timepicker').timepicker({
 		timeFormat: 'HH:mm',
+		onClose: function (time, inst) {
+			$.ajax({
+				type: 'POST',
+				url: '/heating/save',
+				data: {'id': this.id,
+						'value': time,
+						'oldValue': inst.lastVal,
+				},
+				cache: false,
+				success: function() {
+					alert("Submitted");
+				}
+			});
+		}
 	});
 	$('.datepicker').datetimepicker({
 		dateFormat: 'dd.mm.yy',
 	});
-	$('.edit').editable('/save.php', {
+	$('.edit').editable('/heating/save', {
 		indicator: 'Saving...',
 		tooltip: 'Click to edit...',
 		"submitdata": function (value, settings) {
