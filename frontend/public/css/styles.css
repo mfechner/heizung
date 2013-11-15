@@ -3,6 +3,13 @@
 span {
     font-size: 12px;
 }
+.timepicker.hasDatepicker, .datepicker.hasDatepicker {
+    font-size: 11px;
+    position: relative;
+    text-align: right;
+    top: -5px;
+    width: 60px;
+}
 
 div#datetimefield {
     float: right;

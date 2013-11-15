@@ -7,9 +7,10 @@ $this->headLink()->appendStylesheet($this->basePath('css/jquery-ui.css'));
 $this->headLink()->appendStylesheet($this->basePath('css/styles.css'));
 
 // load javascript
+$this->inlineScript()->appendFile($this->basePath('js/sprintf.js'));
 $this->inlineScript()->appendFile($this->basePath('js/jquery-ui.min.js'));
-$this->inlineScript()->appendFile($this->basePath('js/jquery-ui-timepicker-addon.js'));
 $this->inlineScript()->appendFile($this->basePath('js/jquery.jeditable.mini.js'));
+$this->inlineScript()->appendFile($this->basePath('js/jquery-ui-timepicker-addon.js'));
 $this->inlineScript()->appendFile($this->basePath('js/general.js'));
 
 ?>

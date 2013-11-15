@@ -9,6 +9,12 @@ $(document).ready(function() {
 			refreshValues();
 		}
 	});
+	$('.timepicker').timepicker({
+		timeFormat: 'HH:mm',
+	});
+	$('.datepicker').datetimepicker({
+		dateFormat: 'dd.mm.yy',
+	});
 	$('.edit').editable('/save.php', {
 		indicator: 'Saving...',
 		tooltip: 'Click to edit...',
@@ -46,6 +52,7 @@ function updateCaptions(json) {
 			$("#"+key+" #description_short").html(json[key]["webcaption"]);
 		}
 	}
+	config=json;
 }
 
 function refreshValues() {
@@ -82,7 +89,31 @@ function refreshValues() {
 
 function updateValues(json) {
 	for(var key in json) {
-		$("#"+key+" #"+key).html(json[key]);
+		if(json[key].date) {
+			time=json[key].date;
+			if($("#"+key+" #"+key).hasClass('date') || $("#"+key+" #"+key).hasClass('datepicker')) {
+				time=time.substr(0,10);
+			} else if($("#"+key+" #"+key).hasClass('time') || $("#"+key+" #"+key).hasClass('timepicker')) {
+				time= time.substr(11,5);
+			}
+			if($("#"+key+" #"+key).hasClass('hasDatepicker') || $("#"+key+" #"+key).hasClass('hasTimepicker')) {
+				$("#"+key+" #"+key).timepicker('setTime', time);
+			} else {
+				$("#"+key+" #"+key).html(time);
+			}
+		} else {
+			// check if we should formate it
+			if(config[key]['format']) {
+				json[key]=sprintf(config[key]['format'],json[key]);
+			}
+			if(config[key]['unit']=='%') {
+				json[key]*=100;
+			}
+			if(config[key]['unit']) {
+				json[key]=json[key]+config[key]['unit'];
+			}
+			$("#"+key+" #"+key).html(json[key]);
+		}
 	}
 	if(json.heatreturntemp) {
 		$("#heatreturntemp2 #heatreturntemp2").html(json.heatreturntemp);
