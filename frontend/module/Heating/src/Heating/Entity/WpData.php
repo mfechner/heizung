@@ -64,9 +64,9 @@ class WpData
     private $returntempnominal;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="AuxiliaryHeatMode", type="boolean", nullable=false)
+     * @ORM\Column(name="AuxiliaryHeatMode", type="integer", nullable=false)
      */
     private $auxiliaryheatmode;
 
@@ -85,9 +85,9 @@ class WpData
     private $ohdomesticwatercompressor;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatOff", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatOff", type="integer", nullable=false)
      */
     private $heatoff;
 
@@ -127,9 +127,9 @@ class WpData
     private $condensationtemp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ModemType", type="boolean", nullable=false)
+     * @ORM\Column(name="ModemType", type="integer", nullable=false)
      */
     private $modemtype;
 
@@ -141,23 +141,23 @@ class WpData
     private $ohcompressor2;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="PoolMaxRunTime", type="boolean", nullable=false)
+     * @ORM\Column(name="PoolMaxRunTime", type="integer", nullable=false)
      */
     private $poolmaxruntime;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="RoomTempFactor", type="boolean", nullable=false)
+     * @ORM\Column(name="RoomTempFactor", type="integer", nullable=false)
      */
     private $roomtempfactor;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="SourcePumpPreRunPeriod", type="boolean", nullable=false)
+     * @ORM\Column(name="SourcePumpPreRunPeriod", type="integer", nullable=false)
      */
     private $sourcepumpprerunperiod;
 
@@ -176,9 +176,9 @@ class WpData
     private $screedtempnominal;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatingUpScreed", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatingUpScreed", type="integer", nullable=false)
      */
     private $heatingupscreed;
 
@@ -197,16 +197,16 @@ class WpData
     private $failure;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServicePool", type="boolean", nullable=false)
+     * @ORM\Column(name="ServicePool", type="integer", nullable=false)
      */
     private $servicepool;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="PoolTimeDelayOnSolar", type="boolean", nullable=false)
+     * @ORM\Column(name="PoolTimeDelayOnSolar", type="integer", nullable=false)
      */
     private $pooltimedelayonsolar;
 
@@ -218,9 +218,9 @@ class WpData
     private $legionellatimeon;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="DWNumberOfCompressors", type="boolean", nullable=false)
+     * @ORM\Column(name="DWNumberOfCompressors", type="integer", nullable=false)
      */
     private $dwnumberofcompressors;
 
@@ -239,9 +239,9 @@ class WpData
     private $pelectric;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="AuxilaryModeHeating", type="boolean", nullable=false)
+     * @ORM\Column(name="AuxilaryModeHeating", type="integer", nullable=false)
      */
     private $auxilarymodeheating;
 
@@ -274,9 +274,9 @@ class WpData
     private $evaporationpress;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="PoolOff", type="boolean", nullable=false)
+     * @ORM\Column(name="PoolOff", type="integer", nullable=false)
      */
     private $pooloff;
 
@@ -365,16 +365,16 @@ class WpData
     private $solartimeon;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="SolarOff", type="boolean", nullable=false)
+     * @ORM\Column(name="SolarOff", type="integer", nullable=false)
      */
     private $solaroff;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceAuxiliaryHeating", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceAuxiliaryHeating", type="integer", nullable=false)
      */
     private $serviceauxiliaryheating;
 
@@ -407,16 +407,16 @@ class WpData
     private $lcdDisplayLine2;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="SoftwareReset", type="boolean", nullable=false)
+     * @ORM\Column(name="SoftwareReset", type="integer", nullable=false)
      */
     private $softwarereset;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatingPumpPreRunPeriod", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatingPumpPreRunPeriod", type="integer", nullable=false)
      */
     private $heatingpumpprerunperiod;
 
@@ -428,9 +428,9 @@ class WpData
     private $manufserialnum;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="NDStatus", type="boolean", nullable=false)
+     * @ORM\Column(name="NDStatus", type="integer", nullable=false)
      */
     private $ndstatus;
 
@@ -463,16 +463,16 @@ class WpData
     private $heatreturntemp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="Ta", type="boolean", nullable=false)
+     * @ORM\Column(name="Ta", type="integer", nullable=false)
      */
     private $ta;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="DomesticWaterTimeDelayOnSolar", type="boolean", nullable=false)
+     * @ORM\Column(name="DomesticWaterTimeDelayOnSolar", type="integer", nullable=false)
      */
     private $domesticwatertimedelayonsolar;
 
@@ -491,9 +491,9 @@ class WpData
     private $cooltimeon;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="CommMode", type="boolean", nullable=false)
+     * @ORM\Column(name="CommMode", type="integer", nullable=false)
      */
     private $commmode;
 
@@ -540,9 +540,9 @@ class WpData
     private $kp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="AutomaticOffDownUpSwitch", type="boolean", nullable=false)
+     * @ORM\Column(name="AutomaticOffDownUpSwitch", type="integer", nullable=false)
      */
     private $automaticoffdownupswitch;
 
@@ -554,9 +554,9 @@ class WpData
     private $warningsinput;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="SolarSensor", type="boolean", nullable=false)
+     * @ORM\Column(name="SolarSensor", type="integer", nullable=false)
      */
     private $solarsensor;
 
@@ -603,9 +603,9 @@ class WpData
     private $pooltimeoff;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceDomesticWater", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceDomesticWater", type="integer", nullable=false)
      */
     private $servicedomesticwater;
 
@@ -617,9 +617,9 @@ class WpData
     private $heatcharacteristicsetpointbasetemp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="CoolOff", type="boolean", nullable=false)
+     * @ORM\Column(name="CoolOff", type="integer", nullable=false)
      */
     private $cooloff;
 
@@ -631,16 +631,16 @@ class WpData
     private $lngselect;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="NumberOfCompressors", type="boolean", nullable=false)
+     * @ORM\Column(name="NumberOfCompressors", type="integer", nullable=false)
      */
     private $numberofcompressors;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="View", type="boolean", nullable=false)
+     * @ORM\Column(name="View", type="integer", nullable=false)
      */
     private $view;
 
@@ -659,16 +659,16 @@ class WpData
     private $extcontrolcode;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="OperatingHoursSelector", type="boolean", nullable=false)
+     * @ORM\Column(name="OperatingHoursSelector", type="integer", nullable=false)
      */
     private $operatinghoursselector;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="PoolNumberOfCompressors", type="boolean", nullable=false)
+     * @ORM\Column(name="PoolNumberOfCompressors", type="integer", nullable=false)
      */
     private $poolnumberofcompressors;
 
@@ -680,9 +680,9 @@ class WpData
     private $firmwaredate;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatingPumpAfterRunPeriod", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatingPumpAfterRunPeriod", type="integer", nullable=false)
      */
     private $heatingpumpafterrunperiod;
 
@@ -701,16 +701,16 @@ class WpData
     private $failuretempdomesticwater;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="SetDefaultSettings", type="boolean", nullable=false)
+     * @ORM\Column(name="SetDefaultSettings", type="integer", nullable=false)
      */
     private $setdefaultsettings;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="CyclicMeasurementPeriod", type="boolean", nullable=false)
+     * @ORM\Column(name="CyclicMeasurementPeriod", type="integer", nullable=false)
      */
     private $cyclicmeasurementperiod;
 
@@ -750,9 +750,9 @@ class WpData
     private $roomtemp1h;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceCooling", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceCooling", type="integer", nullable=false)
      */
     private $servicecooling;
 
@@ -799,9 +799,9 @@ class WpData
     private $domesticwatertempnominal;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="Ringtones", type="boolean", nullable=false)
+     * @ORM\Column(name="Ringtones", type="integer", nullable=false)
      */
     private $ringtones;
 
@@ -834,9 +834,9 @@ class WpData
     private $operatingstoptime;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="Tn", type="boolean", nullable=false)
+     * @ORM\Column(name="Tn", type="integer", nullable=false)
      */
     private $tn;
 
@@ -883,9 +883,9 @@ class WpData
     private $heatreturntempnominal;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="DomesticWaterOff", type="boolean", nullable=false)
+     * @ORM\Column(name="DomesticWaterOff", type="integer", nullable=false)
      */
     private $domesticwateroff;
 
@@ -904,9 +904,9 @@ class WpData
     private $coolreturntempnominal;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceSolar", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceSolar", type="integer", nullable=false)
      */
     private $servicesolar;
 
@@ -939,9 +939,9 @@ class WpData
     private $heatcharacteristicsetpoint;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="Refrigerant", type="boolean", nullable=false)
+     * @ORM\Column(name="Refrigerant", type="integer", nullable=false)
      */
     private $refrigerant;
 
@@ -1009,9 +1009,9 @@ class WpData
     private $evaporationtemp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceMixer", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceMixer", type="integer", nullable=false)
      */
     private $servicemixer;
 
@@ -1121,9 +1121,9 @@ class WpData
     private $cop;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="LegionellaSchedule", type="boolean", nullable=false)
+     * @ORM\Column(name="LegionellaSchedule", type="integer", nullable=false)
      */
     private $legionellaschedule;
 
@@ -1142,9 +1142,9 @@ class WpData
     private $characteristicsetpointbasetemp;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="DOExtStatus", type="boolean", nullable=false)
+     * @ORM\Column(name="DOExtStatus", type="integer", nullable=false)
      */
     private $doextstatus;
 
@@ -1184,9 +1184,9 @@ class WpData
     private $failureaierror;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatIncreaseOff", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatIncreaseOff", type="integer", nullable=false)
      */
     private $heatincreaseoff;
 
@@ -1240,9 +1240,9 @@ class WpData
     private $pooltempactual;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="ServiceHeating", type="boolean", nullable=false)
+     * @ORM\Column(name="ServiceHeating", type="integer", nullable=false)
      */
     private $serviceheating;
 
@@ -1254,9 +1254,9 @@ class WpData
     private $dibuffer;
 
     /**
-     * @var boolean
+     * @var integer
      *
-     * @ORM\Column(name="HeatSourceMinT", type="boolean", nullable=false)
+     * @ORM\Column(name="HeatSourceMinT", type="integer", nullable=false)
      */
     private $heatsourcemint;
 
