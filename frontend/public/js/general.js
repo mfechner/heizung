@@ -51,16 +51,12 @@ function updateCaptions(json) {
 function refreshValues() {
 	var dateTime= $( "#datetimepicker").val();
 	console.log("date:" + dateTime);
-	var url = this.location.pathname;
-	var filename = url.substring(url.lastIndexOf('/')+1);
+	var url = "/heating/get";
+	url+= dateTime ? ("/"+dateTime):"";
 	$.ajax({
 		// the URL for the request
-		url : "/heating/get",
+		url : url,
 		// the data to send (will be converted to a query string)
-		data : {
-			action : filename,
-			START: dateTime
-		},
 		// whether this is a POST or GET request
 		type : "GET",
 		// the type of data we expect back

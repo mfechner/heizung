@@ -24,12 +24,13 @@ class HeatingController extends AbstractActionController {
 
         ));
     }
+    
     public function getAction() {
         $em=$this->getEntityManager();
         
         $queryStart = "w.timestamp";
         $overviewQuery = ",w.firmwareversion
-                   ,w.FirmwareDate
+                   ,w.firmwaredate
                    ,w.operatingstate
                    ,w.outdoortemp
                    ,w.outdoortemp1h
@@ -105,12 +106,16 @@ class HeatingController extends AbstractActionController {
 				,w.legionellatempnominal
 				,w.dwnumberofcompressors
 				,w.domesticwatertimedelayonsolar";
-        
+        $startRestriction= $this->params()->fromRoute('start');
         $qb =$em->createQueryBuilder();
         $qb->select($queryStart.$overviewQuery.$heatingQuery.$coolingQuery.$hotwaterQuery)
             ->from("Heating\\Entity\\WpData", "w")
             ->orderBy("w.id", "DESC")
             ->setMaxResults(1);
+        if($startRestriction) {
+            $qb->where($qb->expr()->lt('w.timestamp', '?1'));
+            $qb->setParameter(1, $startRestriction);
+        }
         $query=$qb->getQuery();
         $result = new JsonModel($query->getArrayResult()[0]);
         return $result;
