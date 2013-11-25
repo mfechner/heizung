@@ -32,6 +32,7 @@ $(document).ready(function() {
 	$('.edit').editable('/heating/save', {
 		indicator: 'Saving...',
 		tooltip: 'Click to edit...',
+		contentType: 'application/json; charset=utf-8',
 		"submitdata": function (value, settings) {
 		      return {
 		           "oldValue": this.revert
