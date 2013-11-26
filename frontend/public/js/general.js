@@ -37,6 +37,10 @@ $(document).ready(function() {
 		      return {
 		           "oldValue": this.revert
 		      };
+		 },
+		 callback: function (value, settings) {
+			 // Decode utf8
+			 this.innerHTML=jQuery.parseJSON(value);
 		 }
 	});
 	$("#tabs").tabs().addClass("ui-tabs-vertical ui-helper-clearfix");

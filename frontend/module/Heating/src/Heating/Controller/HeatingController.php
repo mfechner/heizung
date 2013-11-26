@@ -145,9 +145,8 @@ class HeatingController extends AbstractActionController {
         $wpWriteData->setTimestamp(new \DateTime('now'));
         $em->persist($wpWriteData);
         $em->flush();
-        
-        $result = new JsonModel(array($wpWriteData->getNewValue()));
+        $data=$wpWriteData->getNewValue();
+        $result = new JsonModel(array($data));
         return $result;
-        
     }
 }

@@ -45,7 +45,7 @@ return array(
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'Heating\Entity' => 'my_annotation_driver'
+                    'Heating\Entity' => 'my_annotation_driver'                    
                 ),
             ),
         ),
