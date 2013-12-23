@@ -24,49 +24,75 @@ $this->inlineScript()->appendFile($this->basePath('js/general.js'));
         </ul>
         <div id="tabs-1">
             <div id="diagram">
-            <img src="/img/thome.gif" class="picture" id="home"><br>
-            
-            <!-- Temperatures -->
-            <div id="outdoortemp"><span id="description_short"></span><span class="value blackText" id="outdoortemp"></span></div><br>
-            <div id="outdoortemp1h"><span id="description_short"></span><span class="value blackText" id="outdoortemp1h"></span></div><br>
-            <div id="outdoortemp24h"><span id="description_short"></span><span class="value blacktext" id="outdoortemp24h"></span></div><br>
-            
-            <div id="roomtempnominal"><span id="description_short"></span><span class="value redtext edit" id="roomtempnominal"></span></div><br>
-            <div id="roomtemp"><span id="description_short"></span><span class="value blacktext" id="roomtemp"></span></div><br>
-            <div id="roomtemp1h"><span id="description_short"></span><span class="value blacktext" id="roomtemp1h"></span></div><br>
-            
-            <!-- general -->
-            <div id="rtcdate"><span id="description"></span><span class="value blacktext date" id="rtcdate"></span></div><br>
-            <div id="rtctime"><span id="description"></span><span class="value blacktext time" id="rtctime"></span></div><br>
-            <div id="firmwareversion"><span id="description_short"></span><span class="value blacktext" id="firmwareversion"></div><br>
-            <div id="firmwaredate"><span id="description_short"></span><span class="value blacktext" id="firmwaredate"></div><br>
-
-            <!--  consumption -->
-            <div class="blacktext" id="pelectric"><span id="description"></span><span id="pelectric"></div><br>
-            <div class="blacktext" id="pthermal"><span id="description"></span><span id="pthermal"></div><br>
-            <div class="blacktext" id="cop"><span id="description"></span><span id="cop"></div><br>
-
-            <img src="img/ds_std.gif" class="picture" id="background"><br>
-            <!-- heatsource -->
-            <div id="heatsourcein"><span class="value redtext" id="heatsourcein"></span></div><br>
-            <div id="heatsourceout"><span class="value bluetext" id="heatsourceout"></span></div><br>
-            <div id="iconpumpheatsource"><img alt="" src="/img/pump_90rgb.ico"></div><br>
-            <!-- condensator -->
-            <div id="condensationtemp"><span class="value redtext" id="condensationtemp"></span></div><br>
-            <div id="condensationpress"><span class="value redtext" id="condensationpress"></span></div><br>
-            <!-- middle -->
-            <div id="sunctiongastemp"><span class="value blacktext" id="sunctiongastemp"></span></div><br>
-            <div id="ohcompressor1"><span class="value blacktext" id="ohcompressor1"></span></div><br>
-            <div id="iconcompressor1"><img alt="" src="/img/refrig_0rgb.ico"></div><br>
-            <div id="iconmagnetvalve"><img alt="" src="/img/valve_magn_0rgb.ico"></div><br>
-            <!-- evaporator -->
-            <div id="evaporationtemp"><span class="value bluetext" id="evaporationtemp"></span></div><br>
-            <div id="evaporationpress"><span class="value bluetext" id="evaporationpress"></span></div><br>
-            <!-- heattarget -->
-            <div id="flowtemp"><span class="value redtext" id="flowtemp"></span></div><br>
-            <div id="heatreturntemp2"><span class="value bluetext" id="heatreturntemp2"></span></div><br>
-            <div id="iconpumpheating"><img alt="" src="/img/pump_180rgb.ico"></div><br>
-        </div>
+	            <div id="diagram-top">
+		            <!-- Temperatures -->
+		            <div id="outdoor_temps">
+			            <div id="outdoortemp"><span id="description_short"></span><span class="value blackText" id="outdoortemp"></span></div><br>
+			            <div id="outdoortemp1h"><span id="description_short"></span><span class="value blackText" id="outdoortemp1h"></span></div><br>
+			            <div id="outdoortemp24h"><span id="description_short"></span><span class="value blacktext" id="outdoortemp24h"></span></div><br>
+		            </div>
+		            
+		            <div id="room_temps">
+			            <div id="roomtempnominal"><span id="description_short"></span><span class="value redtext edit" id="roomtempnominal"></span></div><br>
+			            <div id="roomtemp"><span id="description_short"></span><span class="value blacktext" id="roomtemp"></span></div><br>
+			            <div id="roomtemp1h"><span id="description_short"></span><span class="value blacktext" id="roomtemp1h"></span></div><br>
+		            </div>
+		            
+		            <!-- general -->
+		            <div id="general_data">
+			            <div id="rtcdate"><span id="description"></span><span class="value blacktext date" id="rtcdate"></span></div><br>
+			            <div id="rtctime"><span id="description"></span><span class="value blacktext time" id="rtctime"></span></div><br>
+			            <div id="firmwareversion"><span id="description_short"></span><span class="value blacktext" id="firmwareversion"></span></div><br>
+			            <div id="firmwaredate"><span id="description_short"></span><span class="value blacktext" id="firmwaredate"></span></div><br>
+		            </div>
+				</div>
+	            
+	            <div class="clear" id="seperator_1"></div>
+	            
+				<div id="diagram-bottom">
+		            <!--  consumption -->
+		            <div id="consumption_data">
+			            <div class="blacktext" id="pelectric"><span id="description"></span><span id="pelectric"></span></div>
+			            <div class="blacktext" id="pthermal"><span id="description"></span><span id="pthermal"></span></div>
+			            <div class="blacktext" id="cop"><span id="description"></span><span id="cop"></span></div>
+					</div>
+					
+			        <!-- heattarget -->
+			        <div id="heat_data">
+				        <div id="flowtemp"><span class="value redtext" id="flowtemp"></span></div><br>
+				        <div id="heatreturntemp2"><span class="value bluetext" id="heatreturntemp2"></span></div><br>
+					</div>
+					
+					<div id="diagram-bot-line1">
+						<div id="evaporationtemp"><span class="value bluetext" id="evaporationtemp"></span></div>
+			            <div id="condensationtemp"><span class="value redtext" id="condensationtemp"></span></div>
+			        </div>
+			        <br>
+			        
+					<div id="diagram-bot-line2">
+				        <div id="heatsourcein"><span class="value redtext" id="heatsourcein"></span></div>
+				        <div id="evaporationpress"><span class="value bluetext" id="evaporationpress"></span></div>
+				        <div id="sunctiongastemp"><span class="value blacktext" id="sunctiongastemp"></span></div>
+				        <div id="ohcompressor1"><span class="value blacktext" id="ohcompressor1"></span></div>
+			            <div id="condensationpress"><span class="value redtext" id="condensationpress"></span></div>
+			        </div>
+			        <br>
+			        
+		            <div id="diagram-bot-line3">
+			            <div id="heatsourceout"><span class="value bluetext" id="heatsourceout"></span></div>
+					</div>
+			        <br>
+					
+			        <div id="diagram-bot-icons">
+				        <div id="iconpumpheatsource"><img alt="" src="/img/pump_90rgb.ico"></div>
+			            <div id="iconmagnetvalve"><img alt="" src="/img/valve_magn_0rgb.ico"></div>
+			            <div id="iconcompressor1"><img alt="" src="/img/refrig_0rgb.ico"></div>
+			            <div id="iconpumpheating"><img alt="" src="/img/pump_180rgb.ico"></div>
+		            </div>
+	            </div>
+	            
+	            <div class="clear"></div>
+	        </div>
         </div>
         <div id="tabs-2">
             <div id="heating">
@@ -77,10 +103,10 @@ $this->inlineScript()->appendFile($this->basePath('js/general.js'));
                 <div id="heatcharacteristicsetpoint"><span id="description"></span><span class="blacktext value edit" id="heatcharacteristicsetpoint"></span></div><br>
                 <div id="heatcharacteristicsetpointbasetemp"><span id="description"></span><span class="blacktext value edit" id="heatcharacteristicsetpointbasetemp"></span></div><br>
                 <div id="heatcharacteristicgradient"><span id="description"></span><span class="blacktext value edit" id="heatcharacteristicgradient"></span></div><br>
-                <div id="heatcharacteristiclimit"><span id="description"></span><span class="blacktext value edit" id="heatcharacteristiclimit"></div><br>
-                <div id="heatreturntemp"><span id="description"></span><span class="blacktext value" id="heatreturntemp"></div><br>
-                <div id="heatreturntempnominal"><span id="description"></span><span class="blacktext value" id="heatreturntempnominal"></div><br>
-                <div id="heattemphyst"><span id="description"></span><span class="blacktext value edit" id="heattemphyst"></div><br>
+                <div id="heatcharacteristiclimit"><span id="description"></span><span class="blacktext value edit" id="heatcharacteristiclimit"></span></div><br>
+                <div id="heatreturntemp"><span id="description"></span><span class="blacktext value" id="heatreturntemp"></span></div><br>
+                <div id="heatreturntempnominal"><span id="description"></span><span class="blacktext value" id="heatreturntempnominal"></span></div><br>
+                <div id="heattemphyst"><span id="description"></span><span class="blacktext value edit" id="heattemphyst"></span></div><br>
                 <div id="roomtempnominal"><span id="description"></span><span class="blacktext value edit" id="roomtempnominal"></span></div><br>
                 <div id="roomtempfactor"><span id="description"></span><span class="blacktext value edit" id="roomtempfactor"></span></div><br>
                 <div id="heatincreaseoff"><span id="description"></span><span class="blacktext value edit" id="heatincreaseoff"></span></div><br>
@@ -96,11 +122,11 @@ $this->inlineScript()->appendFile($this->basePath('js/general.js'));
                 <!-- cooling -->
                 <div id="cooloff"><span id="description"></span><span class="blacktext value edit" id="cooloff"></span></div><br>
                 <div id="cooltimeon"><span id="description"></span><input class="blacktext timepicker" id="cooltimeon"></div>
-                <div id="cooltimeoff"><span id="description"></span><input class="blacktext timepicker" id="cooltimeoff"></span></div>
+                <div id="cooltimeoff"><span id="description"></span><input class="blacktext timepicker" id="cooltimeoff"></div>
                 <div id="coolcharacteristicsetpoint"><span id="description"></span><span class="blacktext value edit" id="coolcharacteristicsetpoint"></span></div><br>
                 <div id="coolreturntemp"><span id="description"></span><span class="blacktext value" id="coolreturntemp"></span></div><br>
                 <div id="coolreturntempnominal"><span id="description"></span><span class="blacktext value edit" id="coolreturntempnominal"></span></div><br>
-                <div id="coolreturntemphyst"><span id="description"></span><span class="blacktext value edit" id="coolreturntemphyst"></div><br>
+                <div id="coolreturntemphyst"><span id="description"></span><span class="blacktext value edit" id="coolreturntemphyst"></span></div><br>
             </div>
         </div>
         <div id="tabs-4">
@@ -112,12 +138,12 @@ $this->inlineScript()->appendFile($this->basePath('js/general.js'));
                 <div id="domesticwatertempactual"><span id="description"></span><span class="blacktext value" id="domesticwatertempactual"></span></div><br>
                 <div id="domesticwatertempnominal"><span id="description"></span><span class="blacktext value edit" id="domesticwatertempnominal"></span></div><br>
                 <div id="domesticwatertemphyst"><span id="description"></span><span class="blacktext value edit" id="domesticwatertemphyst"></span></div><br>
-                <div id="legionellaschedule"><span id="description"></span><span class="blacktext value edit" id="legionellaschedule"></div><br>
+                <div id="legionellaschedule"><span id="description"></span><span class="blacktext value edit" id="legionellaschedule"></span></div><br>
                 <div id="legionellatimeon"><span id="description"></span><input class="blacktext timepicker" id="legionellatimeon"></div>
                 <div id="legionellatimeoff"><span id="description"></span><input class="blacktext timepicker" id="legionellatimeoff"></div>
-                <div id="legionellatempnominal"><span id="description"></span><span class="blacktext value edit" id="legionellatempnominal"></div><br>
-                <div id="dwnumberofcompressors"><span id="description"></span><span class="blacktext value" id="dwnumberofcompressors"></div><br>
-                <div id="domesticwatertimedelayonsolar"><span id="description"></span><span class="blacktext value" id="domesticwatertimedelayonsolar"></div><br>
+                <div id="legionellatempnominal"><span id="description"></span><span class="blacktext value edit" id="legionellatempnominal"></span></div><br>
+                <div id="dwnumberofcompressors"><span id="description"></span><span class="blacktext value" id="dwnumberofcompressors"></span></div><br>
+                <div id="domesticwatertimedelayonsolar"><span id="description"></span><span class="blacktext value" id="domesticwatertimedelayonsolar"></span></div><br>
             </div>
         </div>
     </div>
@@ -147,5 +173,7 @@ $this->inlineScript()->appendFile($this->basePath('js/general.js'));
 
         <div id="icon3way"><img alt="" src="/img/3way_32x32_inactive.ico"></div><br>
         <div class="value targettext" id="heatingcircuitnominal"><span class="edit" id="heatingcircuitnominal"></span></div><br>
-         <div class="value blacktext" id="heatingcircuittemp"><span id="heatingcircuittemp"></span></div><br>
+        <div class="value blacktext" id="heatingcircuittemp"><span id="heatingcircuittemp"></span></div><br>
     </div>
+	<div class="clear"></div>
+    

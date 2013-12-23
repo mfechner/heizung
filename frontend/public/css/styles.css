@@ -20,6 +20,8 @@ div#tabs {
 div#overview {
     float: left;
     margin: 0 0 0 20;
+    width: 130px;
+    height: 400px;
 }
 
 .value {
@@ -46,24 +48,12 @@ span#description_short {
     padding-bottom: 15px;
 }
 div#diagram div span#description {
-    width: 57px;
+    width: 60px;
     height: 10px;
 }
 div#diagram div span#description_short {
-    width: 57px;
+    width: 60px;
     height: 10px;
-}
-
-div#diagram img#home.picture {
-    position: relative;
-    left: 150px;
-    top: 0px;
-}
-
-div#diagram img#background.picture {
-    position: relative;
-    left: 0px;
-    top: -330px;
 }
 
 #description {
@@ -87,77 +77,90 @@ div#diagram img#background.picture {
 }
 
 div#diagram  {
-    left: -50px;
-    position: relative;
-}
-div#diagram div {
-    position: relative;
-}
-div#outdoortemp {
-    left: 30px;
-    top: -85px;
-}
-div#outdoortemp1h {
-    left: 30px;
-    top: -85px;
-}
-div#outdoortemp24h {
-    left: 30px;
-    top: -85px;
-}
-div#roomtempnominal {
-    left: 310px;
-    top: -150px;
-}
-div#roomtemp {
-    left: 310px;
-    top: -150px;
-}
-div#roomtemp1h {
-    left: 310px;
-    top: -150px;
 }
 
+div#diagram-top {
+    background: #ffffff url('/img/thome.gif') no-repeat 120px top;
+}
+
+div#diagram-top div {
+	display: inline-block;
+}
+
+div#outdoor_temps {
+	width: 130px;
+	height: 63px;
+	float: left;
+	padding: 21px 0 0 0;
+}
+div#outdoortemp {
+}
+div#outdoortemp1h {
+}
+div#outdoortemp24h {
+}
+
+div#room_temps {
+	width: 130px;
+	height: 63px;
+	margin: 0 0 0 144px;
+	float: left;
+    padding: 21px 0 0 0;
+}
+div#roomtempnominal {
+}
+div#roomtemp {
+}
+div#roomtemp1h {
+}
+
+div#general_data {
+	width: 160px;
+	height: 84px;
+}
 span#rtcdate.value {
     width: 90px;
 }
 div#rtcdate {
-    left: 480px;
-    top: -215px;
 }
 span#rtctime.value {
     width: 90px;
 }
 div#rtctime {
-    left: 480px;
-    top: -215px;
 }
 span#firmwareversion.value {
     width: 90px;
 }
 div#firmwareversion {
-    left: 480px;
-    top: -215px;
 }
 span#firmwaredate.value {
     width: 90px;
 }
 div#firmwaredate {
-    left: 480px;
-    top: -215px;
 }
 
+div#seperator_1 {
+	margin: 25px 0 0 0;
+}
+div#diagram-bottom {
+	background: #ffffff url('/img/ds_std.gif') no-repeat left top;
+	width: 600px;
+	height: 350px;
+}
+
+div#diagram-bottom div {
+    display: inline-block;
+    position: relative;
+}
+div#consumption_data {
+    width: 160px;
+    height: 63px;
+}
 div#pelectric {
-    left: 30px;
-    top: -200px;
 }
 div#pthermal {
-    left: 30px;
-    top: -220px;
 }
 div#cop {
-    left: 30px;
-    top: -240px;
 }
 #pelectric.blacktext span#description {
     width: 100px;
@@ -169,69 +172,81 @@ div#cop {
     width: 100px;
 }
 
-div#heatsourcein {
-    left: 10px;
-    top: -500px;
+div#heat_data {
+	left: 315px;
+	top: 0px;
 }
-div#heatsourceout {
-    left: 70px;
-    top: -400px;
-}
-
-div#sunctiongastemp {
-    left: 205px;
-    top: -640px;
-}
-div#ohcompressor1 {
-    left: 280px;
-    top: -674px;
-}
-
-div#evaporationtemp {
-    left: 105px;
-    top: -826px;
-}
-div#evaporationpress {
-    left: 105px;
-    top: -826px;
-}
-
-div#condensationtemp {
-    left: 355px;
-    top: -630px;
-}
-div#condensationpress {
-    left: 355px;
-    top: -630px;
-}
-
 div#flowtemp {
-    left: 475px;
-    top: -1000px;
+    left: 0px;
+    top: 0px;
 }
 div#heatreturntemp2 {
-    left: 475px;
-    top: -945px;
+    top: 53px;
 }
 
+div#diagram-bot-line1 {
+	top: 110px;
+	left: -120px;
+}
+div#evaporationtemp {
+    left: 0px;
+    top: 0px;
+}
+div#condensationtemp {
+    left: 0px;
+    top: 0px;
+    margin: 0 0 0 180px;
+}
+
+div#diagram-bot-line2 {
+    top: 110px;
+    left: 0px;
+}
+div#heatsourcein {
+	top: 10px;
+}
+div#evaporationpress {
+    margin: 0 0 0 45px;
+}
+div#sunctiongastemp {
+    top: 10px;
+    margin: 0 0 0 30px;
+}
+div#ohcompressor1 {
+    margin: 0 0 0 10px;
+}
+div#condensationpress {
+    margin: 0 0 0 10px;
+}
+
+div#diagram-bot-line3 {
+	top: 215px;
+	left: 70px;
+}
+div#heatsourceout {
+}
+
+div#diagram-bot-icons {
+	left: 26px;
+	top: 120px;
+}
 div#iconpumpheatsource {
-    left: 25px;
-    top: -490px;
-}
-
-div#iconcompressor1 {
-    left: 300px;
-    top: -676px;
-}
-
-div#iconpumpheating {
-    left: 415px;
-    top: -796px;
+    left: 0px;
+    top: 0px;
 }
 div#iconmagnetvalve {
-    left: 175px;
-    top: -661px;
+    margin: 0 0 0 113px;
+    top: 31px;
 }
+div#iconcompressor1 {
+    margin: 0 0 0 80px;
+    top: -36px;
+}
+div#iconpumpheating {
+    margin: 0 0 0 86px;
+    top: 40px;
+}
+
 
 div#overview div {
     position: relative;
@@ -373,3 +388,6 @@ div#hotwater {
 .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active { padding-bottom: 0; padding-right: .1em; border-right-width: 1px; border-right-width: 1px; }
 .ui-tabs-vertical .ui-tabs-panel { padding: 1em; float: right; width: 40em;}
 
+.clear {
+	clear: both;
+}
