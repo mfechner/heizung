@@ -11,7 +11,8 @@
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.2.*",
-	"doctrine/doctrine-orm-module": "dev-master",
+        "slm/locale": "dev-master",
+	    "doctrine/doctrine-orm-module": "dev-master",
         "zendframework/zend-developer-tools": "dev-master",
         "bjyoungblood/bjy-profiler": "dev-master"
     }

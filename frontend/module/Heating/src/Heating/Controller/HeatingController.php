@@ -124,12 +124,14 @@ class HeatingController extends AbstractActionController {
     }
     
     public function getConfigAction() {
-        $response = new \Zend\Http\Response\Stream();
-        $response->getHeaders()->addHeaders(array(
-            'Content-type' => 'application/json; charset=utf-8',
-        ));
-        $response->setStream(fopen(__DIR__ . "/../../../data/config.json", 'r'));
-        return $response;
+        $json = json_decode(file_get_contents(__DIR__ . "/../../../data/config.json"), true);
+        $translator=$this->getServiceLocator()->get('translator');
+        foreach ($json as $key => $value) {
+            //echo "$key => $value";
+            $json[$key]['caption']=$translator->translate($json[$key]['caption']);
+        }
+        $result = new JsonModel($json);
+        return $result;
     }
     
     public function saveAction() {

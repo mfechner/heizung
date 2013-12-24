@@ -1,4 +1,6 @@
 <?php
+namespace Heating;
+
 return array(
     'controllers' => array(
         'invokables' => array(
@@ -25,6 +27,17 @@ return array(
         ),
     ),
 
+    'translator' => array(
+        'locale' => 'de_DE',
+        'translation_file_patterns' => array(
+            array(
+                'type'     => 'gettext',
+                'base_dir' => __DIR__ . '/../language',
+                'pattern'  => '%s.mo',
+            ),
+        ),
+    ),
+    
     'view_manager' => array(
         'display_not_found_reason' => true,
         'display_exceptions' => true,
@@ -45,7 +58,7 @@ return array(
             ),
             'orm_default' => array(
                 'drivers' => array(
-                    'Heating\Entity' => 'my_annotation_driver'                    
+                    'Heating\Entity' => 'my_annotation_driver'
                 ),
             ),
         ),

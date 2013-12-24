@@ -7,3 +7,5 @@
 bin/*.a
 bin/writeModbus
 log
+
+frontend/vendor/*

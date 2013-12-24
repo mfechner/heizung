@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Heating\n"
+"POT-Creation-Date: 2013-12-24 03:56+0100\n"
+"PO-Revision-Date: 2013-12-24 03:56+0100\n"
+"Last-Translator: Matthias Fechner <idefix@fechner.net>\n"
+"Language-Team: Matthias Fechner <idefix@fechner.ent>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.3\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: translate;translatePlural\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../view/heating/heating/index.phtml:25
+msgid "Overview"
+msgstr ""
+
+#: ../view/heating/heating/index.phtml:26
+msgid "Heating"
+msgstr ""
+
+#: ../view/heating/heating/index.phtml:27
+msgid "Cooling"
+msgstr ""
+
+#: ../view/heating/heating/index.phtml:28
+msgid "Hot Water"
+msgstr ""
