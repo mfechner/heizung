@@ -349,7 +349,7 @@ input#datetimepicker.hasdatepicker {
 
 /* Heating */
 div#heating div span#description {
-    width: 200px;
+    width: 300px;
     height: 10px;
 }
 
@@ -360,7 +360,7 @@ div#heating {
 
 /* Cooling */
 div#cooling div span#description {
-    width: 200px;
+    width: 300px;
     height: 10px;
 }
 
@@ -371,7 +371,7 @@ div#cooling {
 
 /* Hot water */
 div#hotwater div span#description {
-    width: 200px;
+    width: 300px;
     height: 10px;
 }
 
