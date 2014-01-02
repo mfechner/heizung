@@ -1,24 +1,20 @@
-# Wenn diese Bibliothek zusätzliche includes benötigt, müssen diese
-# natürlich eingefügt werden.
+# include header files
+INCLUDE_DIRECTORIES( ${CMAKE_SOURCE_DIR}/include )
 
-# Hier wird definiert, welche Quellcodedateien zur Bibliothek dazugehören.
-# Bei großen Projekten ist eine logische Unterteilung sinnvoll.
+# Define source codes
 set(library_SRCS
     mylib.c
 )
 
-# Es wird festgelegt, dass es sich um eine gemeinsam genutzt Bibliothek
-# handelt. Um eine statische Bibliothek zu bekommen, wird
-# SHARED durch STATIC ersetzt.
-add_library (library STATIC ${library_SRCS})
+# Compile as static library
+add_library(mylib STATIC ${library_SRCS})
 
-# Wenn nötig können auch Bibliotheken gegen andere gelinkt werden.
-target_link_libraries(library
-    ${libmodbus}
+TARGET_LINK_LIBRARIES(mylib
+    ${MODBUS_LIBRARIES}
 )
 
-install(TARGETS library
+install(TARGETS mylib
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
-	ARCHIVE DESTINATION lib
+        ARCHIVE DESTINATION lib
 )
