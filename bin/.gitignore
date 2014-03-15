@@ -1,4 +1,7 @@
 readModbus
+writeModbus
 *.o
+*.a
 *~
 config
+sql
