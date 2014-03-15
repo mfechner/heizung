@@ -5,12 +5,14 @@ use Zend\View\Model\JsonModel;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Zend\I18n\Translator\Translator;
 
 class HeatingController extends AbstractActionController {
     /**
      * @var Doctrine\ORM\EntityManager
      */
     protected $em;
+    protected $translator;
 
     public function getEntityManager() {
         if(null === $this->em) {
@@ -19,6 +21,10 @@ class HeatingController extends AbstractActionController {
         return $this->em;
     }
 
+    public function __contruct(Translator $translator) {
+        $this->translator = $translator;
+    }
+    
     public function indexAction() {
         return new ViewModel(array(
 

@@ -19,9 +19,9 @@ sub create_insert {
 } # end of function create_insert
 
 sub readParameter() {
-	my ($wp_memory, $dataTypes, $parameterKey) = @_;
-	my $value;
-	my $prog = "./readModbus -f" . $wp_memory->{$parameterKey}->{function} 
+    my ($wp_memory, $dataTypes, $parameterKey) = @_;
+    my $value;
+    my $prog = "./readModbus -f" . $wp_memory->{$parameterKey}->{function} 
         . " -a" . $wp_memory->{$parameterKey}{addr}
         . " -s" . $wp_memory->{$parameterKey}{size}
         . " -t" . $dataTypes->{ $wp_memory->{$parameterKey}{type} };
@@ -36,8 +36,12 @@ sub readParameter() {
 }
 
 sub writeParameter() {
-	my ($wp_memory, $dataTypes, $parameterKey, $value) = @_;
+    my ($wp_memory, $dataTypes, $parameterKey, $value) = @_;
 
+    # rename keys to small letters as doctrine enforces us to use to capital letters
+    foreach my $key (keys %wp_memory) {
+    	$wp_memory{lc($key)}=delete $wp_memory{$key};
+    }
     my $prog = "./writeModbus -f" . $wp_memory->{$parameterKey}->{function}
         . " -a" . $wp_memory->{$parameterKey}{addr}
         . " -s" . $wp_memory->{$parameterKey}{size}

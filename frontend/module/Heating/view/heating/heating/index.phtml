@@ -13,6 +13,11 @@ $this->inlineScript()->appendFile($this->basePath('js/jquery.jeditable.mini.js')
 $this->inlineScript()->appendFile($this->basePath('js/jquery-ui-timepicker-addon.js'));
 $this->inlineScript()->appendFile($this->basePath('js/general.js'));
 
+$this->navigation()->addPage(array(
+    'type' => 'uri',
+    'label' => 'Heating'
+    ));
+
 ?>
     <!-- Date and Time Selector -->
     <div id="tabs">
