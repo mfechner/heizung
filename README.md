@@ -1,13 +1,14 @@
-# Heating visualization
+# Heating visualization of a Waterkotte WPCU.C
 
 ### Whats new?
 
-*
-*
+* First public version
 
 ## Introduction
 Heating visualization is a tool that read/write values from a Waterkotte heating with a WPCU.C attached.
 Values are visualized on a webpage and some values can even be changed from the website.
+
+For details and screenshot see the website: http://fechner.net/content/visualisierung-einer-waterkotte-w%C3%A4rmepumpe-mit-ein-wpcuc-regelung
 
 ### Technology
 Values are stored in a mysql database, even if you write values to the heating.
@@ -139,3 +140,4 @@ http://_yourhostname_/heating
 And you should see your heating on a web page.
 
 Have fun.
+
