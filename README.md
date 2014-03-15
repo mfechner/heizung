@@ -1,6 +1,6 @@
 # Heating visualization of a Waterkotte WPCU.C
 
-### Whats new?
+## Whats new?
 
 * First public version
 
@@ -10,16 +10,16 @@ Values are visualized on a webpage and some values can even be changed from the 
 
 For details and screenshot see the website: http://fechner.net/content/visualisierung-einer-waterkotte-w%C3%A4rmepumpe-mit-ein-wpcuc-regelung
 
-### Technology
+## Technology
 Values are stored in a mysql database, even if you write values to the heating.
 
 The webinterface is based on ZendFramework2, jQuery, PHP and Doctrine2.
 The backend is written in C and Perl and is using libmodbus.
 
-### Installation
+## Installation
 Clone the repository using git.
 
-## Setup the database
+### Setup the database
 Create a new mysql database using phpmyadmin or the console. Replace the string to your liking:
 ```
 mysql -u root -p
@@ -52,12 +52,12 @@ mysql -u _heatinguser_ -p _heatingdb_ <db.sql
 type yout password
 ```
 
-## Setup the configfiles
+### Setup the configfiles
 Copy the file bin/config.dist to bin/config and edit it according your database settings.
 
 Copy the file frontend/config/autoload/doctrine.local.php.dist to frontend/config/autoload/doctrine.local.php and edit it according your database settings.
 
-## Compile backend
+### Compile backend
 Make sure you install the libmodbus from: http://libmodbus.org/
 I tested it with version 3.0.5. Just extract it, do a ./configure then make then make install.
 On MacOSX I had the problem that the libmodbus.pc was installed in a wrong location. You can correct the with a symlink:
@@ -102,7 +102,7 @@ Make sure, the serial device is correct, permission are correct and you are conn
 Also make sure if you have the MOXA serial LAN converter that the driver is installed correctly.
 Maybe you have to enable the modbus protocol on your heating (mine had it enabled by default).
 
-## Edit crontab to get heating read and written automatically
+### Edit crontab to get heating read and written automatically
 Just edit the file /etc/crontab and add the line:
 ```
 */1 * * * *     idefix  cd /home/idefix/heizung/bin/ && ./WPsetAllValues.pl; ./WPgetAllValues.pl
@@ -113,7 +113,7 @@ As I use a serial to LAN converter MOXA @TODO add specific type here.
 
 Now the process should write every minutes a record into the database keeping all information.
 
-## Setup the frontend
+### Setup the frontend
 Go to folder frontend. Now we have to install all libraries why require, at first we installed composer.phar:
 ```
 curl -sS https://getcomposer.org/installer | php
