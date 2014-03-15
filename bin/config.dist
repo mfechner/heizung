@@ -1,0 +1,6 @@
+server = localhost
+database = <name of database>
+user = <database user>
+password = <password>
+
+logfile  = 'path to logfile like: /home/idefix/heizung/logs/wp_polld.log';
