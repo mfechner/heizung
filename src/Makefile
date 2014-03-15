@@ -1,5 +1,5 @@
-CFLAGS = -c -Wall -g -I. -I../include -I/usr/local/include/modbus/
-LDFLAGS = -L. -lmylib -L../lib -L/usr/local/lib
+CFLAGS = -c -Wall -g -I. -I../include
+LDFLAGS = -L. -lmylib -L../lib
 
 CFLAGS += $(shell pkg-config --cflags libmodbus)
 LDFLAGS += $(shell pkg-config --libs libmodbus)

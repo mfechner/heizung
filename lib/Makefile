@@ -1,4 +1,4 @@
-CFLAGS = -c -Wall -g -I. -I../include -I /usr/local/include/modbus/
+CFLAGS = -c -Wall -g -I. -I../include 
 LDFLAGS = -L. -lmylib
 
 CFLAGS += $(shell pkg-config --cflags libmodbus)
@@ -10,7 +10,6 @@ mylib: mylib.o
 clean:
 	rm *.o
 	rm *.a
-	rm readModbus
 	
 %.o: %.c
 	$(CC) $(CFLAGS) $<
