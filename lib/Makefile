@@ -5,7 +5,7 @@ CFLAGS += $(shell pkg-config --cflags libmodbus)
 LDFLAGS += $(shell pkg-config --libs libmodbus)
 
 mylib: mylib.o
-	$(AR) rcs lib$@.a -o $<
+	$(AR) rcs lib$@.a $<
 
 clean:
 	rm *.o
