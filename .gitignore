@@ -4,8 +4,15 @@
 .DS_Store
 ._*
 
-bin/*.a
-bin/writeModbus
-log
+# cmake files to ignore
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
 
+lib/*.a
+src/readModbus
+src/writeModbus
+log
 frontend/vendor/*

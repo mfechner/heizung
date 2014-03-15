@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "mylib.h"
+#include <mylib.h>
 
 static const char *optString = "d:f:a:s:ht:vw:";
 extern struct globalArgs_t globalArgs;
