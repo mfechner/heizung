@@ -170,4 +170,5 @@ http://_yourhostname_/heating
 And you should see your heating on a web page.
 
 Have fun.
+Matthias Fechner <idefix at fechner.net>
 
