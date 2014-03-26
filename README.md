@@ -16,6 +16,11 @@ Values are stored in a mysql database, even if you write values to the heating.
 The webinterface is based on ZendFramework2, jQuery, PHP and Doctrine2.
 The backend is written in C and Perl and is using libmodbus.
 
+## Required Hardware
+* Waterkotte (in may case a DS010312AI) with WPCU.C controller
+* Moxa NPort 5110A (to get the RS232 port from the heating to LAN)
+* Linux/Unix/FreeBSD machine with compiler, apache, mysql, php
+
 ## Installation
 Clone the repository using git.
 
@@ -65,7 +70,7 @@ On MacOSX I had the problem that the libmodbus.pc was installed in a wrong locat
 ln -s /usr/local/lib/pkgconfig/libmodbus.pc /opt/local/lib/pkgconfig/
 ```
 
-Now got to the directory lib/ and execute:
+Now go to the directory lib/ and execute:
 ```
 cd lib
 make
