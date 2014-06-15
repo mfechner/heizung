@@ -21,6 +21,13 @@ The backend is written in C and Perl and is using libmodbus.
 * Moxa NPort 5110A (to get the RS232 port from the heating to LAN)
 * Linux/Unix/FreeBSD machine with compiler, apache, mysql, php
 
+## Required Libraries
+Make sure the perl library Config::General is installed.
+On gentoo:
+````
+emerge -av dev-perl/config-general
+````
+
 ## Installation
 Clone the repository using git.
 
