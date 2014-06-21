@@ -58,7 +58,25 @@ Netmask: 255.255.255.0
 If you have more networks you would like to access the serial port, add them on the following numbers.
 
 ## Moxa Driver Installation
-
+For the driver I had to ask on Moxa directly to get a current beta driver that fixed my problems. I use the file npreal2_1.18.1_Build_12051018.tgz. I added it to the repository to have everything you require together.
+To install follow the manual I did something like (it is to long ago to remember everything):
+````
+cd moxa-driver
+tar xzvf npreal2_1.18_Build_12020919.tgz  -C /
+cd /tmp/moxa
+/tmp/moxa/mxinst
+... maybe more steps to configure the IP address of your moxa device ...
+````
+To load the driver manually, I had to add on my gentoo linux in the file /etc/conf.d/local.start the lines:
+````
+modprobe npreal2 ttymajor=33 calloutmajor=38 verbose=0
+/usr/lib/npreal2/driver/mxloadsvr
+````
+If the driver is loaded you should see a new device:
+````
+ls -las /dev/ttyr00
+````
+If you can see the device the driver should be fine and you can continue.
 
 ## Required Libraries
 Make sure the perl library Config::General is installed.
