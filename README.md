@@ -21,6 +21,45 @@ The backend is written in C and Perl and is using libmodbus.
 * Moxa NPort 5110A (to get the RS232 port from the heating to LAN)
 * Linux/Unix/FreeBSD machine with compiler, apache, mysql, php
 
+## Configuration of Moxa NPort 5110A
+I had to upgrade the firmware to version 1.1 Build 11080114.
+Serial Settings:
+````
+Port alias: heizung
+Baud rate: 9600
+Data bits: 8
+Stop bits: 1
+Parity: None
+Flow control: DTR/DSR
+FIFO: enable
+Interface: RS-232
+````
+Operating Settings:
+````
+Operation mode: RealCOM
+TCP alive check time: 1
+Max connection: 4
+Ignore jammed IP: No
+Allow driver control: Yes
+Packing length: 0
+Delimiter 1: 00 (enabled not checked)
+Delimiter 2: 00 (enabled not checked)
+Delimeter process: Do Nothing
+Force transmit: 0
+````
+
+Accessible IP Settings:
+Put your IP range in here, e.g. for rule 1:
+````
+Activate the rule: Checked
+IP Address: 192.168.0.0
+Netmask: 255.255.255.0
+````
+If you have more networks you would like to access the serial port, add them on the following numbers.
+
+## Moxa Driver Installation
+
+
 ## Required Libraries
 Make sure the perl library Config::General is installed.
 On gentoo:
