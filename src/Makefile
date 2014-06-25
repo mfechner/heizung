@@ -19,10 +19,14 @@ json:
 	perl configToJSON.pl >../frontend/module/Heating/data/config.json
 	perl captionToGettext.pl >../frontend/module/Heating/data/captions.pm
 	
+install:
+	install -C -m0755 readModbus ../bin/
+	install -C -m0755 writeModbus ../bin/
+
 clean:
-	rm *.o
-	rm *.a
-	rm readModbus
+	rm -f *.o
+	rm -f *.a
+	rm -f readModbus writeModbus
 	
 %.o: %.c
 	$(CC) $(CFLAGS) $<
