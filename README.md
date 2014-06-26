@@ -134,22 +134,15 @@ On MacOSX I had the problem that the libmodbus.pc was installed in a wrong locat
 ln -s /usr/local/lib/pkgconfig/libmodbus.pc /opt/local/lib/pkgconfig/
 ```
 
-Now go to the directory lib/ and execute:
+Now type in the main root directory of the application:
 ```
-cd lib
-make
-cd ..
-```
-
-Now go to the directory src/ and execute:
-```
-cd src
 make
 ```
 
-If everything is fine, you have now two executeable files readModbus and writeModbus.
+That will install the two required files readModbus and writeModbus into the folder bin/.
 To make sure everything is fine just execute
 ```
+cd bin
 ./readModbus -h
 ```
 
